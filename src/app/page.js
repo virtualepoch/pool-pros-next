@@ -13,7 +13,7 @@ export default function Home() {
       <SectionCard
         header="Residential and Commercial Services"
         content1="Fully Certified"
-        logoSrc="/assets/globals/cpo.jpg"
+        logoSrc="/assets/globals/cpo.png"
         logoAlt="CPO Logo"
         logoWidth={426}
         logoHeight={426}
