@@ -1,0 +1,86 @@
+.sectionCard {
+  width: 100%;
+  height: fit-content;
+}
+
+.sectionCardHeaderWrap {
+  width: 100%;
+  height: fit-content;
+  min-height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionCardHeader {
+  width: 100%;
+  height: fit-content;
+  min-height: 100%;
+  padding: 20px;
+  padding-top: 80px;
+  color: #3168ff;
+  font-size: clamp(2.25rem, 1.3333rem + 4.0741vw, 5rem);
+  font-family: var(--font-family);
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-size: 100%;
+  background-image: linear-gradient(111deg, #56fff8 9%, #0d0b88 78%);
+  filter: drop-shadow(1px 2px 3px #000a);
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.sectionCardContent {
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.contentWrap {
+  min-height: 50vh;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  text-align: center;
+}
+
+.contentWrap h2 {
+  width: fit-content;
+  padding: 5px 10px;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+  font-size: 25px;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 15px 1px #0007;
+  background: linear-gradient(40deg, #3168ff44 9%, #56fff844 78%);
+}
+
+.sectionCardBgImg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+}
+
+.sectionCardLogo {
+  width: 40vw;
+  min-width: 150px;
+  max-width: 200px;
+  height: 40vw;
+  min-height: 150px;
+  max-height: 200px;
+  margin: 0 auto;
+  border-radius: 100%;
+  box-shadow: 2px 2px 15px 1px #0007;
+}

@@ -1,0 +1,55 @@
+.loadingSection {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 98;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+
+.loadingSection-exit {
+  opacity: 1;
+}
+
+.loadingSection-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.loadingIcon {
+  width: 50px;
+  height: 50px;
+  background: url(../../../public/icons/spinner-3.svg) center / 100% no-repeat;
+  filter: drop-shadow(0 0 5px #0004);
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.wrapper-widget {
+  width: 100%;
+  min-height: 80vh;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 572px) {
+  .wrapper-widget {
+    min-height: 70vh;
+  }
+}
+
+.widget {
+  min-height: 80vh;
+  margin-bottom: 50px;
+  padding: 20px;
+}
