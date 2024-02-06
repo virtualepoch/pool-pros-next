@@ -57,7 +57,7 @@ export const Footer = () => {
 
       <Image
         className="logo"
-        src="/assets/globals/cpo.png"
+        src="/globals/cpo.png"
         alt="CPO Logo"
         width={426}
         height={426}
@@ -65,7 +65,7 @@ export const Footer = () => {
 
       <Image
         className="logo"
-        src="/assets/globals/pentair.jpg"
+        src="/globals/pentair.jpg"
         alt="Pentair Service Professional Logo"
         width={512}
         height={512}
