@@ -57,7 +57,7 @@ export const Footer = () => {
 
       <Image
         className="logo"
-        src="/globals/cpo.png"
+        src="/globals/cpo.jpg"
         alt="CPO Logo"
         width={426}
         height={426}

@@ -7,8 +7,9 @@ export const Header = () => {
     <header className="header">
       <Link href="/" className="idahomeserv-logo-link">
         <Image
+          priority
           className="idahomeserv-logo"
-          src="/assets/globals/site-logo.png"
+          src="/globals/site-logo.png"
           alt="IdaHomeServ LLC Logo"
           width={800}
           height={432}

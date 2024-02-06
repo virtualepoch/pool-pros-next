@@ -13,7 +13,7 @@ export const NavHeader = ({ setNav }) => {
       >
         <Image
           className="idahomeserv-logo"
-          src="/assets/globals/site-logo.png"
+          src="/globals/site-logo.png"
           alt="IdaHomeServ LLC Logo"
           width={800}
           height={432}
