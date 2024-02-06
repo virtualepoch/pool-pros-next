@@ -33,12 +33,21 @@
 
 .wrapperImages {
   width: 100%;
+  height: auto;
   aspect-ratio: 1;
+  margin: auto;
   display: flex;
   overflow: hidden;
 }
 @media (min-width: 1000px) {
   .wrapperImages {
+    aspect-ratio: 3/2;
+  }
+}
+@media (orientation:landscape) {
+  .wrapperImages{
+    width: auto;
+    height: 80vh;
     aspect-ratio: 3/2;
   }
 }
@@ -83,11 +92,9 @@
   z-index: 2;
   border: 1px solid transparent;
   transform: translateY(-50%) rotateY(180deg);
-  filter: drop-shadow(0 0 3px black);
-  background: url(../../../public/icons/chevron-right-cyan.svg) 25% 50% / 25%
-      no-repeat,
-    rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1px);
+  filter: drop-shadow(0 0 2px #000a);
+  background: url(../../../public/icons/chevron-right-cyan.svg) 25% 50% / 18%
+      no-repeat;
   pointer-events: none;
   border-radius: 200px;
 }
@@ -142,9 +149,9 @@
     width: 60px;
     height: 60px;
     left: -30px;
-    background: url(../../../public/icons/chevron-right-cyan.svg) 25% 50% / 25%
+    background: url(../../../public/icons/chevron-right-cyan.svg) 35% 50% / 15%
         no-repeat,
-      rgba(0, 0, 0, 0.1);
+      #0001;
   }
   .iconBtnSliderRight {
     left: auto;
