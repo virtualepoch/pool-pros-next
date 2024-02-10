@@ -10,6 +10,8 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 export const ImageSlider = ({ images }) => {
+  const [btnPrevHov, setBtnPrevHov] = useState(null);
+  const [btnNextHov, setBtnNextHov] = useState(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const [op, setOp] = useState(null);
@@ -41,7 +43,7 @@ export const ImageSlider = ({ images }) => {
         initialSlide={1}
         effect="coverflow"
         coverflowEffect={{
-          rotate: -10,
+          rotate: 0,
           stretch: 0,
           depth: 200,
           modifier: 4,
@@ -62,18 +64,40 @@ export const ImageSlider = ({ images }) => {
           </SwiperSlide>
         ))}
 
-        <div className="swiper-btn-prev" />
-        <div className="swiper-btn-next" />
+        <div
+          className="swiper-btn-prev"
+          onTouchStart={() => {
+            setBtnPrevHov(true);
+          }}
+          onTouchEnd={() => {
+            setBtnPrevHov(false);
+          }}
+          style={{
+            backgroundColor: btnPrevHov & "#0002",
+          }}
+        />
+        <div
+          className="swiper-btn-next"
+          onTouchStart={() => {
+            setBtnNextHov(true);
+          }}
+          onTouchEnd={() => {
+            setBtnNextHov(false);
+          }}
+          style={{
+            backgroundColor: btnNextHov & "#0002",
+          }}
+        />
       </Swiper>
 
       <Swiper
         onSwiper={setThumbsSwiper}
-        spaceBetween={10}
+        spaceBetween={7}
         slidesPerView="auto"
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="swiper-thumbnails"
+        className="swiper-thumbnails-wrap"
       >
         {images.map((images) => (
           <SwiperSlide key={images.url} className="swiper-thumbnails-slide">
