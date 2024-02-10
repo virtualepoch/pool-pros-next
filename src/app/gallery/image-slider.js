@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, FreeMode, Navigation, Thumbs } from "swiper/modules";
 
@@ -12,8 +12,17 @@ import "swiper/css/thumbs";
 export const ImageSlider = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+  const [op, setOp] = useState(null);
+  useEffect(() => {
+    setOp(true);
+  }, [setOp]);
+
   return (
-    <section className="image-slider" aria-label="Image Slider">
+    <section
+      className="image-slider"
+      aria-label="Image Slider"
+      style={{ opacity: op ? 1 : 0, transition: "opacity 400ms linear" }}
+    >
       <Swiper
         className="swiper_container"
         style={{
@@ -32,7 +41,7 @@ export const ImageSlider = ({ images }) => {
         initialSlide={1}
         effect="coverflow"
         coverflowEffect={{
-          rotate: 0,
+          rotate: -10,
           stretch: 0,
           depth: 200,
           modifier: 4,
@@ -52,7 +61,7 @@ export const ImageSlider = ({ images }) => {
             />
           </SwiperSlide>
         ))}
-        
+
         <div className="swiper-btn-prev" />
         <div className="swiper-btn-next" />
       </Swiper>
