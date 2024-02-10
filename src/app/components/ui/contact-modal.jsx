@@ -6,6 +6,7 @@ import { FooterLinks } from "../footer-links";
 
 export const ContactModal = ({ modal, setModal }) => {
   const form = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -24,6 +25,9 @@ export const ContactModal = ({ modal, setModal }) => {
           console.log(error.text);
         }
       );
+
+    alert("Message sent. Thanks! We'll get back ASAP.");
+    setModal(false);
   };
 
   const [pressed, setPressed] = useState();
@@ -66,15 +70,7 @@ export const ContactModal = ({ modal, setModal }) => {
             usually reply within 24 hours.
           </p>
 
-          <form
-            className="form-quote"
-            ref={form}
-            onSubmit={() => {
-              setModal(false);
-              alert("Message sent. Thanks! We'll get back ASAP.");
-              sendEmail();
-            }}
-          >
+          <form className="form-quote" ref={form} onSubmit={sendEmail}>
             <input
               className="input-form-quote"
               type="text"

@@ -36,16 +36,17 @@
   height: auto;
   aspect-ratio: 1;
   margin: auto;
-  display: flex;
-  overflow: hidden;
+  /* display: flex;
+  overflow: hidden; */
+  border: solid red;
 }
 @media (min-width: 1000px) {
   .wrapperImages {
     aspect-ratio: 3/2;
   }
 }
-@media (orientation:landscape) {
-  .wrapperImages{
+@media (orientation: landscape) {
+  .wrapperImages {
     width: auto;
     height: 80vh;
     aspect-ratio: 3/2;
@@ -53,23 +54,38 @@
 }
 
 .imgImageSlider {
+  border: solid blue;
+  width: 37rem;
+  height: 42rem;
+  border-radius: 2rem;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
-  display: block;
+  /* object-fit: cover; */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* display: block;
   flex-shrink: 0;
-  flex-grow: 0;
-  transition: translate 300ms ease-in-out;
+  flex-grow: 0; */
+  /* transition: translate ease-in-out; */
+  /* transition-duration: 0ms; */
+  /* transition-delay: 200ms; */
+}
+
+.imageSwiperNavBtns {
+  border: solid red;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btnSlider,
 .btnSliderRight {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  width: 25%;
-  max-width: 200px;
-  height: 100%;
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 0 2px #000a);
+  background: url(../../../public/icons/chevron-right-cyan.svg) 25% 50% / 50%
+    no-repeat;
+  border: solid red;
 }
 
 .btnSliderRight {
@@ -80,29 +96,6 @@
 .btnSliderRight:focus-visible {
   border: solid cyan;
   outline: auto;
-}
-
-.iconBtnSlider,
-.iconBtnSliderRight {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 50%;
-  left: -50px;
-  z-index: 2;
-  border: 1px solid transparent;
-  transform: translateY(-50%) rotateY(180deg);
-  filter: drop-shadow(0 0 2px #000a);
-  background: url(../../../public/icons/chevron-right-cyan.svg) 25% 50% / 18%
-      no-repeat;
-  pointer-events: none;
-  border-radius: 200px;
-}
-
-.iconBtnSliderRight {
-  left: auto;
-  right: -50px;
-  transform: translateY(-50%);
 }
 
 .wrapperBtnsImg {

@@ -1,6 +1,12 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export const ImageSlider = ({ styles, images }) => {
   const [imageIndex, setImageIndex] = useState(0);
@@ -16,62 +22,67 @@ export const ImageSlider = ({ styles, images }) => {
     }, 400);
   }, [setImgBtnsTrans]);
 
-  function showPrevImage() {
-    setImageIndex((index) => (index === 0 ? images.length - 1 : index - 1));
-  }
-
-  function showNextImage() {
-    setImageIndex((index) => (index === images.length - 1 ? 0 : index + 1));
-  }
-
   return (
-    <section className={styles.imageSlider} aria-label="Image Slider">
+    <section className="image-slider" aria-label="Image Slider">
       <a href="#after-image-slider-controls" className={styles.skipLink}>
         Skip image slider controls
       </a>
 
-      <div className={styles.wrapperImages}>
-        {images.map((images, index) => (
-          <Image
-            key={images.url}
-            src={images.url}
-            alt={images.alt}
-            aria-hidden={imageIndex !== index}
-            className={styles.imgImageSlider}
-            style={{
-              translate: `${-100 * imageIndex}%`,
-            }}
-            width={640}
-            height={480}
-          />
-        ))}
+      <div>
+        <Swiper
+          className="swiper_container"
+          // className={styles.wrapperImages}
+          loop
+          grabCursor
+          centeredSlides
+          slidesPerView="auto"
+          effect="coverflow"
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          pagination={{ el: ".swiper-pagination", clickable: true }}
+          navigation={{
+            nextEl: ".swiper-btn-prev-slide",
+            prevEl: ".swiper-btn-next-slide",
+            clickable: true,
+          }}
+        >
+          {images.map((images, index) => (
+            <SwiperSlide key={images.url} className="swiper-slide">
+              <Image
+                className="swiper-slide-img"
+                width={640}
+                height={480}
+                src={images.url}
+                alt={images.alt}
+              />
+            </SwiperSlide>
+          ))}
+
+          <div className="swiper-pag-container">
+            <button
+              className="swiper-btn swiper-btn-prev-slide"
+              aria-label="View previous image"
+              onTouchStart={() => setBtnLeftHovered(true)}
+              onTouchEnd={() => setBtnLeftHovered(false)}
+            />
+
+            <div className="swiper-pagination" />
+
+            <button
+              className="swiper-btn swiper-btn-next-slide"
+              aria-label="View next image"
+              onTouchStart={() => setBtnRightHovered(true)}
+              onTouchEnd={() => setBtnRightHovered(false)}
+            />
+          </div>
+        </Swiper>
       </div>
 
-      <button
-        className={styles.btnSlider}
-        aria-label="View previous image"
-        onClick={showPrevImage}
-        onTouchStart={() => setBtnLeftHovered(true)}
-        onTouchEnd={() => setBtnLeftHovered(false)}
-      />
-      <div
-        className={styles.iconBtnSlider}
-        style={{ borderColor: `${btnLeftHovered ? "#0ff" : "transparent"}` }}
-      />
-
-      <button
-        className={styles.btnSliderRight}
-        aria-label="View next image"
-        onClick={showNextImage}
-        onTouchStart={() => setBtnRightHovered(true)}
-        onTouchEnd={() => setBtnRightHovered(false)}
-      />
-      <div
-        className={styles.iconBtnSliderRight}
-        style={{ borderColor: `${btnRightHovered ? "#0ff" : "transparent"}` }}
-      />
-
-      <div
+      {/* <div
         className={styles.wrapperBtnsImg}
         style={{
           transform: `translateY(${imgBtnsTrans ? 0 : 100}%)`,
@@ -91,7 +102,7 @@ export const ImageSlider = ({ styles, images }) => {
             }}
           />
         ))}
-      </div>
+      </div> */}
 
       <div id="after-image-slider-controls" />
     </section>
