@@ -364,8 +364,6 @@ button:focus {
 .image-slider {
   width: 100%;
   position: relative;
-  margin-bottom: 20px;
-  box-shadow: inset 0 -10px 10px 1px #0001;
 }
 
 .swiper_container {
@@ -377,7 +375,7 @@ button:focus {
 
 @media (orientation: portrait) {
   .swiper_container {
-    min-height: 60vh;
+    min-height: 50vh;
   }
 }
 
@@ -409,7 +407,7 @@ button:focus {
   height: fit-content;
   position: relative;
   top: -20px;
-  padding: 5px 10px 20px;
+  padding: 5px 0 20px 10px;
 }
 
 .swiper-thumbnails-slide {

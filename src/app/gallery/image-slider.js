@@ -36,7 +36,7 @@ export const ImageSlider = ({ images }) => {
           modifier: 4,
           slideShadows: false,
         }}
-        thumbs={{ swiper: thumbsSwiper }}
+        thumbs={{ swiper: thumbsSwiper, autoScrollOffset: 2 }}
         modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}
       >
         {images.map((images) => (
