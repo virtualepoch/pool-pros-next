@@ -18,16 +18,18 @@ export const ImageSlider = ({ images }) => {
         className="swiper_container"
         style={{
           "--swiper-navigation-color": "#0ffa",
-          "--swiper-pagination-color": "#0ffa",
         }}
         loop
+        // speed={500}
         grabCursor
-        navigation
+        navigation={{
+          prevEl: ".swiper-btn-prev",
+          nextEl: ".swiper-btn-next",
+        }}
         centeredSlides
         watchSlidesProgress
         slidesPerView="auto"
         initialSlide={1}
-        speed={500}
         effect="coverflow"
         coverflowEffect={{
           rotate: 0,
@@ -36,7 +38,7 @@ export const ImageSlider = ({ images }) => {
           modifier: 4,
           slideShadows: false,
         }}
-        thumbs={{ swiper: thumbsSwiper, autoScrollOffset: 2 }}
+        thumbs={{ swiper: thumbsSwiper }}
         modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}
       >
         {images.map((images) => (
@@ -50,6 +52,9 @@ export const ImageSlider = ({ images }) => {
             />
           </SwiperSlide>
         ))}
+        
+        <div className="swiper-btn-prev" />
+        <div className="swiper-btn-next" />
       </Swiper>
 
       <Swiper
