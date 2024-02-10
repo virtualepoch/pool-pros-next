@@ -1,6 +1,5 @@
 import { LinkContact } from "../components/links/link-contact";
 import { ImageSlider } from "./image-slider";
-import styles from "./page.module.css";
 
 const IMAGES = [
   {
@@ -46,7 +45,7 @@ export default function Gallery() {
     <main className="main">
       <h3 className="route-header">Gallery</h3>
 
-      <ImageSlider styles={styles} images={IMAGES} />
+      <ImageSlider images={IMAGES} />
 
       <LinkContact addedClass="contact-link-gallery-page"/>
     </main>

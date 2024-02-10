@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, FreeMode, Navigation, Thumbs } from "swiper/modules";
 
@@ -9,28 +9,13 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-export const ImageSlider = ({ styles, images }) => {
-  const [imageIndex, setImageIndex] = useState(0);
-
+export const ImageSlider = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
-  const [imgBtnsTrans, setImgBtnsTrans] = useState();
-
-  useEffect(() => {
-    setTimeout(() => {
-      setImgBtnsTrans(true);
-    }, 400);
-  }, [setImgBtnsTrans]);
 
   return (
     <section className="image-slider" aria-label="Image Slider">
-      <a href="#after-image-slider-controls" className={styles.skipLink}>
-        Skip image slider controls
-      </a>
-
       <Swiper
         className="swiper_container"
-        // className={styles.wrapperImages}
         style={{
           "--swiper-navigation-color": "#0ffa",
           "--swiper-pagination-color": "#0ffa",
@@ -85,8 +70,6 @@ export const ImageSlider = ({ styles, images }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <div id="after-image-slider-controls" />
     </section>
   );
 };
