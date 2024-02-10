@@ -362,53 +362,76 @@ button:focus {
 
 /* SWIPER */
 .image-slider {
-  border: solid red;
   width: 100%;
-  padding-bottom: 50px;
   position: relative;
   margin-bottom: 20px;
-  overflow: hidden;
 }
 
 .swiper_container {
-  border: solid blue;
   width: 100%;
+  height: 80vh;
   position: relative;
+}
+@media (orientation: portrait) {
+  .swiper_container {
+    height: 60vh;
+  }
 }
 
 .swiper-slide {
-  border: solid greenyellow;
   position: relative;
+  padding: 10px;
 }
 
-.swiper-slide-img {
-  border: solid magenta;
+.swiper-slide .swiper-slide-img {
   width: 100%;
-  height: auto;
-  max-height: 80vh;
-  border-radius: 2rem;
+  height: 100%;
+  border-radius: 1rem;
   object-fit: cover;
+  box-shadow: 1px 2px 7px 1px #0007;
 }
 
-.swiper-pag-container {
-  border: solid red;
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
 }
 
-.swiper-btn {
-  border: solid blue;
-  width: 50px;
-  height: 50px;
-}
-
-.swiper-pagination {
+/* SWIPER FOR THUMBNAILS */
+.swiper.swiper-thumbnails {
+  width: fit-content;
+  max-width: 100%;
+  height: fit-content;
   position: relative;
-  width: 100%;
+  top: -35px;
+  padding: 5px 10px 10px;
 }
 
-.swiper-pagination .swiper-pagination-bullet {
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+.swiper-thumbnails-slide {
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  padding: 0;
+  position: relative;
+  margin: auto;
 }
 
-.swiper-pagination .swiper-pagination-bullet-active {
-  background: red;
+.swiper-slide-thumb-active .swiper-thumbnails-img {
+  scale: 1.15;
+  border: 1px solid #0ff;
+}
+
+.swiper-thumbnails-img {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  min-height: 50px;
+  border-top: 1px solid #0ff;
+  border-radius: 100%;
+  margin: auto;
+  object-fit: cover;
+  position: relative;
+  box-shadow: 1px 2px 7px 1px #0007;
 }
