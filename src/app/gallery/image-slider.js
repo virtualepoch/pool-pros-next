@@ -26,12 +26,15 @@ export const ImageSlider = ({ images }) => {
         centeredSlides
         watchSlidesProgress
         slidesPerView="auto"
+        initialSlide={1}
+        speed={500}
         effect="coverflow"
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 100,
-          modifier: 2.5,
+          depth: 200,
+          modifier: 4,
+          slideShadows: false,
         }}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}

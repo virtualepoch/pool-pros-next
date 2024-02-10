@@ -3,11 +3,11 @@ import { ImageSlider } from "./image-slider";
 
 const IMAGES = [
   {
-    url: "/poolpics/0.jpeg",
+    url: "/poolpics/1.jpeg",
     alt: "Image one",
   },
   {
-    url: "/poolpics/1.jpeg",
+    url: "/poolpics/0.jpeg",
     alt: "Image two",
   },
   {
@@ -47,7 +47,7 @@ export default function Gallery() {
 
       <ImageSlider images={IMAGES} />
 
-      <LinkContact addedClass="contact-link-gallery-page"/>
+      <LinkContact addedClass="contact-link-gallery-page" />
     </main>
   );
 }
