@@ -3,39 +3,39 @@ import { ImageSlider } from "./image-slider";
 
 const IMAGES = [
   {
-    url: "/poolpics/1.jpeg",
+    url: "/gallery/1.jpeg",
     alt: "Image one",
   },
   {
-    url: "/poolpics/0.jpeg",
+    url: "/gallery/0.jpeg",
     alt: "Image two",
   },
   {
-    url: "/poolpics/2.jpeg",
+    url: "/gallery/2.jpeg",
     alt: "Image three",
   },
   {
-    url: "/poolpics/3.jpeg",
+    url: "/gallery/3.jpeg",
     alt: "Image four",
   },
   {
-    url: "/poolpics/4.jpeg",
+    url: "/gallery/4.jpeg",
     alt: "Image five",
   },
   {
-    url: "/poolpics/5.jpeg",
+    url: "/gallery/5.jpeg",
     alt: "Image six",
   },
   {
-    url: "/poolpics/6.jpeg",
+    url: "/gallery/6.jpeg",
     alt: "Image seven",
   },
   {
-    url: "/poolpics/7.png",
+    url: "/gallery/7.png",
     alt: "Image seven",
   },
   {
-    url: "/poolpics/8.jpg",
+    url: "/gallery/8.jpg",
     alt: "Image seven",
   },
 ];
@@ -43,7 +43,7 @@ const IMAGES = [
 export default function Gallery() {
   return (
     <main className="main">
-      <h3 className="route-header">Gallery</h3>
+      <h1 className="route-header">Gallery</h1>
 
       <ImageSlider images={IMAGES} />
 

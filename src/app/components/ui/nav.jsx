@@ -37,6 +37,8 @@ export const Nav = ({ nav, setNav }) => {
           <CustomLink to="/testimonials" linkName="Testimonials" />
 
           <CustomLink to="/gallery" linkName="Gallery" />
+
+          <CustomLink to="/services" linkName="Services" />
         </section>
 
         <ContactLinks />

@@ -370,12 +370,14 @@ button:focus {
 .swiper_container {
   width: 100%;
   aspect-ratio: 3/2;
+  min-height: 50vh;
   max-height: 85vh;
   position: relative;
 }
 
 @media (orientation: portrait) {
   .swiper_container {
+    aspect-ratio: 1;
     min-height: 50vh;
   }
 }
@@ -434,11 +436,7 @@ button:focus {
   width: fit-content;
   max-width: 100%;
   height: fit-content;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  bottom: -45px;
+  position: relative;
   padding: 10px 10px 25px 20px;
 }
 
