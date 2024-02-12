@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 // COMPONENTS
 import { BtnNav } from "./ui/btn-nav";
 import { Nav } from "./ui/nav";
@@ -7,6 +8,7 @@ import { BtnToTop } from "./ui/btn-to-top";
 
 export const UI = () => {
   const [nav, setNav] = useState();
+  const pathname = usePathname();
 
   return (
     <div className="ui">
@@ -14,7 +16,7 @@ export const UI = () => {
 
       <Nav nav={nav} setNav={setNav} />
 
-      <BtnToTop />
+      {!pathname === "/services" && <BtnToTop />}
     </div>
   );
 };

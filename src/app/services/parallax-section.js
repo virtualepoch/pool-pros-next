@@ -1,28 +1,23 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import styles from "./parallax-section.module.css";
 import Image from "next/image";
-import { useInView } from "react-intersection-observer";
+import styles from "./parallax-section.module.css";
 
 export const ParallaxSection = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.99,
-    triggerOnce: true,
-  });
-
-  console.log(inView);
+  const ref = useRef();
 
   return (
-    <div ref={ref} className={styles.parallaxSectionContainer}>
-      <Parallax pages={3} enabled={inView} className={styles.parallaxSection}>
+    <div className={styles.parallaxSectionContainer}>
+      <Parallax ref={ref} pages={4} className={styles.parallaxSection}>
         <ParallaxLayer
-          factor={3}
+          factor={4}
           offset={0}
           speed={0}
-          className={styles.parallaxLayer1}
+          className={styles.parallaxBgLayer}
         >
           <Image
+            priority
             className={styles.parallaxBgImg}
             src="/home/pool-1024.jpg"
             alt="?"
@@ -36,36 +31,68 @@ export const ParallaxSection = () => {
           offset={0}
           speed={0}
           // horizontal
-          className={styles.parallaxLayer2}
+          className={styles.parallaxLayer1}
         >
-          <h1 className="route-header">Services</h1>
+          <h1 className={`route-header ${styles.parallaxHeader}`}>Services</h1>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          sticky={{ start: 1, end: 2 }}
+          factor={1}
+          offset={1}
+          speed={0}
+          className={styles.parallaxLayer2Overlay}
+        >
+          <h1 className={`route-header ${styles.parallaxHeader}`}>
+            Pool & Spa Cleaning
+          </h1>
         </ParallaxLayer>
 
         <ParallaxLayer
           factor={1}
           offset={1}
-          speed={-1}
-          horizontal
-          className={styles.parallaxLayer3}
+          speed={1}
+          className={styles.parallaxLayer2Bg}
         >
           <Image
-            className={styles.parallaxLogo}
-            src="/globals/cpo.jpg"
-            alt="?"
-            width={426}
-            height={426}
+            className={styles.parallaxLayer2BgImg}
+            src="/gallery/3.jpeg"
+            alt="Pool & spa cleaning section background"
+            width={640}
+            height={480}
           />
         </ParallaxLayer>
 
         <ParallaxLayer
-          sticky={{ start: 1, end: 2 }}
-          className={styles.parallaxLayer4}
-        />
-
-        <ParallaxLayer offset={2} speed={1} className={styles.parallaxLayer5}>
-          <button onClick={() => ref.current.scrollTo(0)}>Scroll to top</button>
+          factor={1}
+          offset={2}
+          speed={1}
+          className={styles.parallaxLayer2Bg}
+        >
+          <Image
+            className={styles.parallaxLayer2BgImg}
+            src="/gallery/2.jpeg"
+            alt="Pool & spa cleaning section background"
+            width={640}
+            height={480}
+          />
         </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2}
+          speed={1}
+          className={styles.parallaxLayer5}
+        ></ParallaxLayer>
       </Parallax>
+
+      <button
+        onClick={() => {
+          ref.current.scrollTo(0);
+        }}
+        className={styles.btnToTop}
+      >
+        Scroll to top
+      </button>
     </div>
   );
 };
