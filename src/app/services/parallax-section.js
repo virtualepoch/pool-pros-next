@@ -1,7 +1,6 @@
 "use client";
 import { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
 import Image from "next/image";
 import styles from "./parallax-section.module.css";
 import { InViewOpacity } from "../components/in-view-opacity";
@@ -60,7 +59,7 @@ export const ParallaxSection = () => {
           speed={1}
           className={styles.parallaxLayer2Bg}
         >
-          <InViewOpacity rootMargin="-300px" triggerOnce={false} opacitySpeed="400ms">
+          <InViewOpacity rootMargin="-20%" triggerOnce={false} opacitySpeed="400ms">
             <Image
               className={styles.parallaxLayer2BgImg}
               src="/gallery/3.jpeg"
@@ -77,7 +76,7 @@ export const ParallaxSection = () => {
           speed={1}
           className={styles.parallaxLayer2Bg}
         >
-          <InViewOpacity rootMargin="-300px" triggerOnce={false} opacitySpeed="400ms">
+          <InViewOpacity rootMargin="-20%" triggerOnce={false} opacitySpeed="400ms">
             <Image
               className={styles.parallaxLayer2BgImg}
               src="/gallery/2.jpeg"
@@ -97,7 +96,7 @@ export const ParallaxSection = () => {
 
       <button
         onClick={() => {
-          ref.current.scrollTo(0);
+          parallaxSection.current.scrollTo(0);
         }}
         className={styles.btnToTop}
       >
