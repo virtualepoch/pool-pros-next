@@ -100,15 +100,17 @@
 
 .springInView {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
   font: 900 50px sans-serif;
   background: linear-gradient(32deg, #0bd1ff, #ffa3ff, #ffd34e);
+  overflow: hidden;
 }
 
-.springInView h1{
+.springInView h1 {
   color: #a00;
   mix-blend-mode: difference;
 }

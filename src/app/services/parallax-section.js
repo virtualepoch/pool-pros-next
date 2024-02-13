@@ -54,12 +54,16 @@ export const ParallaxSection = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          factor={1}
+          factor={0.7}
           offset={1}
           speed={1}
           className={styles.parallaxLayer2Bg}
         >
-          <InViewOpacity rootMargin="-20%" triggerOnce={false} opacitySpeed="400ms">
+          <InViewOpacity
+            rootMargin="-20%"
+            triggerOnce={false}
+            opacitySpeed="400ms"
+          >
             <Image
               className={styles.parallaxLayer2BgImg}
               src="/gallery/3.jpeg"
@@ -71,12 +75,16 @@ export const ParallaxSection = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          factor={1}
-          offset={2}
+          factor={0.7}
+          offset={1.7}
           speed={1}
           className={styles.parallaxLayer2Bg}
         >
-          <InViewOpacity rootMargin="-20%" triggerOnce={false} opacitySpeed="400ms">
+          <InViewOpacity
+            rootMargin="-20%"
+            triggerOnce={false}
+            opacitySpeed="400ms"
+          >
             <Image
               className={styles.parallaxLayer2BgImg}
               src="/gallery/2.jpeg"
@@ -88,10 +96,25 @@ export const ParallaxSection = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2}
+          factor={0.7}
+          offset={2.4}
           speed={1}
-          className={styles.parallaxLayer5}
-        ></ParallaxLayer>
+          className={styles.parallaxLayer2Bg}
+        >
+          <InViewOpacity
+            rootMargin="-20%"
+            triggerOnce={false}
+            opacitySpeed="400ms"
+          >
+            <Image
+              className={styles.parallaxLayer2BgImg}
+              src="/gallery/1.jpeg"
+              alt="Pool & spa cleaning section background"
+              width={640}
+              height={480}
+            />
+          </InViewOpacity>
+        </ParallaxLayer>
       </Parallax>
 
       <button
