@@ -1,15 +1,21 @@
 "use client";
 import { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+
 import Image from "next/image";
 import styles from "./parallax-section.module.css";
+import { InViewOpacity } from "../components/in-view-opacity";
 
 export const ParallaxSection = () => {
-  const ref = useRef();
+  const parallaxSection = useRef();
 
   return (
     <div className={styles.parallaxSectionContainer}>
-      <Parallax ref={ref} pages={4} className={styles.parallaxSection}>
+      <Parallax
+        ref={parallaxSection}
+        pages={4}
+        className={styles.parallaxSection}
+      >
         <ParallaxLayer
           factor={4}
           offset={0}
@@ -54,13 +60,15 @@ export const ParallaxSection = () => {
           speed={1}
           className={styles.parallaxLayer2Bg}
         >
-          <Image
-            className={styles.parallaxLayer2BgImg}
-            src="/gallery/3.jpeg"
-            alt="Pool & spa cleaning section background"
-            width={640}
-            height={480}
-          />
+          <InViewOpacity rootMargin="-300px" triggerOnce={false} opacitySpeed="400ms">
+            <Image
+              className={styles.parallaxLayer2BgImg}
+              src="/gallery/3.jpeg"
+              alt="Pool & spa cleaning section background"
+              width={640}
+              height={480}
+            />
+          </InViewOpacity>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -69,13 +77,15 @@ export const ParallaxSection = () => {
           speed={1}
           className={styles.parallaxLayer2Bg}
         >
-          <Image
-            className={styles.parallaxLayer2BgImg}
-            src="/gallery/2.jpeg"
-            alt="Pool & spa cleaning section background"
-            width={640}
-            height={480}
-          />
+          <InViewOpacity rootMargin="-300px" triggerOnce={false} opacitySpeed="400ms">
+            <Image
+              className={styles.parallaxLayer2BgImg}
+              src="/gallery/2.jpeg"
+              alt="Pool & spa cleaning section background"
+              width={640}
+              height={480}
+            />
+          </InViewOpacity>
         </ParallaxLayer>
 
         <ParallaxLayer

@@ -1,18 +1,25 @@
 "use client";
 import { useInView } from "react-intersection-observer";
 
-export const InViewOpacity = ({ children, opacitySpeed = "700ms" }) => {
+export const InViewOpacity = ({
+  rootMargin = "-20%",
+  triggerOnce = true,
+  opacitySpeed = "700ms",
+  children,
+}) => {
   const { ref, inView } = useInView({
-    rootMargin: "-20%",
-    triggerOnce: true,
+    rootMargin: rootMargin,
+    triggerOnce: triggerOnce,
   });
 
   return (
     <div
       ref={ref}
       style={{
+        width: "fit-content",
+        height: "fit-content",
         opacity: inView ? 1 : 0,
-        transition: `opacity ${opacitySpeed} ease`,
+        transition: `opacity ${opacitySpeed} linear`,
       }}
     >
       {children}

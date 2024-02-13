@@ -142,6 +142,8 @@ button:focus {
 }
 
 .header-phone-number {
+  width: fit-content;
+  margin: 0 auto;
   position: relative;
   padding: 10px;
   letter-spacing: 3px;

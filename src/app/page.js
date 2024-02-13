@@ -1,6 +1,7 @@
 import { HeroSection } from "./components/hero-section";
 import { LinkContact } from "./components/links/link-contact";
 import { SectionCard } from "./components/section-card";
+import { SpringInView } from "./components/spring-in-view";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -43,6 +44,10 @@ export default function Home() {
         bgImgHeight={1365}
         posY={100}
       />
+
+      <SpringInView className={styles.springInView}>
+        <h1>SpringInView</h1>
+      </SpringInView>
     </main>
   );
 }
