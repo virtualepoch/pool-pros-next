@@ -4,6 +4,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Image from "next/image";
 import styles from "./parallax-section.module.css";
 import { InViewOpacity } from "../components/in-view-opacity";
+import { Header } from "../components/header";
 
 export const ParallaxSection = () => {
   const parallaxSection = useRef();
@@ -38,7 +39,8 @@ export const ParallaxSection = () => {
           // horizontal
           className={styles.parallaxLayer1}
         >
-          <h1 className={`route-header ${styles.parallaxHeader}`}>Services</h1>
+          <Header />
+          {/* <h1 className={`route-header ${styles.parallaxHeader}`}>Services</h1> */}
         </ParallaxLayer>
 
         <ParallaxLayer

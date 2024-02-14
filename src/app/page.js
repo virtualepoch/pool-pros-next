@@ -1,12 +1,19 @@
+import { Footer } from "./components/footer";
+import { Header } from "./components/header";
 import { HeroSection } from "./components/hero-section";
 import { LinkContact } from "./components/links/link-contact";
 import { SectionCard } from "./components/section-card";
 import { SpringInViewOpacity } from "./components/spring-in-view-opacity";
+import { BtnToTop } from "./components/ui/btn-to-top";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className="main">
+      <BtnToTop />
+
+      <Header />
+
       <HeroSection styles={styles} />
 
       <LinkContact />
@@ -48,6 +55,8 @@ export default function Home() {
       <SpringInViewOpacity className={styles.springInView}>
         <h1>Spring In View Opacity</h1>
       </SpringInViewOpacity>
+
+      <Footer />
     </main>
   );
 }

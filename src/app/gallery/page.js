@@ -1,3 +1,5 @@
+import { Footer } from "../components/footer";
+import { Header } from "../components/header";
 import { LinkContact } from "../components/links/link-contact";
 import { ImageSlider } from "./image-slider";
 
@@ -43,11 +45,15 @@ const IMAGES = [
 export default function Gallery() {
   return (
     <main className="main">
+      <Header />
+
       <h1 className="route-header">Gallery</h1>
 
       <ImageSlider images={IMAGES} />
 
       <LinkContact addedClass="contact-link-gallery-page" />
+
+      <Footer />
     </main>
   );
 }

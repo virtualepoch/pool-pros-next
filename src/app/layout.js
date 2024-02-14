@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import { UI } from "./components/ui";
-import { Header } from "./components/header";
-import { Footer } from "./components/footer";
+// import { Header } from "./components/header";
+// import { Footer } from "./components/footer";
 import "./globals.css";
 import "./ui.css";
 
@@ -20,11 +20,11 @@ export default function RootLayout({ children }) {
         <div className="app">
           <UI />
 
-          <Header />
+          {/* <Header /> */}
 
           {children}
 
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </html>
