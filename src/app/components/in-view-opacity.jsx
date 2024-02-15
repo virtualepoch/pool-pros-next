@@ -16,8 +16,8 @@ export const InViewOpacity = ({
     <div
       ref={ref}
       style={{
-        width: "fit-content",
-        height: "fit-content",
+        width: "inherit",
+        height: "inherit",
         opacity: inView ? 1 : 0,
         transition: `opacity ${opacitySpeed} linear`,
       }}
