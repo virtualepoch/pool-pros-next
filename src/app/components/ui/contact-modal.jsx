@@ -1,31 +1,12 @@
 "use client";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { FooterLinks } from "../footer-links";
+import { sendEmail } from "./contact-modal-send-func";
 
 export const ContactModal = ({ modal, setModal }) => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_mo98h3m",
-        "template_153843878",
-        form.current,
-        "52XGouyue0NUaWVBb"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-
+  const sent = () => {
     alert("Message sent. Thanks! We'll get back ASAP.");
     setModal(false);
   };
@@ -70,7 +51,12 @@ export const ContactModal = ({ modal, setModal }) => {
             usually reply within 24 hours.
           </p>
 
-          <form className="form-quote" ref={form} onSubmit={sendEmail}>
+          <form
+            className="form-quote"
+            action={async (formData) => {
+              await sendEmail(formData);
+            }}
+          >
             <input
               className="input-form-quote"
               type="text"
@@ -113,6 +99,7 @@ export const ContactModal = ({ modal, setModal }) => {
               onMouseUp={() => setPressed(false)}
               onTouchStart={() => setPressed(true)}
               onTouchEnd={() => setPressed(false)}
+              onClick={sent}
             />
           </form>
         </div>

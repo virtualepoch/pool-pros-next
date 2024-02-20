@@ -7,6 +7,11 @@ import { Background } from "./parallax/background";
 import { Header } from "./parallax/header";
 import { CSSTransition } from "react-transition-group";
 import { Page1 } from "./parallax/page-1";
+import { ParticleSphere } from "../components/particle-sphere";
+
+export const viewport = {
+  themeColor: "#f00",
+};
 
 export default function Services() {
   const ref = useRef(null);
@@ -19,6 +24,7 @@ export default function Services() {
 
   return (
     <main className={`main ${styles.container}`}>
+      {/* <ParticleSphere /> */}
       <Parallax ref={ref} pages={5} className={styles.parallax}>
         <Background styles={styles} />
 
