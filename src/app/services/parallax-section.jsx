@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styles from "./parallax.module.css";
 // COMPONENTS
@@ -8,9 +8,10 @@ import { Header } from "./parallax/header";
 import { Page1 } from "./parallax/page-1";
 import { BtnToTop } from "./parallax/btn-to-top";
 import { HeaderStickyNav } from "./parallax/header-sticky-nav";
+import { Background } from "./parallax/background";
 
 export const ParallaxSection = ({ images }) => {
-  const ref = useRef(null);
+  const ref = useRef();
 
   return (
     <main className={`main ${styles.container}`}>
@@ -24,13 +25,15 @@ export const ParallaxSection = ({ images }) => {
           <HeaderStickyNav styles={styles} />
         </ParallaxLayer>
 
-        <Landing images={images} styles={styles} />
+        <Landing styles={styles} />
 
         <Page1 styles={styles} />
         <Page1 styles={styles} offset={2} src="/gallery/0.jpeg" />
       </Parallax>
 
       <BtnToTop parallaxRef={ref} styles={styles} />
+
+      <Background styles={styles} images={images} />
     </main>
   );
 };
