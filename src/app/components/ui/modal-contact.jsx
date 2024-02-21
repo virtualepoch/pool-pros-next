@@ -3,7 +3,7 @@ import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 // import emailjs from "@emailjs/browser";
 import { FooterLinks } from "../footer-links";
-import { sendEmail } from "./contact-modal-send-func";
+import { sendEmail } from "./modal-contact-send-func";
 
 export const ContactModal = ({ modal, setModal }) => {
   const sent = () => {
@@ -20,12 +20,12 @@ export const ContactModal = ({ modal, setModal }) => {
       onEnter={() => setAnim(true)}
       onExit={() => setAnim(false)}
       timeout={300}
-      classNames="contact-modal"
+      classNames="modal"
       unmountOnExit
     >
-      <section className="contact-modal" aria-label="Contact Form">
+      <section className="modal" aria-label="Contact Form">
         <div
-          className="contact-modal-content-wrap"
+          className="modal-content-wrap"
           style={{
             opacity: anim ? 1 : 0,
             transform: anim ? "translateY(0)" : "translateY(50%)",
@@ -34,11 +34,11 @@ export const ContactModal = ({ modal, setModal }) => {
               : "none",
           }}
         >
-          <div className="header-form-quote">
+          <div className="modal-header">
             <h3 className="flex-center">Contact Us</h3>
 
             <button
-              className="btn-close-quote"
+              className="btn-close-modal"
               aria-label="Close contact form"
               onClick={() => setModal(false)}
             />

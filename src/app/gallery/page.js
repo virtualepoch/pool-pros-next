@@ -1,10 +1,6 @@
 import { LinkContact } from "../components/links/link-contact";
 import { ImageSlider } from "./image-slider";
 
-export const viewport = {
-  themeColor: "#0ff",
-};
-
 const IMAGES = [
   {
     url: "/gallery/1.jpeg",

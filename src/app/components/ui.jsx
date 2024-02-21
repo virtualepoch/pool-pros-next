@@ -4,6 +4,7 @@ import { useState } from "react";
 import { BtnNav } from "./ui/btn-nav";
 import { Nav } from "./ui/nav";
 import { BtnToTop } from "./ui/btn-to-top";
+import { AlertModal } from "./ui/modal-alert";
 
 export const UI = () => {
   const [nav, setNav] = useState();
@@ -15,6 +16,8 @@ export const UI = () => {
       <Nav nav={nav} setNav={setNav} />
 
       <BtnToTop />
+
+      <AlertModal />
     </div>
   );
 };

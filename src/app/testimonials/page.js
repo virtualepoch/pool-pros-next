@@ -1,13 +1,6 @@
-import { Footer } from "../components/footer";
-import { Header } from "../components/header";
-import { BtnToTop } from "../components/ui/btn-to-top";
 import { ElfsightWidgetComponent } from "./elfsight-widget";
 import { LoadingPanel } from "./loading-panel";
 import styles from "./page.module.css";
-
-export const viewport = {
-  themeColor: "#f0f",
-};
 
 export default function Testimonials() {
   return (

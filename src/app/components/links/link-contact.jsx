@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ContactModal } from "../ui/contact-modal";
+import { ContactModal } from "../ui/modal-contact";
 import { InViewOpacityTransform } from "../in-view-opacity-transform";
 
 export const LinkContact = ({ addedClass, content = "Contact Us" }) => {

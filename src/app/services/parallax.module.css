@@ -1,7 +1,7 @@
 .container {
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
 }
 
 .parallax {
@@ -9,17 +9,93 @@
   position: relative;
 }
 
-.background {
-  position: relative;
-  z-index: -1;
-  display: flex;
-  flex-direction: column;
+.header {
+  background: linear-gradient(#fffe 25%, #fffc 50%, #fff9 75%, transparent);
 }
 
-.backgroundImg {
-  width: auto;
-  min-width: 100%;
+.headerPhoneNumberServices {
+  background: #fff;
+  border-radius: 200px;
+  padding: 10px 20px;
+  box-shadow: 1px 2px 10px 1px #0008;
+}
+
+.sticky {
+  margin-top: 0px;
+  max-height: 0;
+}
+
+.stickyHeader {
+  border-radius: 100px;
+}
+
+.btnNav {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 100%;
+  position: absolute;
+  left: 100%;
+  top: calc(50% - 20px);
+  background: url(/icons/chevron-right-cyan.svg) center / 30% no-repeat,
+    var(--btn-nav-bg);
+    display: none;
+}
+
+.landing {
+  width: 100%;
   height: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.heroStatement {
+  width: 100%;
+  max-width: 500px;
+  height: fit-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 101;
+  margin: auto auto 20%;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 1px 2px 10px 1px #0009;
+  background: linear-gradient(
+    to bottom right,
+    #56fff8aa,
+    #56fff899,
+    #56fff8aa,
+    #56fff899
+  );
+  backdrop-filter: blur(3px);
+  color: #fff;
+  font-size: clamp(1.5rem, 0.9375rem + 2.5vw, 2.25rem);
+  font-family: "Comfortaa", sans-serif;
+  text-align: center;
+  line-height: 150%;
+  text-shadow: 1px 2px 3px #000;
+}
+
+.heroStatement span {
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.landingSwiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.landingImg {
+  width: 100%;
+  height: 100%;
+  position: relative;
   object-fit: cover;
   object-position: center top;
 }
@@ -30,19 +106,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-}
-
-.header {
-  background: linear-gradient(#fff 90%, #fffc 95%, transparent);
-}
-
-.sticky {
-  max-height: 0;
-}
-
-.stickyHeader {
-  border-radius: 100px;
-  box-shadow: inset 0 0 3rem 1rem #0ff, 0 2px 20px 1px #0002;
 }
 
 .card {

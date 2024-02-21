@@ -24,9 +24,11 @@ export const Header = ({ styles }) => {
             />
           </Link>
 
-          <h2 className="header-phone-number">(208)475-4344</h2>
-
-          <h1 className="route-header">Services</h1>
+          <h2
+            className={`header-phone-number ${styles.headerPhoneNumberServices}`}
+          >
+            (208)475-4344
+          </h2>
         </header>
       </InViewOpacity>
     </ParallaxLayer>

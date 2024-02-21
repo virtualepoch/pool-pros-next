@@ -9,13 +9,26 @@ import "./_testing.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Copy for Testing",
-  description:
-    "Copy for testing & revision.",
+  title: "Testing - Boise Pool Pros",
+  description: "Boise's Highly Rated Pool & Spa Professionals.",
+  openGraph: {
+    title: "Boise Pool Pros",
+    description:
+      "Boise's Highly Rated Pool & Spa Professionals",
+    url: "/",
+    siteName: "Boise Pool Pros",
+    images: {
+      url: "/og.jpg",
+      width: 1200,
+      height: 630,
+    },
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export const viewport = {
-  themeColor: "#56fff8cc",
+  themeColor: "#f0f",
 };
 
 export default function RootLayout({ children }) {
