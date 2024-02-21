@@ -1,12 +1,17 @@
-export const HeaderStickyNav = ({ styles }) => {
+import { CSSTransition } from "react-transition-group";
+
+export const HeaderStickyNav = ({ styles, stickyNav = true }) => {
   return (
-    <>
-      <h1 className={`route-header ${styles.stickyHeader}`}>
-        <span>
-          <button className={styles.btnNav} />
-        </span>
-        Services
-      </h1>
-    </>
+    <div className={styles.stickyWrap}>
+      <CSSTransition
+        in={true}
+        unmountOnExit
+        timeout={400}
+      >
+        <button className={styles.btnStickyNav} />
+      </CSSTransition>
+
+      <h1 className={`route-header ${styles.stickyHeader}`}>Services</h1>
+    </div>
   );
 };

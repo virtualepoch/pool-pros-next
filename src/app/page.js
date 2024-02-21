@@ -1,7 +1,7 @@
 import { HeroSection } from "./components/hero-section";
 import { LinkContact } from "./components/links/link-contact";
 import { SectionCard } from "./components/section-card";
-import { SpringInViewOpacity } from "./components/spring-in-view-opacity";
+// import { SpringInViewOpacity } from "./components/spring-in-view-opacity";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -45,9 +45,9 @@ export default function Home() {
         posY={100}
       />
 
-      <SpringInViewOpacity className={styles.springInView}>
+      {/* <SpringInViewOpacity className={styles.springInView}>
         <h1>Spring In View Opacity</h1>
-      </SpringInViewOpacity>
+      </SpringInViewOpacity> */}
     </main>
   );
 }
