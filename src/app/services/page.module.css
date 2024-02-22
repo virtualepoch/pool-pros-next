@@ -1,0 +1,70 @@
+.backgroundSwiper {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.backgroundImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: image-zoom 5s linear infinite;
+}
+
+@keyframes image-zoom {
+  0% {
+    scale: 1;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 1.2;
+  }
+}
+
+.landing {
+  min-height: 50vh;
+}
+
+.routeHeader {
+  position: sticky;
+  top: 0;
+}
+
+.heroStatement {
+  width: 100%;
+  max-width: 500px;
+  height: fit-content;
+  margin: auto;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 1px 2px 10px 1px #0009;
+  background: linear-gradient(
+    to bottom right,
+    #56fff8aa,
+    #56fff899,
+    #56fff8aa,
+    #56fff899
+  );
+  backdrop-filter: blur(3px);
+  color: #fff;
+  font-size: clamp(1.5rem, 0.9375rem + 2.5vw, 2.25rem);
+  font-family: "Comfortaa", sans-serif;
+  text-align: center;
+  line-height: 150%;
+  text-shadow: 1px 2px 3px #000;
+}
+
+.heroStatement span {
+  font-weight: 900;
+  text-transform: uppercase;
+}

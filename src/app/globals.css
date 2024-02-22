@@ -116,14 +116,14 @@ button:focus {
 
 .app {
   width: 100%;
-  max-width: 1400px;
   min-height: 100vh;
-  margin: auto;
 }
 
 .main {
   width: 100%;
+  max-width: 1400px;
   min-height: 100vh;
+  margin: auto;
   position: relative;
 }
 

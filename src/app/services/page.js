@@ -1,10 +1,12 @@
-import { ParallaxSection } from "./parallax-section";
+import { Landing } from "./components/landing";
+import { LandingBg } from "./components/landing-bg";
+import styles from "./page.module.css";
 
 export const metadata = {
   title: "Services - Boise Pool Pros",
   openGraph: {
     title: "Boise Pool Pros",
-    description: "Boise's Highly Rated Pool & Spa Professionals",
+    description: "Boise's Highly Rated Pool & Spa Service Professionals",
     url: "/",
     siteName: "Boise Pool Pros",
     images: {
@@ -17,12 +19,14 @@ export const metadata = {
   },
 };
 
-const IMAGES = [
-  { url: "/home/pool-1024.jpg", alt: "image one", width: 1024, height: 2164 },
-  { url: "/home/tech-1024.jpg", alt: "image one", width: 1024, height: 1365 },
-  { url: "/gallery/3.jpeg", alt: "image one", width: 1024, height: 2164 },
-];
-
 export default function Services() {
-  return <ParallaxSection images={IMAGES} />;
+  return (
+    <>
+      <LandingBg styles={styles} />
+      <div className={`route-header ${styles.routeHeader}`}>Services</div>
+      <main className="main">
+        <Landing styles={styles} />
+      </main>
+    </>
+  );
 }

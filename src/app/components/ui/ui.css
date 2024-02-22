@@ -1,9 +1,11 @@
 .ui {
   width: 100%;
+  max-width: 1400px;
   height: 0;
   position: sticky;
   top: 0;
   z-index: 101;
+  margin: auto;
 }
 
 /* BUTTON NAV MENU */
@@ -309,9 +311,9 @@
 .btn-to-top {
   width: 40px;
   height: 40px;
-  position: fixed;
+  position: absolute;
   right: 10px;
-  bottom: 15px;
+  top: calc(100vh - 55px);
   z-index: 98;
   border: 1px solid transparent;
   border-radius: 5px;
