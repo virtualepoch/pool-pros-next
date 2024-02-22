@@ -497,3 +497,26 @@ button:focus {
   position: relative;
   box-shadow: 1px 2px 10px 1px #0005;
 }
+
+/* CSSTransition SERVICES NAV BUTTON */
+.btnNavServices-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.btnNavServices-enter-active {
+  opacity: 1;
+  transform: none;
+ 
+}
+
+.btnNavServices-exit {
+  opacity: 1;
+  transform: none;
+}
+
+.btnNavServices-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 400ms ease, transform 300ms ease;
+}

@@ -1,10 +1,6 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
 import Image from "next/image";
-
-import "swiper/css";
-import "swiper/css/effect-fade";
+import { useEffect, useState } from "react";
 
 const images = [
   { url: "/home/pool-1024.jpg", alt: "image one", width: 1024, height: 2164 },
@@ -13,26 +9,39 @@ const images = [
 ];
 
 export const LandingBg = ({ styles }) => {
+  const [imageIndex, setImageIndex] = useState(0);
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTime(() => 5000);
+    }, 1);
+
+    const interval = setInterval(() => {
+      setImageIndex((index) => (index === images.length - 1 ? 0 : index + 1));
+    }, time);
+
+    return () => clearInterval(interval);
+  }, [time]);
+
   return (
-    <Swiper
-      className={styles.backgroundSwiper}
-      centeredSlides
-      crossFade
-      autoplay={{ delay: 5000 }}
-      effect="fade"
-      modules={[EffectFade, Autoplay]}
-    >
-      {images.map((images) => (
-        <SwiperSlide key={images.url}>
-          <Image
-            className={styles.backgroundImg}
-            src={images.url}
-            alt={images.alt}
-            width={images.width}
-            height={images.height}
-          />
-        </SwiperSlide>
+    <div className={styles.landingBg}>
+      {images.map((images, index) => (
+        <Image
+          className={
+            imageIndex === index
+              ? `${styles.backgroundImg} ${styles.active}`
+              : styles.backgroundImg
+          }
+          priority
+          key={images.url}
+          src={images.url}
+          alt={images.alt}
+          width={images.width}
+          height={images.height}
+          aria-hidden={imageIndex !== index}
+        />
       ))}
-    </Swiper>
+    </div>
   );
 };
