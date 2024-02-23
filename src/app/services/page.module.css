@@ -1,11 +1,11 @@
 .btnNavServices {
-  border: solid red;
   width: 50px;
   height: 50px;
   position: absolute;
   left: 10px;
   top: 15px;
   z-index: 101010;
+  border-radius: 100%;
   background: url(/icons/chevron-right-cyan.svg) center / 30% no-repeat,
     var(--btn-nav-bg);
   transition: opacity 500ms ease, transform 300ms ease;
@@ -34,14 +34,22 @@
   object-fit: cover;
   z-index: -1;
   opacity: 0;
-  scale: 1;
 }
 
 .backgroundImg.active {
   z-index: 0;
   opacity: 1;
-  scale: 1.2;
-  transition: opacity 1s ease, scale 6s linear;
+  transition: opacity 1s ease;
+  animation: zoom 6s linear infinite;
+}
+
+@keyframes zoom {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.2;
+  }
 }
 
 .landing {
@@ -49,23 +57,16 @@
 }
 
 .routeHeader {
-  border: solid;
   width: 100%;
   max-width: 1400px;
   position: sticky;
   top: 0;
   z-index: 100;
   text-align: center;
-}
-
-.headerBg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -2;
-  background: linear-gradient(to left, transparent, #0ffa, transparent);
+  color: #fff;
+  font: 700 40px sans-serif;
+  text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 4px #000;
+  padding: 15px 10px;
 }
 
 .heroStatement {
@@ -95,4 +96,17 @@
 .heroStatement span {
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.section {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  box-shadow: 0 -2px 30px 1px #000a;
+  background: radial-gradient(circle at 10% 10%, #0ff, #00f);
+}
+
+.logo {
+  width: 100%;
+  height: auto;
 }

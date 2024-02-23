@@ -1,6 +1,7 @@
 import { BtnAndNav } from "./components/btn-and-nav";
 import { Landing } from "./components/landing";
 import { LandingBg } from "./components/landing-bg";
+import { Section1 } from "./components/section-1";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -24,13 +25,14 @@ export default function Services() {
   return (
     <>
       <LandingBg styles={styles} />
-      <div className={`route-header ${styles.routeHeader}`}>
-        <div className={styles.headerBg} />
+      <div className={styles.routeHeader}>
         <BtnAndNav styles={styles} />
         Services
       </div>
       <main className="main">
         <Landing styles={styles} />
+
+        <Section1 styles={styles} />
       </main>
     </>
   );

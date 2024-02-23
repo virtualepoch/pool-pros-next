@@ -8,7 +8,7 @@ export const BtnAndNav = ({ styles }) => {
 
   useEffect(() => {
     function handleScroll() {
-      setState(window.scrollY > 0 ? true : false);
+      setState(window.scrollY > 400 ? true : false);
     }
 
     window.addEventListener("scroll", handleScroll);
