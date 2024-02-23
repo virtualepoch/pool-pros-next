@@ -1,23 +1,23 @@
 import { ParallaxBg } from "./components/parallax-bg";
 import { HeroSection } from "./components/hero-section";
-import { LinkContact } from "./components/links/link-contact";
 import { SectionCard } from "./components/section-card";
+// import { LinkContact } from "./components/links/link-contact";
 // import { SpringInViewOpacity } from "./components/spring-in-view-opacity";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className="main">
+    <>
       <ParallaxBg
         src={"/gallery/9.jpg"}
         alt={"Hero image for home page- a glistening pool."}
         width={900}
         height={598}
-        objectPosition="bottom"
+        objectPosition="right"
       />
 
       <HeroSection styles={styles} />
-
+      
       <SectionCard
         header="Residential and Commercial Services"
         content1="Fully Certified"
@@ -53,6 +53,6 @@ export default function Home() {
       {/* <SpringInViewOpacity className={styles.springInView}>
         <h1>Spring In View Opacity</h1>
       </SpringInViewOpacity> */}
-    </main>
+    </>
   );
 }
