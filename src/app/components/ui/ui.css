@@ -229,7 +229,8 @@
   width: 100%;
   max-width: 280px;
   min-height: 64px;
-  margin: 0 auto 60px auto;
+  margin: 50px auto;
+  position: relative;
   padding: 5px 10px;
   border-radius: 300px;
   background: radial-gradient(circle at 45% 40%, #0dd, #0d0b88 170%);
@@ -239,8 +240,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
-  bottom: 10px;
 }
 
 .contact-link.contact.contact-link-gallery-page {
@@ -542,14 +541,17 @@ input.btn-submit-form,
   max-width: 300px;
   height: auto;
   margin: 0 auto;
-  padding: 20px 50px;
+  padding: 0px 50px;
 }
 
 .logo-testing-number {
   width: 50px;
   height: 50px;
-  border-radius: 100%;
-  background-color: #fff;
+  position: absolute;
+  left: calc(50% - 110px);
+  top: -10px;
   display: grid;
   place-items: center;
+  color: #fff;
+  text-shadow: var(--text-shadow-dark);
 }

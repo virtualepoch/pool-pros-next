@@ -1,3 +1,4 @@
+import { ParallaxBg } from "./components/parallax-bg";
 import { HeroSection } from "./components/hero-section";
 import { LinkContact } from "./components/links/link-contact";
 import { SectionCard } from "./components/section-card";
@@ -7,9 +8,15 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className="main">
-      <HeroSection styles={styles} />
+      <ParallaxBg
+        src={"/gallery/9.jpg"}
+        alt={"Hero image for home page- a glistening pool."}
+        width={900}
+        height={598}
+        objectPosition="bottom"
+      />
 
-      <LinkContact />
+      <HeroSection styles={styles} />
 
       <SectionCard
         header="Residential and Commercial Services"
@@ -26,8 +33,6 @@ export default function Home() {
         bgImgHeight={2164}
         posY={20}
       />
-
-      <LinkContact />
 
       <SectionCard
         header="Technical Services"

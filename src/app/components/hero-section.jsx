@@ -28,7 +28,7 @@ export const HeroSection = ({ styles }) => {
               transition: "transform 1s ease, opacity 1s ease",
             }}
           >
-            Your Pool and Spa Specialists
+            Boise&apos;s Highly Rated Pool & Spa Service Professionals
           </h1>
         </div>
 
@@ -65,13 +65,13 @@ export const HeroSection = ({ styles }) => {
         since 2010.
       </h2>
 
-      <div
+      {/* <div
         className={styles.heroImg}
         style={{
           opacity: anim1 ? 1 : 0,
           transition: "opacity 1.5s ease",
         }}
-      />
+      /> */}
     </section>
   );
 };

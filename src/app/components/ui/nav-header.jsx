@@ -6,15 +6,15 @@ export const NavHeader = ({ setNav }) => {
     <header className="nav-header">
       <Link
         href="/"
-        className="idahomeserv-logo-link"
+        className="site-logo-link"
         onClick={() => {
           setNav(false);
         }}
       >
         <Image
-          className="idahomeserv-logo"
-          src="/t/1.png"
-          alt="IdaHomeServ LLC Logo"
+          className="site-logo"
+          src="/t/1.webp"
+          alt="Boise Pool Pros logo and link to home page."
           width={800}
           height={432}
         />
