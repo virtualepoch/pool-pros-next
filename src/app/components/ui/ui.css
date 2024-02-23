@@ -229,7 +229,7 @@
   width: 100%;
   max-width: 280px;
   min-height: 64px;
-  margin: 50px auto;
+  margin: 0 auto 50px;
   position: relative;
   padding: 5px 10px;
   border-radius: 300px;
@@ -538,7 +538,7 @@ input.btn-submit-form,
 }
 .logo-testing {
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
   height: auto;
   margin: 0 auto;
   padding: 0px 50px;

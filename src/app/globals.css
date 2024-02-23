@@ -213,6 +213,7 @@ button:focus {
   right: 0;
   top: 0;
   object-fit: cover;
+  transition: transform 200ms ease;
 }
 
 /* FOOTER */

@@ -44,6 +44,11 @@
   filter: drop-shadow(1px 2px 3px #000a);
   background-image: linear-gradient(111deg, #56fff8 20%, #3168ff 78%);
 }
+@media (max-width: 700px) {
+  .heroHeader {
+    font-size: 30px;
+  }
+}
 
 .heroServicesList {
   width: fit-content;
@@ -57,7 +62,7 @@
   padding: 5px 5px 2px 20px;
   font-size: 20px;
   text-shadow: 0 0 5px #000;
-  background: radial-gradient(circle at 10px 50%, #fffa 4px, transparent 6px),
+  background: radial-gradient(circle at 10px 50%, #fff 2px, transparent 4px),
     linear-gradient(40deg, #3168ff44 9%, #56fff844 78%);
   backdrop-filter: blur(10px);
   border-radius: 5px;

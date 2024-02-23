@@ -17,7 +17,7 @@ export const InViewOpacityTransform = ({
       style={{
         opacity: inView ? 1 : 0,
         transform: inView ? "none" : "translateY(50%)",
-        transition: `opacity ${opacitySpeed} ease,transform ${transformSpeed} ease`,
+        transition: `opacity ${opacitySpeed} ease, transform ${transformSpeed} ease`,
       }}
     >
       {children}
