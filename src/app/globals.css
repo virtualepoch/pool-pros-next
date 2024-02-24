@@ -69,18 +69,25 @@
 }
 
 html {
-  width: 100vw;
+  border: 5px solid red;
   height: 100vh;
+  overflow: hidden;
 }
 
 body {
+  border: 5px solid blue;
   width: 100%;
   height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 10px;
   background: var(--bg);
   color: var(--text);
   font-weight: var(--font-weight);
   font-size: var(--font-size);
   font-family: var(--font-family);
+  -webkit-overflow-scrolling: touch;
 }
 
 button {
@@ -125,10 +132,6 @@ button:focus {
 .app {
   width: 100%;
   height: 100%;
-  position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 10px;
 }
 
 .main {
