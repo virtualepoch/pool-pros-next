@@ -233,7 +233,7 @@
   left: 0;
   right: 0;
   margin: auto;
-  top: calc(100vh - 80px);
+  top: calc(100vh - 100px);
   z-index: 10;
   padding: 3px 10px;
   border-radius: 300px;
