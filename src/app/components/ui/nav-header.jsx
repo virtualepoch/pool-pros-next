@@ -13,7 +13,7 @@ export const NavHeader = ({ setNav }) => {
       >
         <Image
           className="site-logo"
-          src="/t/1.webp"
+          src="/t/1.png"
           alt="Boise Pool Pros logo and link to home page."
           width={800}
           height={432}

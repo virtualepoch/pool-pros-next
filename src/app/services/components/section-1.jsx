@@ -5,10 +5,10 @@ export const Section1 = ({ styles, images }) => {
     <div className={styles.section}>
       <Image
         className={styles.logo}
-        src={"/t/9.webp"}
+        src={"/gallery/1.jpeg"}
         alt="logo"
-        width={400}
-        height={400}
+        width={640}
+        height={480}
       />
     </div>
   );

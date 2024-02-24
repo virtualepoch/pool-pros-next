@@ -13,7 +13,7 @@ export default function Home() {
         alt={"Hero image for home page- a glistening pool."}
         width={900}
         height={598}
-        objectPosition="right"
+        objectPosition="CENTER"
       />
 
       <HeroSection styles={styles} />

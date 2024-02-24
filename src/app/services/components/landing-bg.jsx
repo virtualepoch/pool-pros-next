@@ -3,9 +3,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const images = [
-  { url: "/home/pool-1024.jpg", alt: "image one", width: 1024, height: 2164 },
+  { url: "/gallery/0.jpeg", alt: "image one", width: 1024, height: 2164 },
+  { url: "/gallery/7.png", alt: "image one", width: 1024, height: 2164 },
   { url: "/home/tech-1024.jpg", alt: "image one", width: 1024, height: 1365 },
-  { url: "/gallery/3.jpeg", alt: "image one", width: 1024, height: 2164 },
 ];
 
 export const LandingBg = ({ styles }) => {

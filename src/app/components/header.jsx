@@ -2,19 +2,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, FreeMode, Navigation } from "swiper/modules";
+import { EffectFade, FreeMode, Navigation } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/effect-coverflow";
+import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 
 const images = [
-  { src: "/globals/site-logo.png" },
-  { src: "/t/1.webp" },
+  { src: "/t/1.png" },
   { src: "/t/2.png" },
   { src: "/t/3.png" },
-  { src: "/t/4.webp" },
-  { src: "/t/5.webp" },
+  { src: "/t/4.png" },
 ];
 
 export const Header = () => {
@@ -28,34 +26,21 @@ export const Header = () => {
           "--swiper-navigation-color": "#0ffa",
         }}
         loop
-        // speed={500}
-        grabCursor
         navigation
-        centeredSlides
-        watchSlidesProgress
-        slidesPerView="auto"
-        initialSlide={1}
-        effect="coverflow"
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 200,
-          modifier: 4,
-          slideShadows: false,
-        }}
-        modules={[EffectCoverflow, FreeMode, Navigation]}
+        effect="fade"
+        modules={[EffectFade, Navigation]}
       >
         {images.map((images, index) => (
           <SwiperSlide key={images.url}>
             <div className="logo-testing-wrap">
-              <div className="logo-testing-number">{index}</div>
+              <div className="logo-testing-number">{index + 1}</div>
               <Image
                 priority
                 className="logo-testing"
                 src={images.src}
                 alt="Boise Pool Pros Logo"
-                width={400}
-                height={400}
+                width={512}
+                height={512}
               />
             </div>
           </SwiperSlide>
