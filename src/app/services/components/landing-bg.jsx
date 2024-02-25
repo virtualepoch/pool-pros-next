@@ -40,7 +40,7 @@ export const LandingBg = ({ styles }) => {
               : styles.backgroundImg
           }
           style={{
-            transform: `translateY(${scrollY / 2}px)`,
+            transform: `translateY(-${scrollY / 2}px)`,
           }}
           priority
           key={images.url}

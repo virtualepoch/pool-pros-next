@@ -1,4 +1,4 @@
-import { LinkContact } from "../components/ui/btn-and-modal-contact";
+import { BtnAndModalContact } from "../components/ui/btn-and-modal-contact";
 import { ImageSlider } from "./image-slider";
 
 const IMAGES = [
@@ -47,7 +47,7 @@ export default function Gallery() {
 
       <ImageSlider images={IMAGES} />
 
-      <LinkContact addedClass="contact-link-gallery-page" />
+      <BtnAndModalContact addedClass="contact-link-gallery-page" />
     </main>
   );
 }
