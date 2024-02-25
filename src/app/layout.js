@@ -63,6 +63,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <div className="app">
           <UI />
 
           <Header />
@@ -70,6 +71,7 @@ export default function RootLayout({ children }) {
           {children}
 
           <Footer />
+        </div>
       </body>
     </html>
   );

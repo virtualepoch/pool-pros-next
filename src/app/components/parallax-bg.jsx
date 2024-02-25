@@ -9,6 +9,24 @@ export const ParallaxBg = ({ src, alt, width, height, objectPosition }) => {
     setTimeout(() => setAnim(true), 1);
   }, [setAnim]);
 
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const parallaxStyle = {
+    opacity: anim ? 1 : 0,
+    transition: "opacity 1.5s ease",
+    objectPosition: objectPosition,
+    transform: `translateY(${scrollY / 2}px)`,
+  };
+
   return (
     <Image
       className="parallax-bg-img"
@@ -17,11 +35,7 @@ export const ParallaxBg = ({ src, alt, width, height, objectPosition }) => {
       alt={alt}
       width={width}
       height={height}
-      style={{
-        opacity: anim ? 1 : 0,
-        transition: "opacity 1.5s ease",
-        objectPosition: objectPosition,
-      }}
+      style={parallaxStyle}
     />
   );
 };

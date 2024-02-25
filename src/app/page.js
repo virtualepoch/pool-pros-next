@@ -9,15 +9,15 @@ export default function Home() {
   return (
     <>
       <ParallaxBg
-        src={"/gallery/9.jpg"}
-        alt={"Hero image for home page- a glistening pool."}
+        src="/gallery/9.jpg"
+        alt="Hero image for home page- a glistening pool."
         width={900}
         height={598}
-        objectPosition="CENTER"
+        objectPosition="center"
       />
 
       <HeroSection styles={styles} />
-      
+
       <SectionCard
         header="Residential and Commercial Services"
         content1="Fully Certified"
