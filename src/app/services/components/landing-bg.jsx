@@ -19,11 +19,11 @@ export const LandingBg = ({ styles }) => {
     return () => clearInterval(interval);
   }, []);
 
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     function handleScroll() {
-      setScrollPosition(window.scrollY);
+      setScrollY(window.scrollY);
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -40,7 +40,7 @@ export const LandingBg = ({ styles }) => {
               : styles.backgroundImg
           }
           style={{
-            transform: `translateY(-${scrollPosition / 2}px)`,
+            transform: `translateY(${scrollY / 2}px)`,
           }}
           priority
           key={images.url}

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Parallax } from "react-scroll-parallax";
+// import { Parallax } from "react-scroll-parallax";
 
 export const ParallaxBg = ({ src, alt, width, height, objectPosition }) => {
   const [anim, setAnim] = useState();
@@ -25,17 +25,11 @@ export const ParallaxBg = ({ src, alt, width, height, objectPosition }) => {
     opacity: anim ? 1 : 0,
     transition: "opacity 1.5s ease",
     objectPosition: objectPosition,
-    // transform: `translateY(${scrollY / 2}px)`,
+    transform: `translateY(${scrollY / 2}px)`,
   };
 
   return (
-    <Parallax
-    speed={-100}
-      // rootMargin={"100vh"}
-      // translateY={["-50vh", "0vh"]}
-      // easing="easeInQuad"
-      // shouldAlwaysCompleteAnimation
-    >
+    <div className="parallax-bg">
       <Image
         className="parallax-bg-img"
         priority
@@ -45,6 +39,6 @@ export const ParallaxBg = ({ src, alt, width, height, objectPosition }) => {
         height={height}
         style={parallaxStyle}
       />
-    </Parallax>
+    </div>
   );
 };
