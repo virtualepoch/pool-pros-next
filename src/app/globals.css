@@ -139,11 +139,8 @@ button:focus {
   width: 100%;
   height: fit-content;
   position: relative;
-  z-index: 10;
   display: flex;
   flex-direction: column;
-  /* transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d; */
 }
 
 .site-logo-link {
@@ -181,6 +178,7 @@ button:focus {
   letter-spacing: 3px;
   text-align: center;
   font: 900 20px sans-serif;
+  text-shadow: 0 0 2px #fff;
 }
 
 .route-header {
@@ -206,6 +204,7 @@ button:focus {
   width: 100%;
   height: auto;
   min-height: 100vh;
+  max-height: 100vh;
   position: fixed;
   left: 0;
   right: 0;
