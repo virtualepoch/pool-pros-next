@@ -5,6 +5,11 @@
   padding: 50px 0;
   background: #fff;
   box-shadow: 0 0 10px 1px #000a;
+  margin: auto;
+  position: relative;
+  left: 0;
+  top: -100vh;
+  z-index: 1;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
 }
