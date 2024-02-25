@@ -225,34 +225,81 @@
   transition: transform 100ms ease, border-width 100ms ease;
 }
 
-.contact-link.contact {
+.btn-contact-container {
+  border: solid red;
+  width: 100%;
+  height: 60px;
+  min-height: 60px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 0 10px 1px #000;
+}
+
+.btn-contact-wrap {
+  border: solid blue;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  height: fit-content;
+  position: relative;
+  transition: 1s ease;
+}
+
+.btn-contact-wrap.fixed {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: auto;
+  z-index: 10101;
+  transition: 1s ease;
+}
+
+.btn-contact {
   width: 100%;
   max-width: 280px;
   min-height: 50px;
   position: relative;
+  margin: auto;
+  top: -10px;
   z-index: 10;
-  padding: 3px 10px;
-  border-radius: 300px;
-  background: radial-gradient(circle at 45% 40%, #0dd, #0d0b88 170%);
-  border-top: 1px solid #0ff;
-  border-bottom: 1px solid #095ac5;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 5px;
+  color: var(--contact-link-text);
+  font: 20px "Chivo", sans-serif;
   text-align: center;
+  padding: 3px 10px;
+  border-radius: 300px;
+  border-top: 1px solid #0ff;
+  border-bottom: 1px solid #095ac5;
+  text-shadow: 0 0 1px black, 0 0 2px black;
+  background: radial-gradient(circle at 45% 40%, #0dd, #0d0b88 170%);
+  transition: 1s ease;
 }
 
-.contact-link.contact.contact-link-gallery-page {
+.btn-contact.fixed {
+  width: 50px;
+  max-width: 50px;
+  height: 50px;
+  max-height: 50px;
+  top: auto;
+  bottom: 15px;
+  transition: 1s ease;
+  transform: translateX(calc(50vw - 50px));
+}
+
+.btn-contact.contact-link-gallery-page {
   margin-top: 100px;
 }
 
-.contact-link.contact .contact-link-text {
+.btn-contact .contact-link-text {
   width: 70%;
   text-align: center;
-}
-
-.contact-link.contact::before {
-  display: none;
 }
 
 .contact-link-icon {
@@ -262,10 +309,10 @@
   transition: background-position 300ms ease;
 }
 
-.contact-link.contact:hover {
+.btn-contact:hover {
   background: radial-gradient(circle at 45% 40%, #0ff, #0d0b88 220%);
 }
-.contact-link.contact:hover .contact-link-icon {
+.btn-contact:hover .contact-link-icon {
   background-position: right;
   transition: background-position 300ms ease;
 }

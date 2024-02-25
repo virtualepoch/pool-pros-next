@@ -1,8 +1,7 @@
-import { FixedBgImg, ParallaxBg } from "./components/fixed-bg-img";
+import { FixedBgImg } from "./components/fixed-bg-img";
 import { HeroSection } from "./components/hero-section";
+import { BtnAndModalContact } from "./components/ui/btn-and-modal-contact";
 import { SectionCard } from "./components/section-card";
-// import { LinkContact } from "./components/links/link-contact";
-// import { SpringInViewOpacity } from "./components/spring-in-view-opacity";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -17,6 +16,8 @@ export default function Home() {
       />
 
       <HeroSection styles={styles} />
+
+      <BtnAndModalContact />
 
       <SectionCard
         header="Residential and Commercial Services"

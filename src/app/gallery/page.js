@@ -1,4 +1,4 @@
-import { LinkContact } from "../components/links/link-contact";
+import { LinkContact } from "../components/ui/btn-and-modal-contact";
 import { ImageSlider } from "./image-slider";
 
 const IMAGES = [

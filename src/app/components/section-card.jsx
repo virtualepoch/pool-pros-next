@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { InViewOpacityTransform } from "./in-view-opacity-transform";
 import styles from "./css/section.module.css";
-import { LinkContact } from "./links/link-contact";
 
 export const SectionCard = ({
   header,
@@ -21,8 +20,6 @@ export const SectionCard = ({
 }) => {
   return (
     <section className={styles.sectionCard}>
-      <LinkContact />
-
       <div className={styles.sectionCardHeaderWrap}>
         <InViewOpacityTransform opacitySpeed="1s">
           <h2 className={styles.sectionCardHeader}>{header}</h2>
