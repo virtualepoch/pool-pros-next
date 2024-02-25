@@ -10,26 +10,29 @@ export const ParallaxBg = ({ src, alt, width, height, objectPosition }) => {
     setTimeout(() => setAnim(true), 1);
   }, [setAnim]);
 
-  const [scrollY, setScrollY] = useState(0);
+  // const [scrollY, setScrollY] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollY(window.scrollY);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   const parallaxStyle = {
     opacity: anim ? 1 : 0,
-    top: `${scrollY / 1.5}px`,
     transition: "opacity 1.5s ease",
+  };
+
+  const imgStyle = {
+    // transform: `translateY(-${scrollY / 1.5}px)`,
     objectPosition: objectPosition,
   };
 
   return (
-    <div className="parallax-bg">
+    <div className="parallax-bg" style={parallaxStyle}>
       <Image
         className="parallax-bg-img"
         priority
@@ -37,7 +40,7 @@ export const ParallaxBg = ({ src, alt, width, height, objectPosition }) => {
         alt={alt}
         width={width}
         height={height}
-        style={parallaxStyle}
+        style={imgStyle}
       />
     </div>
   );

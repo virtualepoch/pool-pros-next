@@ -7,8 +7,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
 }
 
 .flexWrap {

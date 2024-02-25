@@ -7,8 +7,6 @@
   box-shadow: 0 0 10px 1px #000a;
   margin: auto;
   position: relative;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
 }
 
 .sectionCardHeaderWrap {
