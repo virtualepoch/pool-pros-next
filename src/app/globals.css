@@ -213,10 +213,8 @@ button:focus {
 .parallax-bg-img {
   width: 100%;
   min-height: 100%;
+  height: auto;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
   object-fit: cover;
   z-index: -1;
   /* transform: translateZ(-10px) scale(2.1); */

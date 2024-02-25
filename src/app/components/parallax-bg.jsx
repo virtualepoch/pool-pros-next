@@ -23,9 +23,9 @@ export const ParallaxBg = ({ src, alt, width, height, objectPosition }) => {
 
   const parallaxStyle = {
     opacity: anim ? 1 : 0,
+    top: `${scrollY / 1.5}px`,
     transition: "opacity 1.5s ease",
     objectPosition: objectPosition,
-    transform: `translateY(${scrollY / 2}px)`,
   };
 
   return (
