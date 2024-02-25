@@ -21,7 +21,8 @@ export const SectionCard = ({
 }) => {
   return (
     <section className={styles.sectionCard}>
-     
+      <LinkContact />
+
       <div className={styles.sectionCardHeaderWrap}>
         <InViewOpacityTransform opacitySpeed="1s">
           <h2 className={styles.sectionCardHeader}>{header}</h2>

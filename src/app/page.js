@@ -1,4 +1,4 @@
-import { ParallaxBg } from "./components/parallax-bg";
+import { FixedBgImg, ParallaxBg } from "./components/fixed-bg-img";
 import { HeroSection } from "./components/hero-section";
 import { SectionCard } from "./components/section-card";
 // import { LinkContact } from "./components/links/link-contact";
@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <>
-      <ParallaxBg
+      <FixedBgImg
         src="/gallery/9.jpg"
         alt="Hero image for home page- a glistening pool."
         width={900}

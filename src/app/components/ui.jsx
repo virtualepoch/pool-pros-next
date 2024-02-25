@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BtnNav } from "./ui/btn-nav";
 import { Nav } from "./ui/nav";
 // import { BtnToTop } from "./ui/btn-to-top";
-import { LinkContact } from "./links/link-contact";
+// import { LinkContact } from "./links/link-contact";
 // import { AlertModal } from "./ui/modal-alert";
 
 export const UI = () => {
@@ -16,7 +16,7 @@ export const UI = () => {
 
       <Nav nav={nav} setNav={setNav} />
 
-      <LinkContact />
+      {/* <LinkContact /> */}
 
       {/* <BtnToTop /> */}
 
