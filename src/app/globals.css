@@ -143,26 +143,17 @@ button:focus {
 }
 
 .site-logo-link {
-  width: fit-content;
+  max-width: 200px;
   height: auto;
   margin: auto;
-  padding: 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-@media (min-width: 1000px) {
-  .site-logo-link {
-    padding: 0px;
-  }
+  padding: 10px;
 }
 
 .site-logo {
-  width: 30vw;
-  min-width: 140px;
-  max-width: 200px;
+  width: 100%;
   height: auto;
-  filter: drop-shadow(2px 1px 3px #000d);
+  margin: auto;
+  box-shadow: 0 0 5px 1px #0003;
 }
 
 .site-logo-link:focus-visible {
@@ -171,13 +162,14 @@ button:focus {
 
 .header-phone-number {
   width: fit-content;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
   padding: 10px;
-  letter-spacing: 3px;
+  color: #fff;
   text-align: center;
+  letter-spacing: 3px;
   font: 900 20px sans-serif;
-  text-shadow: 0 0 2px #fff;
+  text-shadow: var(--text-shadow-4);
 }
 
 .route-header {
@@ -517,64 +509,4 @@ button:focus {
   object-fit: cover;
   position: relative;
   box-shadow: 1px 2px 10px 1px #0005;
-}
-
-/* CSSTransition SERVICES NAV BUTTON */
-.btnNavServices-enter {
-  opacity: 0;
-  transform: translateY(-100%);
-}
-
-.btnNavServices-enter-active {
-  opacity: 1;
-  transform: none;
-}
-
-.btnNavServices-exit {
-  opacity: 1;
-  transform: none;
-}
-
-.btnNavServices-exit-active {
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: opacity 400ms ease, transform 300ms ease;
-}
-
-/* LOGO TESTING////////////////////////////////////////// */
-
-/* LOGO TESTING */
-.swiper-logo-test {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}
-
-.logo-testing-wrap {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 1px 5px #0007);
-}
-.logo-testing {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  margin: 0 auto;
-  padding: 0px 20px;
-}
-
-.logo-testing-number {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: calc(50% - 110px);
-  top: -10px;
-  display: grid;
-  place-items: center;
-  color: #fff;
-  text-shadow: var(--text-shadow-dark);
 }

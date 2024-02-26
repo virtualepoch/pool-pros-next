@@ -4,7 +4,6 @@ import { CSSTransition } from "react-transition-group";
 
 export const BtnAndNav = ({ styles }) => {
   const [state, setState] = useState();
-  const [anim, setAnim] = useState();
 
   useEffect(() => {
     function handleScroll() {
@@ -15,22 +14,54 @@ export const BtnAndNav = ({ styles }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [setState]);
 
+  ///////////////////////////////////////////////////////
+
+  const [anim, setAnim] = useState();
+
   useEffect(() => {
     setTimeout(() => setAnim(state), 1);
   }, [setAnim, state]);
 
+  //////////////////////////////////////////////////////
+
+  const [nav, setNav] = useState();
+  const [open, setOpen] = useState();
+
+  useEffect(() => {
+    setTimeout(() => setOpen(nav), 1);
+  }, [setOpen, nav]);
+
   return (
-    <CSSTransition in={state} unmountOnExit timeout={500}>
-      <button
-        className={styles.btnNavServices}
-        style={{
-          transform: `translateY(-${anim ? 0 : 100}%)`,
-          opacity: anim ? 1 : 0,
-        }}
-        onClick={() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
-      />
-    </CSSTransition>
+    <>
+      <CSSTransition in={state} unmountOnExit timeout={500}>
+        <button
+          className={
+            nav
+              ? `${styles.btnNavServices} ${styles.open}`
+              : styles.btnNavServices
+          }
+          style={{
+            transform: `translateY(-${anim ? 0 : 100}%)`,
+            opacity: anim ? 1 : 0,
+          }}
+          onClick={() => {
+            setNav(!nav);
+          }}
+        >
+          <div className={styles.btnNavServicesIcon} />
+        </button>
+      </CSSTransition>
+
+      <CSSTransition in={nav} unmountOnExit timeout={500}>
+        <nav
+          className={styles.navServices}
+          style={{
+            // transform: `translateY(-${open ? 0 : 100}%)`,
+            opacity: open ? 1 : 0,
+            transition: `opacity ${open ? 1 : 0}s ease`,
+          }}
+        ></nav>
+      </CSSTransition>
+    </>
   );
 };
