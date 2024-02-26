@@ -69,7 +69,7 @@
   width: fit-content;
   padding: 5px 10px;
   color: #fff;
-  font-size: 25px;
+  font: 22px "Comfortaa", sans-serif;
   text-shadow: 0 0 5px #000;
   border-radius: 5px;
   backdrop-filter: blur(10px);

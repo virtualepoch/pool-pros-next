@@ -1,7 +1,7 @@
-import { BtnAndNav } from "./components/btn-and-nav";
-import { Landing } from "./components/landing";
 import { ZoomBg } from "../components/zoom-bg";
-import { Section1 } from "./components/section-1";
+import { Landing } from "./components/landing";
+import { BtnAndNav } from "./components/btn-and-nav";
+import { ServicesSection } from "./components/services-section";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -27,6 +27,53 @@ const IMAGES = [
   { url: "/home/tech-1024.jpg", alt: "image one", width: 1024, height: 1365 },
 ];
 
+const SERVICES = [
+  {
+    id: "pool-cleaning",
+    header: "Pool Cleaning",
+    image: "/gallery/3.jpeg",
+    content: "Pool Cleaning... What we do",
+  },
+  {
+    id: "spa-cleaning",
+    header: "Spa Cleaning",
+    image: "/gallery/7.png",
+    content: "Spa Cleaning... What we do",
+    imagePosition: "30% 50%",
+  },
+  {
+    id: "pool-maintenance",
+    header: "Pool Maintenance",
+    image: "/gallery/0.jpeg",
+    imagePosition: "0 50%",
+    content: "Pool Maintenance... What we do",
+  },
+  {
+    id: "spa-maintenance",
+    header: "Spa Maintenance",
+    image: "/gallery/7.png",
+    content: "Spa Maintenance... What we do",
+  },
+  {
+    id: "technical-services",
+    header: "Technical Services",
+    image: "/home/tech-1024.jpg",
+    content: "Technical Services... What we do",
+  },
+  {
+    id: "pool-openings",
+    header: "Pool Openings",
+    image: "/gallery/2.jpeg",
+    content: "Pool Openings... What we do",
+  },
+  {
+    id: "pool-closings",
+    header: "Pool Closings",
+    image: "/gallery/2.jpeg",
+    content: "Pool Closings... What we do",
+  },
+];
+
 export default function Services() {
   return (
     <>
@@ -39,7 +86,7 @@ export default function Services() {
         <p>What We Do</p>
       </div>
 
-      <Section1 styles={styles} />
+      <ServicesSection services={SERVICES} styles={styles} />
     </>
   );
 }

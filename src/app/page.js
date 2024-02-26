@@ -3,6 +3,7 @@ import { HeroSection } from "./components/hero-section";
 import { BtnAndModalContact } from "./components/ui/btn-and-modal-contact";
 import { Section } from "./components/section";
 import styles from "./page.module.css";
+import { SwiperAutoFlow } from "./components/swiper-auto-flow";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
 
       <Section
         header="Residential and Commercial Services"
-        assurance="By choosing us for all your weekly pool and spa services, you can rest assured because we are :"
+        assurance="By choosing us for your weekly pool and spa services, you can rest assured. We are :"
         li1="Fully Insured,"
         li2="Fully Certified,"
         li3="and Guarantee Satisfaction!"
@@ -51,6 +52,8 @@ export default function Home() {
         bgImgHeight={1365}
         posY={100}
       />
+
+      <SwiperAutoFlow styles={styles} />
     </>
   );
 }

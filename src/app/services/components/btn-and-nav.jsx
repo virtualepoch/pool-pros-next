@@ -2,6 +2,37 @@
 import { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 
+const links = [
+  {
+    linkName: "Pool Cleaning",
+    linkUrl: "#pool-cleaning",
+  },
+  {
+    linkName: "Spa Cleaning",
+    linkUrl: "#spa-cleaning",
+  },
+  {
+    linkName: "Pool Maintenance",
+    linkUrl: "#pool-maintenance",
+  },
+  {
+    linkName: "Spa Maintenance",
+    linkUrl: "#spa-maintenance",
+  },
+  {
+    linkName: "Technical Services",
+    linkUrl: "#technical-services",
+  },
+  {
+    linkName: "Pool Openings",
+    linkUrl: "#pool-openings",
+  },
+  {
+    linkName: "Pool Closings",
+    linkUrl: "#pool-closings",
+  },
+];
+
 export const BtnAndNav = ({ styles }) => {
   const [state, setState] = useState();
 
@@ -41,8 +72,9 @@ export const BtnAndNav = ({ styles }) => {
               : styles.btnNavServices
           }
           style={{
-            transform: `translateY(-${anim ? 0 : 100}%)`,
             opacity: anim ? 1 : 0,
+            transform: `translateY(-${anim ? 0 : 100}%)`,
+            transition: `opacity 500ms ease, transform 500ms ease`,
           }}
           onClick={() => {
             setNav(!nav);
@@ -52,25 +84,26 @@ export const BtnAndNav = ({ styles }) => {
         </button>
       </CSSTransition>
 
-      <CSSTransition in={nav} unmountOnExit timeout={500}>
+      <CSSTransition in={nav && state} unmountOnExit timeout={700}>
         <nav
           className={styles.navServices}
           style={{
-            // transform: `translateY(-${open ? 0 : 100}%)`,
-            opacity: open ? 1 : 0,
-            transition: `opacity ${open ? 1 : 0}s ease`,
+            opacity: open && state ? 1 : 0,
+            transform: `translateY(-${open && state ? 0 : 25}%)`,
+            transition: `opacity ${
+              open && state ? 700 : 400
+            }ms ease, transform 500ms ease`,
           }}
         >
+          <p className={styles.headerNavServices}>Services</p>
           <ul>
-            <li>
-              <a href="#pool-cleaning">Pool Cleaning</a>
-            </li>
-            <li>Spa Cleaning</li>
-            <li>Pool Maintenance</li>
-            <li>Spa Maintenance</li>
-            <li>Technical Services</li>
-            <li>Pool Openings</li>
-            <li>Pool Closing</li>
+            {links.map((links) => (
+              <li key={links.linkName}>
+                <a href={links.linkUrl} onClick={() => setNav(false)}>
+                  {links.linkName}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </CSSTransition>

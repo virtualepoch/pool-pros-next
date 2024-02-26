@@ -14,21 +14,21 @@
   margin: auto;
   padding: 20px;
   border-radius: 4px;
-  box-shadow: 1px 2px 10px 1px #0009;
-  background: linear-gradient(
+  /* box-shadow: 1px 2px 10px 1px #0009; */
+  /* background: linear-gradient(
     to bottom right,
     #56fff822,
     #56fff844,
     #56fff822,
     #56fff844
   );
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px); */
   color: #fff;
   font-size: clamp(1.5rem, 0.9375rem + 2.5vw, 2.25rem);
   font-family: "Comfortaa", sans-serif;
   text-align: center;
   line-height: 150%;
-  text-shadow: 1px 2px 3px #000;
+  text-shadow: var(--text-shadow-4), 1px 2px 3px #000;
 }
 
 .heroStatement span {
@@ -75,16 +75,7 @@
   border-radius: 25px;
   background: var(--btn-nav-bg);
   background: #fff;
-  transition: 500ms ease;
   box-shadow: 1px 2px 10px 1px #000a;
-}
-
-.btnNavServices.open {
-  width: calc(100% - 80px);
-  max-width: 700px;
-  height: calc(100vh - 100px);
-  background: linear-gradient(#fff4 40px, #fff 55px);
-  transition: 500ms ease;
 }
 
 .btnNavServicesIcon {
@@ -102,18 +93,27 @@
 }
 
 .navServices {
-  border: solid magenta;
   width: calc(100% - 80px);
-  max-width: 700px;
-  height: calc(100vh - 150px);
+  max-width: fit-content;
+  max-height: calc(100vh - 150px);
   position: fixed;
   left: 10px;
   top: 65px;
-  z-index: 101010;
+  z-index: 101;
+  padding: 20px;
+  color: #222;
+  font-family: "latin", sans-serif;
+  text-shadow: none;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 1px 1px 10px 1px #0009;
+}
+
+p.headerNavServices {
+  font: 18px "latin", sans-serif;
 }
 
 .navServices ul {
-  border: solid blue;
   height: 100%;
   padding: 32px 20px;
   display: flex;
@@ -124,6 +124,25 @@
   font-size: 20px;
 }
 
+.navServices li {
+  width: 100%;
+  display: flex;
+}
+.navServices li:hover {
+  border-color: #111;
+}
+
+.navServices a {
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 100px;
+  padding: 5px 10px;
+}
+
+.navServices a:hover {
+  background-color: #f9f9f9;
+}
+
 .routeHeader p {
   margin: auto;
   font-size: clamp(1.5rem, 0.9375rem + 2.5vw, 2.25rem);
@@ -131,26 +150,65 @@
 }
 
 .section {
-  border: 1px solid #0ff;
   width: 100%;
-  min-height: 200vh;
+  min-height: 100vh;
   position: relative;
-  padding: 24px;
+  padding: 24px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
+  box-shadow: 0 -2px 10px 1px #0004;
   background: radial-gradient(circle at 10% 10%, #0ff, #00f);
+  color: #fff;
+  font-size: 20px;
+  text-shadow: var(--text-shadow-3);
 }
 
-.logo {
+.sectionWrapper {
   width: 100%;
-  height: auto;
-  margin: 20px;
-  object-fit: cover;
-  object-position: center;
+  max-width: 1400px;
+  margin: 100px auto;
   position: relative;
+}
+
+.sectionHeader {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  padding: 54px 24px;
+  font-size: 24px;
+}
+
+.sectionImage {
+  width: 80%;
+  height: auto;
+  min-height: 70vh;
+  position: absolute;
+  left: 0;
+  right: auto;
+  object-fit: cover;
+  object-position: 65% 50%;
+}
+
+.sectionContent {
+  width: 80%;
+  min-height: 60vh;
+  margin-top: 5vh;
+  position: absolute;
+  left: auto;
+  right: 0;
+  z-index: 1;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  backdrop-filter: blur(10px);
+  box-shadow: 1px 2px 10px 1px #0005;
 }
 
 .poolCleaning {
