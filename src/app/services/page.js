@@ -1,6 +1,6 @@
 import { BtnAndNav } from "./components/btn-and-nav";
 import { Landing } from "./components/landing";
-import { LandingBg } from "./components/landing-bg";
+import { ZoomBg } from "../components/zoom-bg";
 import { Section1 } from "./components/section-1";
 import styles from "./page.module.css";
 
@@ -21,19 +21,25 @@ export const metadata = {
   },
 };
 
+const IMAGES = [
+  { url: "/gallery/0.jpeg", alt: "image one", width: 1024, height: 2164 },
+  { url: "/gallery/7.png", alt: "image one", width: 1024, height: 2164 },
+  { url: "/home/tech-1024.jpg", alt: "image one", width: 1024, height: 1365 },
+];
+
 export default function Services() {
   return (
     <>
-      <LandingBg styles={styles} />
+      <ZoomBg images={IMAGES} />
+
+      <Landing styles={styles} />
+
       <div className={styles.routeHeader}>
         <BtnAndNav styles={styles} />
-        Services
+        <p>What We Do</p>
       </div>
-      <main className="main">
-        <Landing styles={styles} />
 
-        <Section1 styles={styles} />
-      </main>
+      <Section1 styles={styles} />
     </>
   );
 }

@@ -19,7 +19,7 @@ export const BtnAndModalContact = ({ addedClass, content = "Contact Us" }) => {
 
   return (
     <>
-      <div className="btn-contact-container">
+      <div className={`btn-contact-container ${addedClass}`}>
         <div
           className={btnFixed ? "btn-contact-wrap fixed" : "btn-contact-wrap"}
         >
@@ -39,7 +39,7 @@ export const BtnAndModalContact = ({ addedClass, content = "Contact Us" }) => {
           >
             <p className="contact-link-text">{content}</p>
 
-            <div className={`contact-link-icon ${addedClass}`} />
+            <div className="contact-link-icon" />
           </button>
         </div>
       </div>

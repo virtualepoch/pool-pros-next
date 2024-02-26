@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { InViewOpacityTransform } from "./in-view-opacity-transform";
-import styles from "./css/section.module.css";
+import styles from "./section.module.css";
 
 export const Section = ({
   header,

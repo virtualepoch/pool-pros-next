@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const Section1 = ({ styles, images }) => {
+export const Section1 = ({ styles }) => {
   return (
     <div className={styles.section}>
       <Image
