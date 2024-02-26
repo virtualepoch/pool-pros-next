@@ -15,8 +15,9 @@ export const NavHeader = ({ setNav }) => {
           className="site-logo"
           src="/t/1.png"
           alt="Boise Pool Pros logo and link to home page."
-          width={800}
-          height={432}
+          width={636}
+          height={609}
+          priority
         />
       </Link>
     </header>

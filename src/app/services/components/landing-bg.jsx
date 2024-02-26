@@ -19,16 +19,16 @@ export const LandingBg = ({ styles }) => {
     return () => clearInterval(interval);
   }, []);
 
-  const [scrollY, setScrollY] = useState(0);
+  // const [scrollY, setScrollY] = useState(0);
 
-  useEffect(() => {
-    function handleScroll() {
-      setScrollY(window.scrollY);
-    }
+  // useEffect(() => {
+  //   function handleScroll() {
+  //     setScrollY(window.scrollY);
+  //   }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <div className={styles.landingBg}>
@@ -39,9 +39,9 @@ export const LandingBg = ({ styles }) => {
               ? `${styles.backgroundImg} ${styles.active}`
               : styles.backgroundImg
           }
-          style={{
-            transform: `translateY(-${scrollY / 2}px)`,
-          }}
+          // style={{
+          //   transform: `translateY(-${scrollY / 2}px)`,
+          // }}
           priority
           key={images.url}
           src={images.url}

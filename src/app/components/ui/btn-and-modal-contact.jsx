@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { ContactModal } from "./modal-contact";
-import { InViewOpacityTransform } from "../in-view-opacity-transform";
+import { InViewOpacity } from "../in-view-opacity";
 
 export const BtnAndModalContact = ({ addedClass, content = "Contact Us" }) => {
   const [modal, setModal] = useState();
@@ -21,35 +21,33 @@ export const BtnAndModalContact = ({ addedClass, content = "Contact Us" }) => {
   return (
     <>
       <div className="btn-contact-container">
-        <InViewOpacityTransform>
-          <div
-            className={btnFixed ? "btn-contact-wrap fixed" : "btn-contact-wrap"}
+        <div
+          className={btnFixed ? "btn-contact-wrap fixed" : "btn-contact-wrap"}
+          // style={{
+          //   transform: btnFixed ? "translateY(calc(100vh - 50px))" : "none",
+          // }}
+        >
+          <button
+            className={btnFixed ? "btn-contact fixed" : "btn-contact"}
+            onClick={() => {
+              setModal(true);
+            }}
+            onMouseDown={() => setPressed(true)}
+            onMouseUp={() => setPressed(false)}
+            onTouchStart={() => setPressed(true)}
+            onTouchEnd={() => setPressed(false)}
             style={{
-              transform: btnFixed ? "translateY(calc(100vh - 50px))" : "none",
+              border: pressed ? "2px solid #0ff" : "",
+              boxShadow: pressed ? "none" : "1px 2px 10px 1px #0007",
+              // transform: btnFixed
+              //   ? `{translateX(${window.innerWidth / 2})}`
+              //   : "none",
             }}
           >
-            <button
-              className={btnFixed ? "btn-contact fixed" : "btn-contact"}
-              onClick={() => {
-                setModal(true);
-              }}
-              onMouseDown={() => setPressed(true)}
-              onMouseUp={() => setPressed(false)}
-              onTouchStart={() => setPressed(true)}
-              onTouchEnd={() => setPressed(false)}
-              style={{
-                border: pressed ? "2px solid #0ff" : "",
-                boxShadow: pressed ? "none" : "1px 2px 5px 1px #0003",
-                // transform: btnFixed
-                //   ? `{translateX(${window.innerWidth / 2})}`
-                //   : "none",
-              }}
-            >
-              <p className="contact-link-text">{content}</p>
-              <div className={`contact-link-icon ${addedClass}`} />
-            </button>
-          </div>
-        </InViewOpacityTransform>
+            <p className="contact-link-text">{btnFixed ? "" : content}</p>
+            <div className={`contact-link-icon ${addedClass}`} />
+          </button>
+        </div>
       </div>
 
       <ContactModal modal={modal} setModal={setModal} />
