@@ -65,16 +65,8 @@
   text-align: center;
 }
 
-@media (orientation: landscape) {
-  .content {
-    flex-direction: row-reverse;
-    gap: 0;
-  }
-}
-
 .statement {
   width: fit-content;
-  max-width: 50%;
   padding: 5px 10px;
   color: #fff;
   font-size: 25px;
@@ -83,6 +75,16 @@
   backdrop-filter: blur(10px);
   box-shadow: 2px 2px 15px 1px #0007;
   background: linear-gradient(40deg, #3168ff44 9%, #56fff844 78%);
+}
+
+@media (orientation: landscape) {
+  .content {
+    flex-direction: row-reverse;
+    gap: 0;
+  }
+  .statement {
+    max-width: 50%;
+  }
 }
 
 .statement ul li {
