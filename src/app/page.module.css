@@ -33,27 +33,13 @@
   padding: 32px;
   color: #0ff;
   font: 900 clamp(2.25rem, 1.3333rem + 4.0741vw, 5rem) var(--font-family);
-  text-shadow: var(--text-shadow-2);
+  text-shadow: var(--text-shadow-2), 2px 2px 7px #000a;
 }
 
 .heroServicesList {
   width: fit-content;
   height: fit-content;
   margin: 32px;
-}
-
-@media (max-width: 480px) {
-  .heroHeader {
-    padding: 32px 24px 24px;
-  }
-  .heroServicesList {
-    margin: 20px 24px;
-  }
-}
-@media (max-width: 700px) {
-  .heroHeader {
-    font-size: 30px;
-  }
 }
 
 .heroServicesList li {
@@ -71,14 +57,32 @@
 
 .heroStatement {
   width: 100%;
-  padding: 20px 40px;
+  padding: 32px;
   color: #fff;
   text-align: center;
   text-shadow: 0 0 4px #000;
   font-family: var(--font-family);
   background: #0002;
   backdrop-filter: blur(7px);
-  box-shadow: 0 0 10px 1px #000a;
+  box-shadow: 0 0 10px 1px #0007;
+}
+
+@media (max-width: 480px) {
+  .heroHeader {
+    padding: 32px 24px 24px;
+  }
+  .heroServicesList {
+    margin: 20px 24px;
+  }
+  .heroStatement {
+    padding: 20px 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .heroHeader {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 800px) {

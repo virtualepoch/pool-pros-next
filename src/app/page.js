@@ -1,7 +1,7 @@
 import { FixedBgImg } from "./components/fixed-bg-img";
 import { HeroSection } from "./components/hero-section";
 import { BtnAndModalContact } from "./components/ui/btn-and-modal-contact";
-import { SectionCard } from "./components/section-card";
+import { Section } from "./components/section";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -19,15 +19,16 @@ export default function Home() {
 
       <BtnAndModalContact />
 
-      <SectionCard
+      <Section
         header="Residential and Commercial Services"
-        content1="Fully Certified"
+        assurance="By choosing us for all your weekly pool and spa services, you can rest assured because we are :"
+        li1="Fully Insured,"
+        li2="Fully Certified,"
+        li3="and Guarantee Satisfaction!"
         logoSrc="/globals/cpo.jpg"
         logoAlt="CPO Logo"
         logoWidth={426}
         logoHeight={426}
-        content2="Fully Insured"
-        content3="Satisfaction Guaranteed!"
         bgImgSrc="/home/pool-1024.jpg"
         bgImgAlt="A shallow pool/spa with a large pool in the background"
         bgImgWidth={1024}
@@ -35,25 +36,21 @@ export default function Home() {
         posY={20}
       />
 
-      <SectionCard
+      <Section
         header="Technical Services"
-        content1="Certified Pentair Technicians"
+        assurance="Certified Pentair Technicians"
+        li1="Over a decade of experience!"
+        li2="Satisfaction Guaranteed!"
         logoSrc="/globals/pentair.jpg"
         logoAlt="Pentair Service Professional Logo"
         logoWidth={512}
         logoHeight={512}
-        content2="Over a decade of experience!"
-        content3="Satisfaction Guaranteed!"
         bgImgSrc="/home/tech-1024.jpg"
         bgImgAlt="Several pool pumps and filters fit snugly in a small room."
         bgImgWidth={1024}
         bgImgHeight={1365}
         posY={100}
       />
-
-      {/* <SpringInViewOpacity className={styles.springInView}>
-        <h1>Spring In View Opacity</h1>
-      </SpringInViewOpacity> */}
     </>
   );
 }

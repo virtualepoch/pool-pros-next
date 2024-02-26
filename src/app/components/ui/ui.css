@@ -225,14 +225,17 @@
   transition: transform 100ms ease, border-width 100ms ease;
 }
 
+:root {
+  --contact-btn-trans: 1s;
+}
+
 .btn-contact-container {
   /* border: solid red; */
   width: 100%;
-  height: 60px;
+  height: 70px;
   min-height: 60px;
   position: relative;
   background: #fff;
-  box-shadow: 0 0 10px 1px #000;
 }
 
 .btn-contact-wrap {
@@ -243,6 +246,8 @@
   position: absolute;
   left: 0;
   right: 0;
+  transition: transform var(--contact-btn-trans) ease;
+  transform: none;
 }
 
 .btn-contact-wrap.fixed {
@@ -255,7 +260,7 @@
   top: 0;
   bottom: auto;
   z-index: 10;
-  transition: 1s ease;
+  transition: transform var(--contact-btn-trans) ease;
   transform: translateY(calc(100vh - 50px));
 }
 
@@ -280,6 +285,9 @@
   border-bottom: 1px solid #095ac5;
   text-shadow: 0 0 1px black, 0 0 2px black;
   background: radial-gradient(circle at 45% 40%, #0dd, #0d0b88 170%);
+  transition: var(--contact-btn-trans) ease,
+    height var(--contact-btn-trans) ease var(--contact-btn-trans);
+  transform: none;
 }
 
 .btn-contact.fixed {
@@ -290,7 +298,7 @@
   top: auto;
   bottom: 15px;
   gap: 0;
-  transition: 1s ease;
+  transition: var(--contact-btn-trans) ease;
   transform: translateX(calc(50vw - 43px));
 }
 
@@ -307,6 +315,20 @@
 .btn-contact .contact-link-text {
   width: 70%;
   text-align: center;
+  overflow: hidden;
+  opacity: 1;
+  transition: width calc(var(--contact-btn-trans) / 2)
+      calc(var(--contact-btn-trans) / 2),
+    opacity calc(var(--contact-btn-trans) / 2) ease
+      calc(var(--contact-btn-trans) / 2);
+}
+
+.btn-contact.fixed .contact-link-text {
+  width: 0;
+  opacity: 0;
+  transition: width calc(var(--contact-btn-trans) / 2)
+      calc(var(--contact-btn-trans) / 2),
+    opacity calc(var(--contact-btn-trans) / 2) ease;
 }
 
 .btn-contact .contact-link-icon {

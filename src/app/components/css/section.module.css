@@ -1,22 +1,26 @@
-.sectionCard {
+.section {
   width: 100%;
   height: fit-content;
   position: relative;
+  /* !!!- Z-INDEX BELOW NEEDS TO BE SET AT- ( -1 )!!!" SO THAT THE "CONTACT BUTTON" IS ON TOP OF IT */
+  z-index: -1;
   padding: 50px 0;
   background: #fff;
 }
 
-.sectionCardHeaderWrap {
-  width: 100%;
+.wrap {
   max-width: 1400px;
   margin: auto;
+}
+
+.headerWrap {
+  width: 100%;
   height: fit-content;
-  min-height: 150px;
   position: relative;
   overflow: hidden;
 }
 
-.sectionCardHeader {
+.header {
   width: 100%;
   height: fit-content;
   min-height: 100%;
@@ -35,10 +39,8 @@
   background-image: linear-gradient(111deg, #56fff8 9%, #0d0b88 78%);
 }
 
-.sectionCardContent {
+.contentWrap {
   width: 100%;
-  max-width: 1400px;
-  margin: auto;
   height: fit-content;
   position: relative;
   display: flex;
@@ -48,32 +50,57 @@
   overflow: hidden;
 }
 
-.contentWrap {
+.content {
+  width: 100%;
+  height: 100%;
   min-height: 50vh;
-  position: relative;
-  margin: 30px auto;
   z-index: 1;
+  position: relative;
+  padding: 32px;
   display: flex;
+  gap: 50px;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  gap: 20px;
   text-align: center;
 }
 
-.contentWrap h2 {
+@media (orientation: landscape) {
+  .content {
+    flex-direction: row-reverse;
+    gap: 0;
+  }
+}
+
+.statement {
   width: fit-content;
+  max-width: 50%;
   padding: 5px 10px;
   color: #fff;
-  text-shadow: 0 0 5px #000;
   font-size: 25px;
+  text-shadow: 0 0 5px #000;
   border-radius: 5px;
   backdrop-filter: blur(10px);
   box-shadow: 2px 2px 15px 1px #0007;
   background: linear-gradient(40deg, #3168ff44 9%, #56fff844 78%);
 }
 
-.sectionCardBgImg {
+.statement ul li {
+  width: fit-content;
+  margin: auto;
+  padding: 5px;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  box-shadow: 2px 2px 15px 1px #0007;
+}
+
+.bgImg {
   width: 100%;
   height: auto;
   max-height: 100vh;
@@ -82,14 +109,8 @@
   object-position: center;
 }
 
-.sectionCardLogo {
-  width: 40vw;
-  min-width: 150px;
-  max-width: 200px;
-  height: 40vw;
-  min-height: 150px;
-  max-height: 200px;
-  margin: 0 auto;
-  border-radius: 100%;
-  box-shadow: 2px 2px 15px 1px #0007;
+@media (max-width: 480px) {
+  .content {
+    padding: 20px 24px;
+  }
 }
