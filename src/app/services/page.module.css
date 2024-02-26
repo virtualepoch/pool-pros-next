@@ -112,6 +112,18 @@
   z-index: 101010;
 }
 
+.navServices ul {
+  border: solid blue;
+  height: 100%;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
 .routeHeader p {
   margin: auto;
   font-size: clamp(1.5rem, 0.9375rem + 2.5vw, 2.25rem);
@@ -139,4 +151,9 @@
   object-fit: cover;
   object-position: center;
   position: relative;
+}
+
+.poolCleaning {
+  width: 100%;
+  height: 100vh;
 }

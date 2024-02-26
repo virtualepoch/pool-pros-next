@@ -60,7 +60,19 @@ export const BtnAndNav = ({ styles }) => {
             opacity: open ? 1 : 0,
             transition: `opacity ${open ? 1 : 0}s ease`,
           }}
-        ></nav>
+        >
+          <ul>
+            <li>
+              <a href="#pool-cleaning">Pool Cleaning</a>
+            </li>
+            <li>Spa Cleaning</li>
+            <li>Pool Maintenance</li>
+            <li>Spa Maintenance</li>
+            <li>Technical Services</li>
+            <li>Pool Openings</li>
+            <li>Pool Closing</li>
+          </ul>
+        </nav>
       </CSSTransition>
     </>
   );
