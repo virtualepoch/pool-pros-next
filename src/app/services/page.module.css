@@ -49,6 +49,7 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 20;
   margin: auto;
   z-index: 100;
   display: flex;
@@ -64,6 +65,11 @@
   box-shadow: 0 0 10px 1px #0007;
 }
 
+.headerText {
+  position: relative;
+  z-index: 101;
+}
+
 .btnNavServices {
   width: 50px;
   max-width: 50px;
@@ -75,7 +81,6 @@
   border-radius: 25px;
   background: var(--btn-nav-bg);
   background: #fff;
-  box-shadow: 1px 2px 10px 1px #000a;
 }
 
 .btnNavServicesIcon {
@@ -97,9 +102,9 @@
   max-width: fit-content;
   max-height: calc(100vh - 150px);
   position: fixed;
-  left: 10px;
-  top: 65px;
-  z-index: 101;
+  left: 20px;
+  top: 55px;
+  z-index: 100;
   padding: 20px;
   color: #222;
   font-family: "latin", sans-serif;
@@ -151,6 +156,7 @@ p.headerNavServices {
 
 .section {
   width: 100%;
+  height: fit-content;
   min-height: 100vh;
   position: relative;
   padding: 24px 0;
@@ -162,14 +168,15 @@ p.headerNavServices {
   box-shadow: 0 -2px 10px 1px #0004;
   background: radial-gradient(circle at 10% 10%, #0ff, #00f);
   color: #fff;
-  font-size: 20px;
-  text-shadow: var(--text-shadow-3);
+  font-size: 22px;
+  text-shadow: var(--text-shadow-3), 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
 }
 
 .sectionWrapper {
   width: 100%;
   max-width: 1400px;
   margin: 100px auto;
+  padding: 100px 0;
   position: relative;
 }
 
@@ -179,36 +186,41 @@ p.headerNavServices {
   text-align: center;
   padding: 54px 24px;
   font-size: 24px;
+  text-shadow: var(--text-shadow-3);
+}
+
+.imageWrap {
+  perspective: 800px;
+  perspective-origin: 50% 50%;
 }
 
 .sectionImage {
-  width: 80%;
+  width: 100%;
   height: auto;
   min-height: 70vh;
   position: absolute;
   left: 0;
-  right: auto;
+  right: 0;
   object-fit: cover;
   object-position: 65% 50%;
+  border-radius: 24px;
+  transform-style: preserve-3d;
+  box-shadow: 40px 0 40px 1px #0004;
 }
 
 .sectionContent {
-  width: 80%;
+  width: calc(100% - 40px);
   min-height: 60vh;
   margin-top: 5vh;
-  position: absolute;
-  left: auto;
-  right: 0;
-  z-index: 1;
-  padding: 24px;
+  padding: 40px 100px 40px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: right;
-  border-top-left-radius: 24px;
-  border-bottom-left-radius: 24px;
-  backdrop-filter: blur(10px);
-  box-shadow: 1px 2px 10px 1px #0005;
+  text-align: left;
+  /* border-top-left-radius: 24px; */
+  /* border-bottom-left-radius: 24px; */
+  /* backdrop-filter: blur(10px);*/
+  /*  box-shadow: 1px 2px 10px 1px #0005; */
 }
 
 .poolCleaning {

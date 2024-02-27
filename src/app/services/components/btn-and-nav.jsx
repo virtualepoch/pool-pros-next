@@ -34,6 +34,7 @@ const links = [
 ];
 
 export const BtnAndNav = ({ styles }) => {
+  const [pressed, setPressed] = useState();
   const [state, setState] = useState();
 
   useEffect(() => {
@@ -71,9 +72,14 @@ export const BtnAndNav = ({ styles }) => {
               ? `${styles.btnNavServices} ${styles.open}`
               : styles.btnNavServices
           }
+          onMouseDown={() => setPressed(true)}
+          onMouseUp={() => setPressed(false)}
+          onTouchStart={() => setPressed(true)}
+          onTouchEnd={() => setPressed(false)}
           style={{
             opacity: anim ? 1 : 0,
             transform: `translateY(-${anim ? 0 : 100}%)`,
+            boxShadow: pressed ? "none" : "1px 2px 10px 1px #0007",
             transition: `opacity 500ms ease, transform 500ms ease`,
           }}
           onClick={() => {

@@ -2,6 +2,7 @@
 import { useInView } from "react-intersection-observer";
 
 export const InViewOpacity = ({
+  className,
   rootMargin = "-20%",
   triggerOnce = true,
   opacitySpeed = "700ms",
@@ -15,6 +16,7 @@ export const InViewOpacity = ({
   return (
     <div
       ref={ref}
+      className={className}
       style={{
         width: "inherit",
         height: "inherit",

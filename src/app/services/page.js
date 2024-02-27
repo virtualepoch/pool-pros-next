@@ -32,13 +32,15 @@ const SERVICES = [
     id: "pool-cleaning",
     header: "Pool Cleaning",
     image: "/gallery/3.jpeg",
-    content: "Pool Cleaning... What we do",
+    content:
+      "Pool Cleaning... What we do... -The Boise Pool Pros are certified, insured, and experienced pool and spa openers. When it comes to pool openings we are not only certified and insured, but also very experienced. You can rest assured that we will get you pool opened, cleaned, and the equipment running and finely tuned. -The Boise Pool Pros are certified, insured, and experienced pool and spa openers. When it comes to pool openings we are not only certified and insured, but also very experienced. You can rest assured that we will get you pool opened, cleaned, and the equipment running and finely tuned.",
   },
   {
     id: "spa-cleaning",
     header: "Spa Cleaning",
     image: "/gallery/7.png",
-    content: "Spa Cleaning... What we do",
+    content:
+      "Spa Cleaning... What we do... -The Boise Pool Pros are certified, insured, and experienced pool and spa openers. When it comes to pool openings we are not only certified and insured, but also very experienced. You can rest assured that we will get you pool opened, cleaned, and the equipment running and finely tuned.",
     imagePosition: "30% 50%",
   },
   {
@@ -83,7 +85,7 @@ export default function Services() {
 
       <div className={styles.routeHeader}>
         <BtnAndNav styles={styles} />
-        <p>What We Do</p>
+        <p className={styles.headerText}>What We Do</p>
       </div>
 
       <ServicesSection services={SERVICES} styles={styles} />

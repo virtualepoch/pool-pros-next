@@ -263,7 +263,7 @@
   bottom: auto;
   z-index: 10;
   transition: transform var(--contact-btn-trans) ease;
-  transform: translateY(calc(100vh - 50px));
+  transform: translateY(calc(100vh - 70px));
 }
 
 .btn-contact {

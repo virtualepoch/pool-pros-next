@@ -6,10 +6,11 @@ export const InViewOpacityTransform = ({
   children,
   opacitySpeed = "700ms",
   transformSpeed = "500ms",
+  triggerOnce = true,
 }) => {
   const { ref, inView } = useInView({
     rootMargin: "0%",
-    triggerOnce: true,
+    triggerOnce: triggerOnce,
   });
 
   return (
