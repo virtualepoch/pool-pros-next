@@ -7,7 +7,7 @@ export const Landing = ({ styles }) => {
         The Boise Pool Pros are <span>highly rated, </span>
         <span>certified, </span>
         <span>insured, </span>
-        and <span>experienced, </span> pool and spa service professionals.
+        and <span>experienced </span> pool and spa service professionals.
       </h2>
 
       <BtnAndModalContact addedClass={styles.btnContact} />

@@ -1,3 +1,22 @@
+.orderSummaryContainer {
+  background-color: #eee;
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 100px 32px;
+}
+
+.pre {
+  border-radius: 32px;
+  box-shadow: 0 2px 20px 1px #0002;
+  padding: 32px;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
+
 .landing {
   height: fit-content;
   min-height: calc(100vh - 126px);
@@ -71,12 +90,12 @@
 }
 
 .btnNavServices {
-  width: 50px;
-  max-width: 50px;
-  height: 50px;
+  width: 40px;
+  max-width: 40px;
+  height: 40px;
   position: fixed;
   left: 10px;
-  top: 15px;
+  top: 20px;
   z-index: 10101;
   border-radius: 25px;
   background: var(--btn-nav-bg);
@@ -84,17 +103,17 @@
 }
 
 .btnNavServicesIcon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   left: 0;
   top: 0;
-  background: url(/icons/chevron-right-black.svg) center / 25% no-repeat;
+  background: url(/icons/chevron-down-solid.svg) center / 25% no-repeat;
   transition: transform 500ms ease;
 }
 
 .btnNavServices.open .btnNavServicesIcon {
-  transform: rotate(90deg);
+  transform: rotate(-180deg);
 }
 
 .navServices {
@@ -169,7 +188,7 @@ p.headerNavServices {
   background: radial-gradient(circle at 10% 10%, #0ff, #00f);
   color: #fff;
   font-size: 22px;
-  text-shadow: var(--text-shadow-3), 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
+  text-shadow: var(--text-shadow-1), 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
 }
 
 .sectionWrapper {
@@ -190,40 +209,43 @@ p.headerNavServices {
 }
 
 .imageWrap {
-  perspective: 800px;
+  perspective: 2800px;
   perspective-origin: 50% 50%;
 }
 
 .sectionImage {
-  width: 100%;
+  width: calc(100% - 40px);
+  max-width: 1000px;
   height: auto;
   min-height: 70vh;
   position: absolute;
-  left: 0;
+  left: -30px;
   right: 0;
+  margin: auto;
   object-fit: cover;
   object-position: 65% 50%;
   border-radius: 24px;
   transform-style: preserve-3d;
   box-shadow: 40px 0 40px 1px #0004;
+  /* cursor: crosshair; */
+  transform: rotateY(-10deg);
+  transition: transform 400ms ease;
+}
+
+.sectionImage:hover {
+  transform: rotateY(10deg);
 }
 
 .sectionContent {
   width: calc(100% - 40px);
-  min-height: 60vh;
-  margin-top: 5vh;
-  padding: 40px 100px 40px 40px;
+  max-width: 960px;
+  height: fit-content;
+  margin: auto;
+  padding: 32px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: left;
-  /* border-top-left-radius: 24px; */
-  /* border-bottom-left-radius: 24px; */
-  /* backdrop-filter: blur(10px);*/
-  /*  box-shadow: 1px 2px 10px 1px #0005; */
-}
-
-.poolCleaning {
-  width: 100%;
-  height: 100vh;
+  text-align: center;
+  filter: drop-shadow(0 0 30px #000);
+  pointer-events: none;
 }

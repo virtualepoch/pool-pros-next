@@ -25,7 +25,7 @@ export const ServicesSection = ({ services, styles }) => {
                 height={480}
                 style={{
                   objectPosition: services.imagePosition,
-                  transform: "rotateY(-30deg)",
+                  // transform: "rotateY(-10deg)",
                 }}
               />
             </InViewOpacity>

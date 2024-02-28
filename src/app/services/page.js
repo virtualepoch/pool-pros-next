@@ -3,6 +3,7 @@ import { Landing } from "./components/landing";
 import { BtnAndNav } from "./components/btn-and-nav";
 import { ServicesSection } from "./components/services-section";
 import styles from "./page.module.css";
+// import { OrderSummary } from "./order-summary";
 
 export const metadata = {
   title: "Services - Boise Pool Pros",
@@ -79,6 +80,8 @@ const SERVICES = [
 export default function Services() {
   return (
     <>
+      {/* <OrderSummary styles={styles} /> */}
+
       <ZoomBg images={IMAGES} />
 
       <Landing styles={styles} />
