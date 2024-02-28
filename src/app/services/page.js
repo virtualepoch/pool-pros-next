@@ -34,14 +34,15 @@ const SERVICES = [
     header: "Pool Cleaning",
     image: "/gallery/3.jpeg",
     content:
-      "Pool Cleaning... What we do... -The Boise Pool Pros are certified, insured, and experienced pool and spa openers. When it comes to pool openings we are not only certified and insured, but also very experienced. You can rest assured that we will get you pool opened, cleaned, and the equipment running and finely tuned. -The Boise Pool Pros are certified, insured, and experienced pool and spa openers. When it comes to pool openings we are not only certified and insured, but also very experienced. You can rest assured that we will get you pool opened, cleaned, and the equipment running and finely tuned.",
+      "Pool Cleaning... What we do... -The Boise Pool Pros are certified, insured, and experienced pool and spa openers. When it comes to pool openings we are not only certified and insured, but also very experienced.",
   },
   {
     id: "spa-cleaning",
     header: "Spa Cleaning",
     image: "/gallery/7.png",
+    imagePosition: "0% 100%",
     content:
-      "Spa Cleaning... What we do... -The Boise Pool Pros are certified, insured, and experienced pool and spa openers. When it comes to pool openings we are not only certified and insured, but also very experienced. You can rest assured that we will get you pool opened, cleaned, and the equipment running and finely tuned.",
+      "Spa Cleaning... What we do... -The Boise Pool Pros are certified, insured, and experienced pool and spa openers. When it comes to pool openings we are not only certified and insured, but also very experienced.",
     imagePosition: "30% 50%",
   },
   {

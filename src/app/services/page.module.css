@@ -173,6 +173,15 @@ p.headerNavServices {
   font-family: "Comfortaa", sans-serif;
 }
 
+.sections {
+  position: relative;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  background-color: #fefefe;
+}
+
 .section {
   width: 100%;
   height: fit-content;
@@ -184,56 +193,40 @@ p.headerNavServices {
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  box-shadow: 0 -2px 10px 1px #0004;
-  background: radial-gradient(circle at 10% 10%, #0ff, #00f);
   color: #fff;
   font-size: 22px;
   text-shadow: var(--text-shadow-1), 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
 }
 
-.sectionWrapper {
-  width: 100%;
-  max-width: 1400px;
-  margin: 100px auto;
-  padding: 100px 0;
-  position: relative;
-}
-
 .sectionHeader {
   width: 100%;
   height: fit-content;
+  position: relative;
+  z-index: 1;
   text-align: center;
   padding: 54px 24px;
   font-size: 24px;
-  text-shadow: var(--text-shadow-3);
-}
-
-.imageWrap {
-  perspective: 2800px;
-  perspective-origin: 50% 50%;
+  text-shadow: var(--text-shadow-3), 4px 3px 7px #000;
 }
 
 .sectionImage {
-  width: calc(100% - 40px);
-  max-width: 1000px;
+  width: 100%;
+  /* max-width: 1000px; */
   height: auto;
   min-height: 70vh;
   position: absolute;
-  left: -30px;
+  left: 0;
   right: 0;
-  margin: auto;
+  margin: 100px auto;
+  bottom: 0;
+  z-index: 0;
   object-fit: cover;
-  object-position: 65% 50%;
-  border-radius: 24px;
-  transform-style: preserve-3d;
-  box-shadow: 40px 0 40px 1px #0004;
-  /* cursor: crosshair; */
-  transform: rotateY(-10deg);
-  transition: transform 400ms ease;
+  object-position: 100% 100%;
 }
 
-.sectionImage:hover {
-  transform: rotateY(10deg);
+.sectionContentWrap {
+  position: relative;
+  z-index: 1;
 }
 
 .sectionContent {
@@ -241,11 +234,17 @@ p.headerNavServices {
   max-width: 960px;
   height: fit-content;
   margin: auto;
+  position: relative;
   padding: 32px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  filter: drop-shadow(0 0 30px #000);
   pointer-events: none;
+  border-left: 1px solid #bbb;
+  border-top: 1px solid #aaa;
+  border-radius: 8px;
+  background: #7777;
+  backdrop-filter: blur(5px);
+  box-shadow: 2px 2px 15px 1px #000a;
 }
