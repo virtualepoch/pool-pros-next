@@ -7,9 +7,8 @@ import { BgGradientAnim } from "./bg-gradient-anim/bg-gradient-anim";
 export const ServicesSection = ({ services, styles }) => {
   return (
     <div className={styles.sections}>
-      
       <BgGradientAnim />
-      
+
       {services.map((services) => (
         <section className={styles.section} key={services.id} id={services.id}>
           <h3 className={styles.sectionHeader}>{services.header}</h3>
@@ -28,15 +27,7 @@ export const ServicesSection = ({ services, styles }) => {
             }
           />
 
-          <InViewOpacityTransform
-            className={styles.sectionContentWrap}
-            rootMargin="0%"
-            triggerOnce={false}
-            opacitySpeed="1000ms"
-            transformSpeed="1000ms"
-          >
-            <p className={styles.sectionContent}>{services.content}</p>
-          </InViewOpacityTransform>
+          <p className={styles.sectionContent}>{services.content}</p>
         </section>
       ))}
     </div>
