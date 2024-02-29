@@ -3,6 +3,7 @@ import { Landing } from "./components/landing";
 import { BtnAndNav } from "./components/btn-and-nav";
 import { ServicesSection } from "./components/services-section";
 import styles from "./page.module.css";
+import { BgGradientAnim } from "./components/bg-gradient-anim/bg-gradient-anim";
 // import { OrderSummary } from "./order-summary";
 
 export const metadata = {
@@ -81,6 +82,7 @@ const SERVICES = [
 export default function Services() {
   return (
     <>
+      {/* <BgGradientAnim /> */}
       {/* <OrderSummary styles={styles} /> */}
 
       <ZoomBg images={IMAGES} />

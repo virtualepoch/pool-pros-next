@@ -175,7 +175,6 @@ p.headerNavServices {
 
 .sections {
   position: relative;
-  padding: 100px 0;
   display: flex;
   flex-direction: column;
   gap: 100px;
@@ -183,10 +182,12 @@ p.headerNavServices {
 }
 
 .section {
+  /* border: solid black; */
   width: 100%;
   height: fit-content;
   min-height: 100vh;
   position: relative;
+  top: -100vh;
   padding: 24px 0;
   display: flex;
   flex-direction: column;
@@ -199,6 +200,7 @@ p.headerNavServices {
 }
 
 .sectionHeader {
+  /* border: solid blue; */
   width: 100%;
   height: fit-content;
   position: relative;
@@ -211,27 +213,30 @@ p.headerNavServices {
 
 .sectionImage {
   width: 100%;
-  /* max-width: 1000px; */
+  max-width: 800px;
   height: auto;
-  min-height: 70vh;
+  /* aspect-ratio: 16/9; */
+  aspect-ratio: 1;
+  /* min-height: 30vh; */
   position: absolute;
   left: 0;
   right: 0;
   margin: 100px auto;
-  bottom: 0;
   z-index: 0;
   object-fit: cover;
   object-position: 100% 100%;
+  box-shadow: 1px 2px 15px 1px #000a;
 }
 
 .sectionContentWrap {
   position: relative;
   z-index: 1;
+  /* border: solid red; */
 }
 
 .sectionContent {
   width: calc(100% - 40px);
-  max-width: 960px;
+  max-width: 760px;
   height: fit-content;
   margin: auto;
   position: relative;
@@ -239,12 +244,14 @@ p.headerNavServices {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #111;
+  text-shadow: none;
   text-align: center;
   pointer-events: none;
-  border-left: 1px solid #bbb;
-  border-top: 1px solid #aaa;
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
   border-radius: 8px;
-  background: #7777;
-  backdrop-filter: blur(5px);
-  box-shadow: 2px 2px 15px 1px #000a;
+  background: #eeeb;
+  backdrop-filter: blur(3px);
+  box-shadow: 2px 3px 20px 1px #0007;
 }

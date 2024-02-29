@@ -2,10 +2,14 @@
 import { InViewOpacity } from "@/app/components/in-view-opacity";
 import { InViewOpacityTransform } from "@/app/components/in-view-opacity-transform";
 import Image from "next/image";
+import { BgGradientAnim } from "./bg-gradient-anim/bg-gradient-anim";
 
 export const ServicesSection = ({ services, styles }) => {
   return (
     <div className={styles.sections}>
+      
+      <BgGradientAnim />
+      
       {services.map((services) => (
         <section className={styles.section} key={services.id} id={services.id}>
           <h3 className={styles.sectionHeader}>{services.header}</h3>

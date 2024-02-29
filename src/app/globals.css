@@ -49,6 +49,28 @@
   --swiper-thumb-size: 40px;
 }
 
+/* ROOT STYLE FOR GRADIENT BACKGROUND ANIMATION */
+:root {
+  --color-bg1: rgb(0, 38, 53);
+  --color-bg2: rgb(0, 225, 255);
+  --color1: 0, 255, 255;
+  --color2: 25, 255, 255;
+  --color3: 55, 200, 200;
+  --color4: 100, 255, 250;
+  --color5: 0, 255, 255;
+  --interactive: 0, 255, 255;
+
+  --circle-size: 80%;
+  --blending: hard-light;
+
+  --color1-rgb: rgb(18, 113, 255);
+  --color2-rgb: rgb(221, 74, 255);
+  --color3-rgb: rgb(100, 220, 255);
+  --color4-rgb: rgb(200, 50, 50);
+  --color5-rgb: rgb(180, 180, 50);
+  --interactive-rgb: rgb(140, 100, 255);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #334;
