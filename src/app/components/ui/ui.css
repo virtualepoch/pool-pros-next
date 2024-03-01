@@ -237,7 +237,7 @@
   height: 70px;
   min-height: 60px;
   position: relative;
-  background: #fff;
+  background: var(--bg);
 }
 
 .btn-contact-wrap {

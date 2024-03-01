@@ -5,7 +5,7 @@
   /* !!!- Z-INDEX BELOW NEEDS TO BE SET AT- ( -1 )!!!" SO THAT THE "CONTACT BUTTON" IS ON TOP OF IT */
   z-index: -1;
   padding: 50px 0;
-  background: #fff;
+  background: var(--bg);
 }
 
 .wrap {

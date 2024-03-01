@@ -148,7 +148,6 @@ button:focus {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  scroll-behavior: smooth;
 }
 
 .main {
@@ -430,6 +429,7 @@ button:focus {
 
 .swiper_container {
   width: 100%;
+  max-width: 1000px;
   aspect-ratio: 3/2;
   min-height: 50vh;
   max-height: 85vh;

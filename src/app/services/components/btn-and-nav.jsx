@@ -4,6 +4,10 @@ import { CSSTransition } from "react-transition-group";
 
 const links = [
   {
+    linkName: "Pool Openings",
+    linkUrl: "#pool-openings",
+  },
+  {
     linkName: "Pool Cleaning",
     linkUrl: "#pool-cleaning",
   },
@@ -22,10 +26,6 @@ const links = [
   {
     linkName: "Technical Services",
     linkUrl: "#technical-services",
-  },
-  {
-    linkName: "Pool Openings",
-    linkUrl: "#pool-openings",
   },
   {
     linkName: "Pool Closings",

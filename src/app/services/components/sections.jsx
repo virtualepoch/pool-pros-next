@@ -1,16 +1,19 @@
 "use client";
-import { InViewOpacity } from "@/app/components/in-view-opacity";
-import { InViewOpacityTransform } from "@/app/components/in-view-opacity-transform";
 import Image from "next/image";
 import { BgGradientAnim } from "./bg-gradient-anim/bg-gradient-anim";
+import { SectionBeforeAfter } from "./section-before-after";
 
-export const ServicesSection = ({ services, styles }) => {
+export const Sections = ({ services, styles }) => {
   return (
     <div className={styles.sections}>
       <BgGradientAnim />
 
       {services.map((services) => (
         <section className={styles.section} key={services.id} id={services.id}>
+          {services.id === "technical-services" && (
+            <div className={styles.inViewRef} />
+          )}
+
           <h3 className={styles.sectionHeader}>{services.header}</h3>
 
           <Image
@@ -19,15 +22,20 @@ export const ServicesSection = ({ services, styles }) => {
             alt="Services section image"
             width={640}
             height={480}
-            style={
-              {
-                // objectPosition: services.imagePosition,
-                // transform: "rotateY(-10deg)",
-              }
-            }
           />
 
           <p className={styles.sectionContent}>{services.content}</p>
+
+          {services.id === "pool-openings" && (
+            <SectionBeforeAfter styles={styles} services={services} />
+          )}
+
+          {services.id === "technical-services" && (
+            <div className={styles.stickersContainer}>
+              <div className={styles.pentairStickers} />
+              <p className={styles.stickersMessage}>We are fully Certified!</p>
+            </div>
+          )}
         </section>
       ))}
     </div>

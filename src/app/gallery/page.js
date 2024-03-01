@@ -3,11 +3,11 @@ import { ImageSlider } from "./image-slider";
 
 const IMAGES = [
   {
-    url: "/gallery/1.jpeg",
+    url: "/gallery/1.jpg",
     alt: "Image one",
   },
   {
-    url: "/gallery/0.jpeg",
+    url: "/gallery/0.jpg",
     alt: "Image two",
   },
   {

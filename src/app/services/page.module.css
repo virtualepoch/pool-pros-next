@@ -1,3 +1,4 @@
+/* TESTING, TESTING, TESTING, TESTING...///////////////////////////////// */
 .orderSummaryContainer {
   background-color: #eee;
   width: 100%;
@@ -15,6 +16,16 @@
   box-shadow: 0 2px 20px 1px #0002;
   padding: 32px;
 }
+
+.watergif {
+  width: 100%;
+  height: 500px;
+  aspect-ratio: 1;
+  position: relative;
+  background: url(https://gifdb.com/images/high/blue-pool-water-reflection-ac7ghsk1xa52q7cn.webp)
+    50% 100% / 100% no-repeat;
+}
+
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
 .landing {
@@ -177,18 +188,17 @@ p.headerNavServices {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 64px;
   background-color: #fefefe;
 }
 
 .section {
-  /* border: solid black; */
   width: 100%;
   height: fit-content;
   min-height: 100vh;
   position: relative;
   top: -100vh;
-  padding: 24px 0;
+  padding: 75px 24px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -200,15 +210,15 @@ p.headerNavServices {
 }
 
 .sectionHeader {
-  /* border: solid blue; */
   width: 100%;
   height: fit-content;
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 54px 24px;
+  padding: 48px 24px;
   font-size: 24px;
-  text-shadow: var(--text-shadow-3), 4px 3px 7px #000;
+  /* text-shadow: var(--text-shadow-3), 4px 3px 7px #000; */
+  text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 2px #000, 0 0 20px #0ff;
 }
 
 .sectionImage {
@@ -220,11 +230,10 @@ p.headerNavServices {
   margin: 0 auto;
   object-fit: cover;
   object-position: 100% 100%;
-  box-shadow: 0 2px 10px 1px #0006;
 }
 
 .sectionContent {
-  width: calc(100% - 40px);
+  width: 100%;
   max-width: 760px;
   height: fit-content;
   margin: 50px auto;
@@ -233,8 +242,117 @@ p.headerNavServices {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
-  text-shadow: 0 0 10px #fff, 0 0 20px #0ff;
+  text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 2px #000, 0 0 20px #0ff;
   text-align: center;
   /* pointer-events: none; */
+}
+
+.beforeAfterContainer {
+  width: 100%;
+  max-width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+@media (max-width: 800px) {
+  .beforeAfterContainer {
+    flex-direction: column;
+  }
+}
+.beforeAfterText {
+  padding: 32px;
+}
+
+.imagesWrap {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+}
+
+.beforeImage,
+.afterImage {
+  position: relative;
+  width: auto;
+  max-width: 100%;
+  height: fit-content;
+  max-height: 400px;
+}
+
+.afterImage {
+  position: absolute;
+  animation: afterImageOpacity 10s infinite linear;
+}
+
+.beforeText,
+.afterText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: fit-content;
+  min-width: 100px;
+  padding: 3px 7px;
+  text-align: center;
+  color: #000;
+  text-shadow: none;
+  background-color: #eee;
+}
+
+.afterText {
+  animation: afterImageOpacity 10s infinite linear;
+}
+
+@keyframes afterImageOpacity {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.inViewRef {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.stickersContainer {
+  width: 100%;
+  max-width: 700px;
+  position: absolute;
+  bottom: 0;
+}
+
+.pentairStickers {
+  width: 100%;
+  height: 400px;
+  bottom: 0;
+  background: url(/services/certified-stickers.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+
+.stickersMessage {
+  width: 100%;
+  padding: 24px;
+  text-align: center;
+  background: rgb(11, 84, 151);
 }
