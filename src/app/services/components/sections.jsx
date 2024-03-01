@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { BgGradientAnim } from "./bg-gradient-anim/bg-gradient-anim";
 import { SectionBeforeAfter } from "./section-before-after";
+import { SiteLogoFloatAnim } from "./site-logo-float-anim";
 
 export const Sections = ({ services, styles }) => {
   return (
@@ -8,7 +9,15 @@ export const Sections = ({ services, styles }) => {
       <BgGradientAnim />
 
       {services.map((services) => (
-        <section className={styles.section} key={services.id} id={services.id}>
+        <section
+          className={
+            services.id === "technical-services"
+              ? `${styles.section} ${styles.technicalServices}`
+              : `${styles.section}`
+          }
+          key={services.id}
+          id={services.id}
+        >
           {services.id === "technical-services" && (
             <div className={styles.inViewRef} />
           )}
@@ -32,26 +41,6 @@ export const Sections = ({ services, styles }) => {
           {services.id === "technical-services" && (
             <>
               <div className={styles.stickersContainer}>
-                <div className={styles.pentairStickersDiv} />
-                <p className={styles.stickersMessage}>
-                  We are fully Certified! div 1024
-                </p>
-              </div>
-
-              <div className={styles.stickersContainer}>
-                <Image
-                  className={styles.pentairStickers}
-                  src="/services/certified-stickers-1024.png"
-                  alt="Services section image"
-                  width={1443}
-                  height={1518}
-                />
-                <p className={styles.stickersMessage}>
-                  We are fully Certified! next img 1024
-                </p>
-              </div>
-
-              <div className={styles.stickersContainer}>
                 <Image
                   className={styles.pentairStickers}
                   src="/services/certified-stickers-512.png"
@@ -63,23 +52,12 @@ export const Sections = ({ services, styles }) => {
                   We are fully Certified! next img 512
                 </p>
               </div>
-
-              <div className={styles.stickersContainer}>
-                <Image
-                  className={styles.pentairStickers}
-                  src="/services/certified-stickers-256.png"
-                  alt="Services section image"
-                  width={512}
-                  height={539}
-                />
-                <p className={styles.stickersMessage}>
-                  We are fully Certified! next img 256
-                </p>
-              </div>
             </>
           )}
         </section>
       ))}
+
+      <SiteLogoFloatAnim styles={styles} />
     </div>
   );
 };

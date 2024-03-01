@@ -195,7 +195,6 @@ p.headerNavServices {
 .section {
   width: 100%;
   height: fit-content;
-  min-height: 100vh;
   position: relative;
   top: -100vh;
   padding: 75px 24px 24px;
@@ -326,6 +325,16 @@ p.headerNavServices {
   }
 }
 
+.section.technicalServices {
+  border: solid blue;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section.technicalServices .sectionImage {
+  width: calc(100% - 48px);
+}
+
 .inViewRef {
   width: 100%;
   height: 100%;
@@ -367,4 +376,49 @@ p.headerNavServices {
   padding: 24px;
   text-align: center;
   background: rgb(11, 84, 151);
+}
+
+/* SITE LOGO FLOATING ANIMATION */
+.siteLogoFloatAnim {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.logoFloatWrap {
+  max-width: 333px;
+  height: auto;
+  display: flex;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 333px 33px #0ff;
+  animation: logoFloat 3s linear infinite;
+}
+
+@keyframes logoFloat {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateX(4deg) rotateY(4deg);
+  }
+  75% {
+    transform: rotateX(-4deg) rotateY(-4deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+}
+
+/* .logoFloatWrap:hover {
+  animation: none;
+} */
+
+.logoFloat {
+  width: 100%;
+  height: auto;
 }
