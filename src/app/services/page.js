@@ -3,8 +3,6 @@ import { Landing } from "./components/landing";
 import { BtnAndNav } from "./components/btn-and-nav";
 import { Sections } from "./components/sections";
 import styles from "./page.module.css";
-import { BgGradientAnim } from "./components/bg-gradient-anim/bg-gradient-anim";
-// import { OrderSummary } from "./order-summary";
 
 export const metadata = {
   title: "Services - Boise Pool Pros",
@@ -84,9 +82,6 @@ const SERVICES = [
 export default function Services() {
   return (
     <>
-      {/* <BgGradientAnim /> */}
-      {/* <OrderSummary styles={styles} /> */}
-
       <ZoomBg images={IMAGES} />
 
       <Landing styles={styles} />
@@ -95,8 +90,6 @@ export default function Services() {
         <BtnAndNav styles={styles} />
         <p className={styles.headerText}>What We Do</p>
       </div>
-
-      {/* <div className={styles.watergif} /> */}
 
       <Sections services={SERVICES} styles={styles} />
     </>
