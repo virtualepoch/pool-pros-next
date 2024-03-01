@@ -30,10 +30,53 @@ export const Sections = ({ services, styles }) => {
           )}
 
           {services.id === "technical-services" && (
-            <div className={styles.stickersContainer}>
-              <div className={styles.pentairStickers} />
-              <p className={styles.stickersMessage}>We are fully Certified!</p>
-            </div>
+            <>
+              <div className={styles.stickersContainer}>
+                <div className={styles.pentairStickersDiv} />
+                <p className={styles.stickersMessage}>
+                  We are fully Certified! div 1024
+                </p>
+              </div>
+
+              <div className={styles.stickersContainer}>
+                <Image
+                  className={styles.pentairStickers}
+                  src="/services/certified-stickers-1024.png"
+                  alt="Services section image"
+                  width={1443}
+                  height={1518}
+                />
+                <p className={styles.stickersMessage}>
+                  We are fully Certified! next img 1024
+                </p>
+              </div>
+
+              <div className={styles.stickersContainer}>
+                <Image
+                  className={styles.pentairStickers}
+                  src="/services/certified-stickers-512.png"
+                  alt="Services section image"
+                  width={512}
+                  height={539}
+                />
+                <p className={styles.stickersMessage}>
+                  We are fully Certified! next img 512
+                </p>
+              </div>
+
+              <div className={styles.stickersContainer}>
+                <Image
+                  className={styles.pentairStickers}
+                  src="/services/certified-stickers-256.png"
+                  alt="Services section image"
+                  width={512}
+                  height={539}
+                />
+                <p className={styles.stickersMessage}>
+                  We are fully Certified! next img 256
+                </p>
+              </div>
+            </>
           )}
         </section>
       ))}

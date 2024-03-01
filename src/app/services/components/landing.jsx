@@ -1,4 +1,4 @@
-import { BtnAndModalContact } from "@/app/components/ui/btn-and-modal-contact";
+import { BtnAndModalContact } from "../../components/ui/btn-and-modal-contact";
 
 export const Landing = ({ styles }) => {
   return (

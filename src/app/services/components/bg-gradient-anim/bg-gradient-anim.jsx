@@ -1,6 +1,6 @@
 "use client";
+// import { FollowCursor } from "../../../components/ui/follow-cursor";
 import styles from "./bg-gradient-anim.module.css";
-import { FollowCursor } from "@/app/components/ui/follow-cursor";
 
 export const BgGradientAnim = () => {
   return (
@@ -20,7 +20,7 @@ export const BgGradientAnim = () => {
               values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
               result="goo"
             />
-            
+
             <feBlend in="SourceGraphic" in2="goo" />
           </filter>
         </defs>
@@ -32,9 +32,9 @@ export const BgGradientAnim = () => {
         <div className={styles.g4}></div>
         <div className={styles.g5}></div>
 
-        <FollowCursor>
+        {/* <FollowCursor>
           <div className={styles.interactive}></div>
-        </FollowCursor>
+        </FollowCursor> */}
       </div>
     </div>
   );

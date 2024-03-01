@@ -165,10 +165,11 @@ button:focus {
 }
 
 .site-logo-link {
-  max-width: 200px;
+  width: fit-content;
+  max-width: 170px;
   height: auto;
   margin: auto;
-  padding: 10px;
+  padding: 15px 10px 10px;
 }
 
 .site-logo {
@@ -321,19 +322,23 @@ button:focus {
   background: #0ff;
 }
 
+.footer-logos-wrap {
+  display: flex;
+  gap: 50px;
+  padding: 10px;
+}
+
 .logo {
-  width: 30vw;
-  min-width: 120px;
-  max-width: 180px;
-  height: 30vw;
-  min-height: 120px;
-  max-height: 180px;
+  width: 100%;
+  max-width: 170px;
+  aspect-ratio: 1;
+  height: auto;
   margin: auto;
   border-radius: 100%;
 }
 
 .copyright-wrap {
-  padding: 50px 20px 5px 20px;
+  padding: 50px 20px 15px 20px;
   text-align: center;
   font: 9px sans-serif;
   line-height: 18px;

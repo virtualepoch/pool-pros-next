@@ -55,7 +55,7 @@ const SERVICES = [
   {
     id: "pool-maintenance",
     header: "Pool Maintenance",
-    image: "/gallery/0.jpeg",
+    image: "/gallery/0.jpg",
     imagePosition: "0 50%",
     content: "Pool Maintenance... What we do",
   },

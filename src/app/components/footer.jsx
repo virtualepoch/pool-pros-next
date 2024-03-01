@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { FooterLinks } from "./footer-links";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -56,29 +57,42 @@ export const Footer = () => {
 
       <FooterLinks />
 
-      <a href="https://cpo.training/">
-        <Image
-          className="logo"
-          src="/globals/cpo.jpg"
-          alt="CPO Logo"
-          width={426}
-          height={426}
-          target="_blank"
-          rel="noreferrer"
-        />
-      </a>
+      <div className="footer-logos-wrap">
+        <a href="https://cpo.training/">
+          <Image
+            className="logo"
+            src="/globals/cpo.jpg"
+            alt="CPO Logo"
+            width={426}
+            height={426}
+            target="_blank"
+            rel="noreferrer"
+          />
+        </a>
 
-      <a href="https://www.pentair.com">
+        <a href="https://www.pentair.com">
+          <Image
+            className="logo"
+            src="/globals/pentair.jpg"
+            alt="Pentair Service Professional Logo"
+            width={512}
+            height={512}
+            target="_blank"
+            rel="noreferrer"
+          />
+        </a>
+      </div>
+
+      <Link href="/" className="site-logo-link">
         <Image
-          className="logo"
-          src="/globals/pentair.jpg"
-          alt="Pentair Service Professional Logo"
+          priority
+          className="site-logo"
+          src="/t/1.png"
+          alt="Boise Pool Pros Logo"
           width={512}
           height={512}
-          target="_blank"
-          rel="noreferrer"
         />
-      </a>
+      </Link>
 
       <div className="copyright-wrap">
         <h3 className="footer-info">IdaHomeServ@gmail.com</h3>

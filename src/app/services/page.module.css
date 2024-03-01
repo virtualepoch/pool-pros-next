@@ -333,21 +333,33 @@ p.headerNavServices {
   position: absolute;
   top: 0;
   left: 0;
+  border: solid magenta;
 }
 
 .stickersContainer {
   width: 100%;
   max-width: 700px;
-  position: absolute;
-  bottom: 0;
+  height: auto;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  /* border: solid rebeccapurple; */
+  filter: drop-shadow(0 0 20px #0009);
+}
+
+.pentairStickersDiv {
+  /* border: solid red; */
+  width: 100%;
+  aspect-ratio: 512/539;
+  height: auto;
+  background: url(/services/certified-stickers-1024.png) 50% 0 no-repeat;
+  background-size: cover;
 }
 
 .pentairStickers {
+  /* border: solid rebeccapurple; */
   width: 100%;
-  height: 400px;
-  bottom: 0;
-  background: url(/services/certified-stickers.png) 50% 0 no-repeat;
-  background-size: cover;
+  height: auto;
 }
 
 .stickersMessage {
