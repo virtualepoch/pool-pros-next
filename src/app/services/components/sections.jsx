@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { BgGradientAnim } from "./bg-gradient-anim/bg-gradient-anim";
 import { SectionBeforeAfter } from "./section-before-after";
