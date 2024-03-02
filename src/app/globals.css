@@ -7,11 +7,11 @@
 
   /* GENERAL GRADIENTS */
   --grad-1: linear-gradient(109.5deg, #56fff8 9.4%, #0d0b88 78.4%);
-  --grad-1-op: linear-gradient(109.5deg, #56fff8cc 9.4%, #0d0b88cc 78.4%);
+  --grad-1-op: linear-gradient(110deg, #56fff8cc 9%, #0d0b88cc 78%);
 
   /* BACKGROUND COLORS */
   --bg: #fafafa;
-  --btn-nav-bg: var(--grad-1-op);
+  --btn-nav-bg: linear-gradient(110deg, #56fff8dd 9%, #0d0b88dd 78%);
   --nav-link-bg-image: radial-gradient(circle at 10% 10%, #0ff, #00f);
 
   /* TEXT COLORS */
@@ -232,7 +232,7 @@ button:focus {
   width: 100%;
   background: var(--grad-1-op);
   position: relative;
-  padding-top: 150px;
+  padding: 150px 24px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -309,7 +309,7 @@ button:focus {
   flex-direction: row;
   /* flex-wrap: wrap; */
   gap: 10px;
-  padding: 15px;
+  padding: 12px;
   margin: auto;
 }
 
@@ -324,13 +324,13 @@ button:focus {
 
 .footer-logos-wrap {
   display: flex;
-  gap: 50px;
-  padding: 10px;
+  gap: 40px;
+  padding: 24px;
 }
 
 .logo {
   width: 100%;
-  max-width: 170px;
+  max-width: 140px;
   aspect-ratio: 1;
   height: auto;
   margin: auto;
@@ -338,16 +338,30 @@ button:focus {
 }
 
 .copyright-wrap {
-  padding: 50px 20px 15px 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  font: 9px sans-serif;
+  font: 12px sans-serif;
   line-height: 18px;
 }
 
-.virtual-epoch-link {
-  padding: 5px;
-  margin-top: 20px;
+.virtual-epoch-link-wrapper {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  z-index: 10101;
   line-height: 12px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.virtual-epoch-link {
+  margin: 0 auto;
+  border: 1px solid;
+  padding: 5px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -430,6 +444,7 @@ button:focus {
 .image-slider {
   width: 100%;
   position: relative;
+  margin-bottom: 100px;
 }
 
 .swiper_container {

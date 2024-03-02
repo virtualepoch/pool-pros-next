@@ -12,19 +12,19 @@ const reviews = [
     clientName: "Lisa Johnson",
     url: "https://g.co/kgs/jdDBtVX",
     reviewText:
-      "These guys are great! They came when they said the would. They answered all my questions promptly and helped me whenever I needed it. They took very good care of us this year. We will definitely have them back next season. Thanks guys! ",
+      "These guys are great! They came when they said the would. They answered all my questions promptly and helped me whenever I needed it. They took very good care of us this year!",
   },
   {
     clientName: "Amethyst",
     url: "https://g.co/kgs/E2QHs5H",
     reviewText:
-      "These guys saved both my 90,000 gallon pool and year-round spa. They’ve done everything from adding aeration, heater & chlorinator replacement, reminding me to order chemicals before they run out, acid washing, winterization, chemical testing, cleaning and helping with leak detection (helping me find a good vendor) and more. They are professional, prompt and pleasant to deal with. ",
+      "These guys saved both my 90,000 gallon pool and year-round spa. They’ve done everything from adding aeration, heater & chlorinator replacement, reminding me to order chemicals before they run out, acid washing, winterization, chemical testing, cleaning... ",
   },
   {
     clientName: "Holly Cormell",
     url: "https://g.co/kgs/NuzoCt8",
     reviewText:
-      "We LOVE IdaHomeServ ... we've used another company before them and switched to Paul and I wish I would of know about IdaHomeServ sooner because the quality of work and customer service is top notch. They pay attention to details, don't rush through their work but take their time and do it correctly and are thorough. The communication is exactly what I would expect and I appreciate being kept in the loop of what is going on with my pool. ",
+      "We LOVE IdaHomeServ ... we've used another company before them and switched to Paul and I wish I would of know about IdaHomeServ sooner because the quality of work and customer service is top notch... ",
   },
 ];
 

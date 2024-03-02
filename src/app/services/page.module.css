@@ -326,23 +326,12 @@ p.headerNavServices {
 }
 
 .section.technicalServices {
-  border: solid blue;
   padding-left: 0;
   padding-right: 0;
 }
 
 .section.technicalServices .sectionImage {
   width: calc(100% - 48px);
-}
-
-.inViewRef {
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: solid magenta;
 }
 
 .stickersContainer {
@@ -352,8 +341,7 @@ p.headerNavServices {
   margin: 32px auto;
   display: flex;
   flex-direction: column;
-  /* border: solid rebeccapurple; */
-  filter: drop-shadow(0 0 20px #0009);
+  filter: drop-shadow(0 -5px 20px #0ff);
 }
 
 .pentairStickersDiv {
@@ -387,19 +375,24 @@ p.headerNavServices {
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1000px;
+  /* perspective: 1000px; */
 }
 
 .logoFloatWrap {
-  max-width: 333px;
+  max-width: 170px;
   height: auto;
   display: flex;
-  transform-style: preserve-3d;
-  box-shadow: 0 0 333px 33px #0ff;
-  animation: logoFloat 3s linear infinite;
+  /* transform-style: preserve-3d; */
+  /* box-shadow: 0 0 333px 33px #0ff; */
+  /* animation: logoFloat 3s linear infinite; */
 }
 
-@keyframes logoFloat {
+.logoFloat {
+  width: 100%;
+  height: auto;
+}
+
+/* @keyframes logoFloat {
   0% {
     transform: rotateX(0deg) rotateY(0deg);
   }
@@ -412,13 +405,4 @@ p.headerNavServices {
   100% {
     transform: rotateX(0deg) rotateY(0deg);
   }
-}
-
-/* .logoFloatWrap:hover {
-  animation: none;
 } */
-
-.logoFloat {
-  width: 100%;
-  height: auto;
-}

@@ -9,12 +9,10 @@ export const SiteLogoFloatAnim = ({ styles }) => {
     <div className={styles.siteLogoFloatAnim}>
       <div
         className={styles.logoFloatWrap}
-        onMouseDown={() => setPressed(true)}
-        onMouseUp={() => setPressed(false)}
         onTouchStart={() => setPressed(true)}
         onTouchEnd={() => setPressed(false)}
         style={{
-          animation: pressed && "none",
+          boxShadow: pressed ? "0 0 100px 10px #0ff" : "0 0 20px 1px #0ff",
         }}
       >
         <Image

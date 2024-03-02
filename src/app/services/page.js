@@ -3,6 +3,8 @@ import { Landing } from "./components/landing";
 import { BtnAndNav } from "./components/btn-and-nav";
 import { Sections } from "./components/sections";
 import styles from "./page.module.css";
+import { BtnAndModalTodoList } from "../_todo-app/btn-and-modal-todo-list";
+import { prisma } from "../../db";
 
 export const metadata = {
   title: "Services - Boise Pool Pros",
@@ -79,9 +81,17 @@ const SERVICES = [
   },
 ];
 
-export default function Services() {
+function getTodos() {
+  return prisma.todo.findMany();
+}
+
+export default async function Services() {
+  const todos = await getTodos();
+
   return (
     <>
+      <BtnAndModalTodoList todos={todos} />
+
       <ZoomBg images={IMAGES} />
 
       <Landing styles={styles} />

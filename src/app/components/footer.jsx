@@ -58,7 +58,7 @@ export const Footer = () => {
       <FooterLinks />
 
       <div className="footer-logos-wrap">
-        <a href="https://cpo.training/">
+        <a href="https://cpo.training/" target="_blank" rel="noreferrer">
           <Image
             className="logo"
             src="/globals/cpo.jpg"
@@ -70,7 +70,7 @@ export const Footer = () => {
           />
         </a>
 
-        <a href="https://www.pentair.com">
+        <a href="https://www.pentair.com" target="_blank" rel="noreferrer">
           <Image
             className="logo"
             src="/globals/pentair.jpg"
@@ -95,30 +95,28 @@ export const Footer = () => {
       </Link>
 
       <div className="copyright-wrap">
-        <h3 className="footer-info">IdaHomeServ@gmail.com</h3>
+        <p className="footer-info">boisepoolpros@gmail.com</p>
 
-        <h3 className="footer-info">
-          8670 West Pembrook Drive, Boise, ID 83704
-        </h3>
+        <p className="footer-info">8670 West Pembrook Drive, Boise, ID 83704</p>
 
-        <h3 className="footer-info">(208) 475-4344</h3>
+        <p className="footer-info">(208) 475-4344</p>
 
-        <h3 className="footer-copyright">
-          Copyright &copy; 2024 IdaHomeServ LLC Pool and Spa, all rights
-          reserved.
-        </h3>
-        <h3 className="footer-info virtual-epoch-link">
+        <p className="footer-copyright">
+          Copyright &copy; 2024 Boise Pool Pros, all rights reserved.
+        </p>
+
+        <p className="footer-info virtual-epoch-link-wrapper">
           Site developed by
           <br />
           <a
-            style={{ textDecoration: "underline" }}
+          className="virtual-epoch-link"
             href="https://www.virtualepoch.com"
             target="_blank"
             rel="noreferrer"
           >
             VirtualEpoch.com
           </a>
-        </h3>
+        </p>
       </div>
     </footer>
   );

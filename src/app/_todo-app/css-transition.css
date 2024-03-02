@@ -1,0 +1,18 @@
+.todo-app-enter {
+  opacity: 0;
+  transform: translateY(50%);
+}
+.todo-app-enter-active {
+  opacity: 1;
+  transform: none;
+  transition: transform 500ms ease, opacity 700ms ease;
+}
+.todo-app-exit {
+  opacity: 1;
+  transform: none;
+  transition: transform 500ms ease, opacity 300ms ease;
+}
+.todo-app-exit-active {
+  opacity: 0;
+  transform: translateY(50%);
+}

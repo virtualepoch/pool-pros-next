@@ -3,7 +3,7 @@ import { ImageSlider } from "./image-slider";
 
 const IMAGES = [
   {
-    url: "/gallery/1.jpg",
+    url: "/gallery/1.jpeg",
     alt: "Image one",
   },
   {

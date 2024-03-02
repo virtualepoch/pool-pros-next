@@ -37,7 +37,7 @@ export const ContactModal = ({ modal, setModal }) => {
       in={modal}
       onEnter={() => setAnim(true)}
       onExit={() => setAnim(false)}
-      timeout={300}
+      timeout={400}
       classNames="modal"
       unmountOnExit
     >

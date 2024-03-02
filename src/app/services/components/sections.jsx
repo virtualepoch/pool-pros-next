@@ -18,10 +18,6 @@ export const Sections = ({ services, styles }) => {
           key={services.id}
           id={services.id}
         >
-          {services.id === "technical-services" && (
-            <div className={styles.inViewRef} />
-          )}
-
           <h3 className={styles.sectionHeader}>{services.header}</h3>
 
           <Image
@@ -49,7 +45,7 @@ export const Sections = ({ services, styles }) => {
                   height={539}
                 />
                 <p className={styles.stickersMessage}>
-                  We are fully Certified! next img 512
+                  We are fully Certified!
                 </p>
               </div>
             </>
