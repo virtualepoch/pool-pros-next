@@ -4,6 +4,7 @@ import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import "./globals.css";
 import "./components/ui/ui.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,6 +66,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="app">
           <UI />
+
+          <Link href="/todo-app" className="todo-app-link" />
 
           <Header />
 

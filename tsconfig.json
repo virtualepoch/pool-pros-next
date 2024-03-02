@@ -23,7 +23,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/app/_todo-app/btn-and-modal-todo-list.jsx"
+    "src/app/todo-app/btn-and-modal-todo-list.jsx"
   ],
   "exclude": ["node_modules"]
 }

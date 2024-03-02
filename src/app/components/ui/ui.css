@@ -616,3 +616,16 @@ input.btn-submit-form,
     radial-gradient(circle at 45% 40%, #0dd, #0d0b88 170%);
   filter: drop-shadow(1px 2px 3px #000a);
 }
+
+.todo-app-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10101;
+  width: 50px;
+  height: 50px;
+  background: url(/icons/chevron-up-cyan.svg) center / 30% no-repeat;
+  transform: rotate(45deg);
+  border-radius: 100%;
+  border-top: 1px solid #0ff;
+}
