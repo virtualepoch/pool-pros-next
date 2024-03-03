@@ -1,0 +1,21 @@
+.app-enter {
+  opacity: 0;
+  transform: translateY(50%);
+}
+
+.app-enter-active {
+  opacity: 1;
+  transform: none;
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.app-exit {
+  opacity: 1;
+  transform: none;
+}
+
+.app-exit-active {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 300ms ease, transform 500ms ease;
+}

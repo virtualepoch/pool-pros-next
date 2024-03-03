@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "./zoom-bg.module.css";
 
-export const ZoomBg = ({images}) => {
+export const ZoomBg = ({ images }) => {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export const ZoomBg = ({images}) => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images]);
 
   return (
     <div className={styles.container}>

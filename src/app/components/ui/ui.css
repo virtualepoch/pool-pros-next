@@ -23,14 +23,14 @@
   backdrop-filter: blur(4px);
   border-radius: 25px;
   box-shadow: 1px 2px 10px 1px #0007;
-  transition: all 300ms ease;
+  transition: 300ms ease;
 }
 
 .btn-nav-bg.nav-open {
   width: calc(100% - 20px);
   max-width: 690px;
   height: calc(100vh - 25px);
-  transition: all 400ms cubic-bezier(0.6, -0.04, 0.735, 0.045);
+  transition: 400ms cubic-bezier(0.6, -0.04, 0.735, 0.045);
 }
 
 .btn-nav {
@@ -615,17 +615,4 @@ input.btn-submit-form,
   background: url(/icons/question-solid.svg) center / 30% no-repeat,
     radial-gradient(circle at 45% 40%, #0dd, #0d0b88 170%);
   filter: drop-shadow(1px 2px 3px #000a);
-}
-
-.todo-app-link {
-  position: fixed;
-  top: 15px;
-  left: 10px;
-  z-index: 10101;
-  width: 50px;
-  height: 50px;
-  background: url(/icons/chevron-up-cyan.svg) center / 30% no-repeat, slategray;
-  transform: rotate(135deg);
-  border-radius: 100%;
-  border-top: solid #0ff;
 }

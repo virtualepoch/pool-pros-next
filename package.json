@@ -21,7 +21,8 @@
     "react-scroll-parallax": "^3.4.5",
     "react-transition-group": "^4.4.5",
     "resend": "^3.2.0",
-    "swiper": "^11.0.6"
+    "swiper": "^11.0.6",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",

@@ -1,6 +1,6 @@
-import { LinkCall } from "./links/link-call";
-import { LinkText } from "./links/link-text";
-import { LinkEmail } from "./links/link-email";
+import { LinkCall } from "../links/link-call";
+import { LinkText } from "../links/link-text";
+import { LinkEmail } from "../links/link-email";
 
 export const FooterLinks = () => {
   return (

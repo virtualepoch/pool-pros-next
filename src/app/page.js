@@ -1,9 +1,9 @@
-import { FixedBgImg } from "./components/fixed-bg-img";
-import { HeroSection } from "./components/hero-section";
+import { FixedBgImg } from "./components/global/fixed-bg-img";
+import { HeroSection } from "./components/global/hero-section";
 import { BtnAndModalContact } from "./components/ui/btn-and-modal-contact";
-import { Section } from "./components/section";
+import { Section } from "./components/global/section";
 import styles from "./page.module.css";
-import { SwiperAutoFlow } from "./components/swiper-auto-flow";
+import { SwiperAutoFlow } from "./components/global/swiper-auto-flow";
 
 export default function Home() {
   return (

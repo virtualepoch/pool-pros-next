@@ -1,4 +1,4 @@
-import { ZoomBg } from "../components/zoom-bg";
+import { ZoomBg } from "../components/global/zoom-bg";
 import { Landing } from "./components/landing";
 import { BtnAndNav } from "./components/btn-and-nav";
 import { Sections } from "./components/sections";
@@ -80,7 +80,6 @@ const SERVICES = [
 ];
 
 export default function Services() {
-
   return (
     <>
       <ZoomBg images={IMAGES} />

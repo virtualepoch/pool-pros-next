@@ -2,7 +2,7 @@
 import { useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import emailjs from "@emailjs/browser";
-import { FooterLinks } from "../footer-links";
+import { FooterLinks } from "../global/footer-links";
 
 export const ContactModal = ({ modal, setModal }) => {
   const form = useRef();
