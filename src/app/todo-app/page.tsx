@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { prisma } from "../../db";
+import { prisma } from "./db";
 import { ItemTodo } from "./item-todo";
 import styles from "./todo-app.module.css";
 

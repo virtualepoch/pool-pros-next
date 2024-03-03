@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { prisma } from "../../../db";
+import { prisma } from "../db";
 import { redirect } from "next/navigation";
 
 import styles from "../todo-app.module.css";
