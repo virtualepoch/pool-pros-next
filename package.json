@@ -5,10 +5,9 @@
   "scripts": {
     "dev": "npm run open-browser && next dev -p 3000",
     "open-browser": "start http://localhost:3000",
-    "build": "prisma generate && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "prisma generate"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
