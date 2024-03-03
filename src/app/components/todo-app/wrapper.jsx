@@ -52,7 +52,7 @@ export const Wrapper = () => {
 
       {todos.map((todo, index) =>
         todo.isEditing ? (
-          <EditForm editTodo={editTask} task={todo} />
+          <EditForm task={todo} key={index} editTodo={editTask} />
         ) : (
           <Item
             task={todo}
