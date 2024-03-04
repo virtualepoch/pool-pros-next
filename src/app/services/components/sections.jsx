@@ -1,14 +1,23 @@
 import Image from "next/image";
 import { BgGradientAnim } from "./bg-gradient-anim/bg-gradient-anim";
-import { SectionBeforeAfter } from "./section-before-after";
+import { SectionBeforeAfter } from "./section-components/section-before-after";
 import { SiteLogoFloatAnim } from "./site-logo-float-anim";
+import { Intro } from "./section-components/intro";
+import { Guarantee } from "./section-components/guarantee";
+import { Details } from "./section-components/details";
+import { WhyChoose } from "./section-components/why-choose";
 
-export const Sections = ({ services, styles }) => {
+import styles from "./sections.module.css";
+
+// CONTENT //////////////////////////////////////////
+import { SERVICES } from "../content/main-content";
+
+export const Sections = () => {
   return (
     <div className={styles.sections}>
       <BgGradientAnim />
 
-      {services.map((services) => (
+      {SERVICES.map((services) => (
         <section
           className={
             services.id === "technical-services"
@@ -18,17 +27,26 @@ export const Sections = ({ services, styles }) => {
           key={services.id}
           id={services.id}
         >
-          <h3 className={styles.sectionHeader}>{services.header}</h3>
+          <header className={styles.header}>
+            <h3>{services.header}</h3>
 
-          <Image
-            className={styles.sectionImage}
-            src={services.image}
-            alt="Services section image"
-            width={640}
-            height={480}
-          />
+            <Image
+              className={styles.headerImage}
+              src={services.image}
+              alt="Services section image"
+              width={640}
+              height={480}
+              style={{ objectPosition: services.imagePosition }}
+            />
+          </header>
 
-          <p className={styles.sectionContent}>{services.content}</p>
+          <Intro styles={styles} services={services} />
+
+          <Guarantee styles={styles} services={services} />
+
+          <Details styles={styles} services={services} />
+
+          <WhyChoose styles={styles} />
 
           {services.id === "pool-openings" && (
             <SectionBeforeAfter styles={styles} services={services} />

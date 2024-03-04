@@ -293,6 +293,10 @@
   transform: none;
 }
 
+.btn-contact:focus-visible {
+  border: solid var(--focus-visible);
+}
+
 .btn-contact.fixed {
   width: 50px;
   max-width: 50px;

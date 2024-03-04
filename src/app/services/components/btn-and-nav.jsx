@@ -76,6 +76,8 @@ export const BtnAndNav = ({ styles }) => {
           onMouseUp={() => setPressed(false)}
           onTouchStart={() => setPressed(true)}
           onTouchEnd={() => setPressed(false)}
+          onMouseEnter={() => setNav(true)}
+          onMouseLeave={() => setNav(false)}
           style={{
             opacity: anim ? 1 : 0,
             transform: `translateY(-${anim ? 0 : 100}%)`,
@@ -93,6 +95,8 @@ export const BtnAndNav = ({ styles }) => {
       <CSSTransition in={nav && state} unmountOnExit timeout={700}>
         <nav
           className={styles.navServices}
+          onMouseEnter={() => setNav(true)}
+          onMouseLeave={() => setNav(false)}
           style={{
             opacity: open && state ? 1 : 0,
             transform: `translateY(-${open && state ? 0 : 25}%)`,

@@ -27,58 +27,6 @@ const IMAGES = [
   { url: "/home/tech-1024.jpg", alt: "image one", width: 1024, height: 1365 },
 ];
 
-const SERVICES = [
-  {
-    id: "pool-openings",
-    header: "Pool Openings",
-    image: "/gallery/2.jpeg",
-    content: "Pool Openings... What we do",
-    beforeImage: "/services/before1-480.jpg",
-    afterImage: "/services/after1-480.jpg",
-  },
-  {
-    id: "pool-cleaning",
-    header: "Pool Cleaning",
-    image: "/gallery/3.jpeg",
-    content:
-      "Pool Cleaning... What we do... -The Boise Pool Pros are certified, insured, and experienced pool and spa openers. When it comes to pool openings we are not only certified and insured, but also very experienced.",
-  },
-  {
-    id: "spa-cleaning",
-    header: "Spa Cleaning",
-    image: "/gallery/7.png",
-    imagePosition: "0% 100%",
-    content:
-      "Spa Cleaning... What we do... -The Boise Pool Pros are certified, insured, and experienced pool and spa openers. When it comes to pool openings we are not only certified and insured, but also very experienced.",
-    imagePosition: "30% 50%",
-  },
-  {
-    id: "pool-maintenance",
-    header: "Pool Maintenance",
-    image: "/gallery/0.jpg",
-    imagePosition: "0 50%",
-    content: "Pool Maintenance... What we do",
-  },
-  {
-    id: "spa-maintenance",
-    header: "Spa Maintenance",
-    image: "/gallery/7.png",
-    content: "Spa Maintenance... What we do",
-  },
-  {
-    id: "technical-services",
-    header: "Technical Services",
-    image: "/home/tech-1024.jpg",
-    content: "Technical Services... What we do",
-  },
-  {
-    id: "pool-closings",
-    header: "Pool Closings",
-    image: "/gallery/2.jpeg",
-    content: "Pool Closings... What we do",
-  },
-];
-
 export default function Services() {
   return (
     <>
@@ -87,11 +35,13 @@ export default function Services() {
       <Landing styles={styles} />
 
       <div className={styles.routeHeader}>
-        <BtnAndNav styles={styles} />
+        <div className={styles.btnAndNavWrap}>
+          <BtnAndNav styles={styles} />
+        </div>
         <p className={styles.headerText}>What We Do</p>
       </div>
 
-      <Sections services={SERVICES} styles={styles} />
+      <Sections />
     </>
   );
 }
