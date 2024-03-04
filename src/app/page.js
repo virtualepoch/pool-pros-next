@@ -30,11 +30,11 @@ export default function Home() {
         logoAlt="CPO Logo"
         logoWidth={426}
         logoHeight={426}
-        bgImgSrc="/home/pool-1024.jpg"
+        bgImgSrc="/gallery/10.jpg"
         bgImgAlt="A shallow pool/spa with a large pool in the background"
         bgImgWidth={1024}
         bgImgHeight={2164}
-        posY={20}
+        objectPosition="50% 55%"
       />
 
       <Section
@@ -51,7 +51,7 @@ export default function Home() {
         bgImgAlt="A shallow pool/spa with a large pool in the background"
         bgImgWidth={1024}
         bgImgHeight={2164}
-        posY={20}
+        objectPosition="50% 20%"
         href="/services"
       />
 
@@ -68,7 +68,7 @@ export default function Home() {
         bgImgAlt="Several pool pumps and filters fit snugly in a small room."
         bgImgWidth={1024}
         bgImgHeight={1365}
-        posY={100}
+        objectPosition="50% 90%"
         href="/services#technical-services"
       />
 

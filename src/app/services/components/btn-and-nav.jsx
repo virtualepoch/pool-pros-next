@@ -105,7 +105,6 @@ export const BtnAndNav = ({ styles }) => {
             }ms ease, transform 500ms ease`,
           }}
         >
-          <p className={styles.headerNavServices}>Services</p>
           <ul>
             {links.map((links) => (
               <li key={links.linkName}>

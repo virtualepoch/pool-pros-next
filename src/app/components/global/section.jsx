@@ -21,6 +21,7 @@ export const Section = ({
   bgImgWidth,
   bgImgHeight,
   posY,
+  objectPosition,
   href = "/services#pool-openings",
 }) => {
   const [pressed, setPressed] = useState();
@@ -87,8 +88,7 @@ export const Section = ({
             width={bgImgWidth}
             height={bgImgHeight}
             style={{
-              top: `${posY}%`,
-              transform: `translateY(-${posY}%)`,
+              objectPosition: `${objectPosition}`,
             }}
           />
         </div>

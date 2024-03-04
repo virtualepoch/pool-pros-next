@@ -4,7 +4,7 @@ import { Header } from "./components/global/header";
 import { Footer } from "./components/global/footer";
 import "./globals.css";
 import "./components/ui/ui.css";
-import { TodoApp } from "./components/todo-app/app";
+// import { TodoApp } from "./components/todo-app/app";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -66,8 +66,6 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="app">
           <UI />
-
-          <TodoApp />
 
           <Header />
 
