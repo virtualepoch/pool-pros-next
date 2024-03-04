@@ -2,8 +2,14 @@ import Image from "next/image";
 
 export const Intro = ({ styles, services }) => {
   return (
-    <div className={styles.introWrap}>
-      <p className={styles.intro}>{services.intro}</p>
+    <div className={styles.intro}>
+      <div className={styles.introContentWrap}>
+        <div className={styles.quoteIconLeft} />
+
+        <p className={styles.introContent}>{services.intro}</p>
+        
+        <div className={styles.quoteIconRight} />
+      </div>
 
       <Image
         className={styles.introImage}

@@ -27,8 +27,8 @@ export const Sections = () => {
           key={services.id}
           id={services.id}
         >
-          <header className={styles.header}>
-            <h3>{services.header}</h3>
+          <header className={styles.headerWrap}>
+            <h3 className={styles.header}>{services.header}</h3>
 
             <Image
               className={styles.headerImage}
@@ -40,34 +40,36 @@ export const Sections = () => {
             />
           </header>
 
-          <Intro styles={styles} services={services} />
+          <div className={styles.sectionContentWrap}>
+            <Intro styles={styles} services={services} />
 
-          <Guarantee styles={styles} services={services} />
+            <Guarantee styles={styles} services={services} />
 
-          <Details styles={styles} services={services} />
+            <Details styles={styles} services={services} />
 
-          <WhyChoose styles={styles} />
+            <WhyChoose styles={styles} />
 
-          {services.id === "pool-openings" && (
-            <SectionBeforeAfter styles={styles} services={services} />
-          )}
+            {services.id === "pool-openings" && (
+              <SectionBeforeAfter styles={styles} services={services} />
+            )}
 
-          {services.id === "technical-services" && (
-            <>
-              <div className={styles.stickersContainer}>
-                <Image
-                  className={styles.pentairStickers}
-                  src="/services/certified-stickers-512.png"
-                  alt="Services section image"
-                  width={512}
-                  height={539}
-                />
-                <p className={styles.stickersMessage}>
-                  We are fully Certified!
-                </p>
-              </div>
-            </>
-          )}
+            {services.id === "technical-services" && (
+              <>
+                <div className={styles.stickersContainer}>
+                  <Image
+                    className={styles.pentairStickers}
+                    src="/services/certified-stickers-512.png"
+                    alt="Services section image"
+                    width={512}
+                    height={539}
+                  />
+                  <p className={styles.stickersMessage}>
+                    We are fully Certified!
+                  </p>
+                </div>
+              </>
+            )}
+          </div>
         </section>
       ))}
 

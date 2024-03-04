@@ -11,34 +11,34 @@
 }
 
 .section {
-  /* border: solid; */
   width: 100%;
   max-width: 1400px;
   height: fit-content;
   position: relative;
-  padding: 64px 24px 24px;
+  padding: 64px 0 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 64px;
-  overflow: hidden;
-  /* text-shadow: var(--text-shadow-1), 0 0 5px #000, 0 0 10px #000, 0 0 15px #000; */
 }
 
-.header {
-  /* border: solid rebeccapurple; */
+.headerWrap {
   width: 100%;
   height: fit-content;
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 48px 24px;
   color: #fff;
   text-shadow: var(--text-shadow-2);
   font-size: 32px;
   overflow: hidden;
-  /* text-shadow: var(--text-shadow-3), 4px 3px 7px #000; */
-  /* text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 2px #000, 0 0 20px #0ff; */
+}
+
+.header {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 48px 24px 24px;
+  box-shadow: inset 0 0 10px 1px #0004;
 }
 
 .headerImage {
@@ -56,24 +56,64 @@
   object-position: center;
 }
 
-/* INTRO ////////////////////////////////////////////////////// */
-.introWrap {
-  /* border: solid red; */
+.sectionContentWrap {
+  position: relative;
+  padding: 48px 24px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+/* INTRO ////////////////////////////////////////////////////// */
+.intro {
+  display: flex;
+  align-items: center;
   gap: 24px;
 }
 
 @media (max-width: 1050px) {
-  .introWrap {
+  .intro {
     flex-direction: column;
   }
 }
 
-.intro {
-  /* border: solid blue; */
+.introContentWrap {
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quoteIconLeft,
+.quoteIconRight {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 0;
+  bottom: auto;
+  z-index: 0;
+  background: url(/icons/quote-left-solid.svg) center / 100% no-repeat;
+}
+
+.introContent {
+  position: relative;
+  z-index: 1;
   padding: 24px 0;
   display: flex;
   align-items: center;
+}
+
+.quoteIconRight {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  z-index: 0;
+  background-image: url(/icons/quote-right-solid.svg);
 }
 
 .introImage {
@@ -96,17 +136,16 @@
 
 .guaranteeHeader {
   margin: auto;
+  text-align: center;
 }
 
 .guaranteeContentWrap {
-  /* border: solid red; */
   width: 100%;
   max-width: 700px;
   display: flex;
   align-items: center;
   gap: 24px;
   font-size: 20px;
-  /* text-align: center; */
 }
 
 .guaranteeImage {
@@ -201,7 +240,7 @@
 .sectionWhyChoose {
   width: 100%;
   max-width: 700px;
-  padding: 24px 24px 32px 54px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   border-radius: 24px;
@@ -209,27 +248,36 @@
 }
 
 .whyChooseHeader {
-  padding: 24px;
+  padding: 24px 0;
   text-align: center;
 }
 
 .whyChooseList {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
   overflow: visible;
-  position: relative;
+  font-size: 20px;
 }
 
-.whyChooseItem::before {
-  content: "";
-  width: 30px;
+.whyChooseItem {
+  position: relative;
+  z-index: 1;
+}
+
+.whyChooseIcon {
+  width: 64px;
   min-width: 30px;
-  height: 30px;
+  height: 64px;
   position: absolute;
-  left: -35px;
+  left: 24px;
+  top: -12px;
+  z-index: -1;
   margin: auto;
-  background: url(/icons/drupal.svg) 50% 0% / 80% no-repeat;
+  overflow: visible;
+  opacity: 0.3;
+  background: url(/icons/drupal.svg) center / 80% no-repeat;
   filter: drop-shadow(0 1px 4px #00f);
 }
 
@@ -237,6 +285,7 @@
   font-weight: 700;
 }
 
+/* BEFORE/AFTER ////////////////////////////////////// */
 .beforeAfterContainer {
   width: 100%;
   max-width: fit-content;
@@ -245,6 +294,7 @@
   align-items: center;
   gap: 32px;
 }
+
 @media (max-width: 800px) {
   .guaranteeContentWrap {
     flex-direction: column-reverse;
@@ -254,8 +304,12 @@
     flex-direction: column;
   }
 }
+
 .beforeAfterText {
   padding: 32px;
+  color: #fff;
+  font: 900 32px "Comfortaa", sans-serif;
+  text-shadow: 0 0 3px #000;
 }
 
 .imagesWrap {
@@ -272,12 +326,13 @@
   width: auto;
   max-width: 100%;
   height: fit-content;
-  max-height: 200px;
+  max-height: 300px;
+  border-radius: 64px;
 }
 
 .afterImage {
   position: absolute;
-  animation: afterImageOpacity 5s infinite linear;
+  animation: afterImageOpacity 3s infinite linear;
 }
 
 .beforeText,
@@ -298,7 +353,7 @@
 }
 
 .afterText {
-  animation: afterImageOpacity 5s infinite linear;
+  animation: afterImageOpacity 3s infinite linear;
 }
 
 @keyframes afterImageOpacity {
