@@ -33,7 +33,13 @@ export const SERVICES = [
     header: "Pool Cleaning",
     image: "/gallery/3.jpeg",
     imagePosition: "100% 100%",
-    introImage: "/services/open1.jpg",
+    intro:
+      "At Boise Pool Pros, we understand that a clean pool is the heart of your backyard oasis. It's not just about the aesthetics; it's about health, safety, and the joy of swimming in sparkling, crystal-clear water. That's why our professional pool cleaning services are designed to ensure your pool remains in pristine condition, inviting you to dive in at any moment.",
+    introImage: "/gallery/0.jpg",
+    guaranteeHeader: "Dedicated to Excellence",
+    guarantee:
+      "With over 10 years in the pool maintenance industry, our team of certified pool technicians brings expertise, dedication, and a meticulous eye for detail to every pool they service. We're committed to using the latest pool cleaning technologies and eco-friendly practices to not only maintain your pool's beauty but also its health and longevity.",
+    detailsHeader: "Our Comprehensive Pool Cleaning Services Include:",
     detailsImage: "/services/open2.jpg",
     content:
       "Pool Cleaning... What we do... -The Boise Pool Pros are certified, insured, and experienced pool and spa openers. When it comes to pool openings we are not only certified and insured, but also very experienced.",

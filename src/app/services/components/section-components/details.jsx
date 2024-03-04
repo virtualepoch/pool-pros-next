@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { POOL_OPENING_LIST } from "../../content/pool-opening-list";
+import { POOL_CLEANING_LIST } from "../../content/pool-cleaning-list";
 
 export const Details = ({ styles, services }) => {
   return (
@@ -27,6 +28,14 @@ export const Details = ({ styles, services }) => {
                 <li className={styles.detailsListItem} key={item}>
                   <div className={styles.checkbox} />
                   {item}
+                </li>
+              ))}
+
+            {services.id === "pool-cleaning" &&
+              POOL_CLEANING_LIST.map((item) => (
+                <li className={styles.cleaningDetailsListItem} key={item.id}>
+                  <span style={{ fontWeight: "700" }}>{item.id}</span>
+                  {item.text}
                 </li>
               ))}
           </ul>

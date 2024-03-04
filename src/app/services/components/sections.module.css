@@ -220,11 +220,14 @@
 }
 
 .detailsListItem {
-  /* border: solid blue; */
   display: flex;
   align-items: center;
   gap: 12px;
   font-size: 18px;
+}
+
+.cleaningDetailsListItem{
+  display: block;
 }
 
 .checkbox {
@@ -271,7 +274,7 @@
   min-width: 30px;
   height: 64px;
   position: absolute;
-  left: 24px;
+  left: 12px;
   top: -12px;
   z-index: -1;
   margin: auto;
