@@ -351,7 +351,7 @@ button:focus {
   width: fit-content;
   height: fit-content;
   position: relative;
-  z-index: 10101;
+  z-index: 101;
   line-height: 12px;
   display: flex;
   flex-direction: column;
