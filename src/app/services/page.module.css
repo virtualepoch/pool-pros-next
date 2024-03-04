@@ -106,13 +106,13 @@
   max-width: fit-content;
   position: absolute;
   left: 0;
-  right: 0;
-  top: 32px;
+  right: auto;
+  top: 24px;
   z-index: 101;
-  width: fit-content;
+  min-width: 180px;
   margin: auto;
+  text-align: center;
   pointer-events: none;
-  transition: all 500ms ease;
 }
 
 .btnAndNavWrap {

@@ -3,7 +3,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { InViewOpacityTransform } from "./in-view-opacity-transform";
-import { BtnAndModalContact } from "../../components/global/btn-and-modal-contact";
 import styles from "./section.module.css";
 
 export const Section = ({
@@ -75,8 +74,6 @@ export const Section = ({
 
                   <div className="contact-link-icon" />
                 </Link>
-
-                <BtnAndModalContact />
               </div>
             </InViewOpacityTransform>
           </div>

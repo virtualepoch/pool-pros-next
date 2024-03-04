@@ -266,6 +266,10 @@
   transform: translateY(calc(100vh - 70px));
 }
 
+.btn-contact-wrap-open {
+  background-color: var(--bg);
+}
+
 .btn-contact {
   width: 100%;
   max-width: 280px;

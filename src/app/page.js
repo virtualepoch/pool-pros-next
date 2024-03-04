@@ -1,6 +1,7 @@
 import { FixedBgImg } from "./components/global/fixed-bg-img";
 import { HeroSection } from "./components/global/hero-section";
 import { BtnAndModalContact } from "./components/ui/btn-and-modal-contact";
+import { BtnAndModalContactGlobal } from "./components/global/btn-and-modal-contact-global";
 import { Section } from "./components/global/section";
 import styles from "./page.module.css";
 import { SwiperAutoFlow } from "./components/global/swiper-auto-flow";
@@ -37,12 +38,14 @@ export default function Home() {
         objectPosition="50% 55%"
       />
 
+      <BtnAndModalContactGlobal />
+
       <Section
         header="Residential and Commercial Services"
-        assurance="By choosing us for your weekly pool and spa services, you can rest assured. We are :"
-        li1="Fully Insured,"
-        li2="Fully Certified,"
-        li3="and Guarantee Satisfaction!"
+        assurance="At Boise Pool Pros, we specialize in providing top-tier pool services tailored to both residential and commercial clients. Our expert team is equipped to handle every aspect of pool maintenance, cleaning, opening, and closing, ensuring your pool is pristine, healthy, and ready for enjoyment year-round."
+        // li1="Fully Insured,"
+        // li2="Fully Certified,"
+        // li3="and Guarantee Satisfaction!"
         logoSrc="/globals/cpo.jpg"
         logoAlt="CPO Logo"
         logoWidth={426}
@@ -55,11 +58,14 @@ export default function Home() {
         href="/services"
       />
 
+      <BtnAndModalContactGlobal />
+
       <Section
         header="Technical Services"
-        assurance="Certified Pentair Technicians"
-        li1="Over a decade of experience!"
-        li2="Satisfaction Guaranteed!"
+        assurance="At Boise Pool Pros, we understand that the backbone of any great pool experience is its technical integrity. Our specialized pool technical services are designed to address, maintain, and enhance the mechanical and structural aspects of your pool, ensuring it operates smoothly and efficiently."
+        li1="Certified Pentair Technicians!"
+        li2="Over a decade of experience!"
+        li3="Satisfaction Guaranteed!"
         logoSrc="/globals/pentair.jpg"
         logoAlt="Pentair Service Professional Logo"
         logoWidth={512}
@@ -71,6 +77,8 @@ export default function Home() {
         objectPosition="50% 90%"
         href="/services#technical-services"
       />
+
+      <BtnAndModalContactGlobal />
 
       <SwiperAutoFlow styles={styles} />
     </>
