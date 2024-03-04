@@ -8,20 +8,12 @@ const links = [
     linkUrl: "#pool-openings",
   },
   {
-    linkName: "Pool Cleaning",
+    linkName: "Pool & Spa Cleaning",
     linkUrl: "#pool-cleaning",
   },
   {
-    linkName: "Spa Cleaning",
-    linkUrl: "#spa-cleaning",
-  },
-  {
-    linkName: "Pool Maintenance",
+    linkName: "Pool & Spa Maintenance",
     linkUrl: "#pool-maintenance",
-  },
-  {
-    linkName: "Spa Maintenance",
-    linkUrl: "#spa-maintenance",
   },
   {
     linkName: "Technical Services",

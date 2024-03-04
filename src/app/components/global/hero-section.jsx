@@ -62,7 +62,7 @@ export const HeroSection = ({ styles }) => {
         >
           Boise Metro Area
         </span>{" "}
-        since 2010.
+        since 2019.
       </h2>
 
       {/* <div

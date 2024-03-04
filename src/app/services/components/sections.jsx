@@ -30,22 +30,22 @@ export const Sections = () => {
           <header className={styles.headerWrap}>
             <h3 className={styles.header}>{services.header}</h3>
 
-            <img
+            {/* <img
               src="https://gifdb.com/images/high/blue-pool-water-reflection-ac7ghsk1xa52q7cn.webp"
               alt="hello"
               width={604}
               height={400}
               className={styles.headerImage}
               style={{ objectPosition: "center" }}
-            />
-            {/* <Image
+            /> */}
+            <Image
               className={styles.headerImage}
               src={services.image}
               alt="Services section image"
               width={640}
               height={480}
               style={{ objectPosition: services.imagePosition }}
-            /> */}
+            />
           </header>
 
           <div className={styles.sectionContentWrap}>

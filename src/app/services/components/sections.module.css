@@ -203,6 +203,7 @@
   max-width: 500px;
   height: auto;
   border-radius: 24px;
+  object-fit: cover;
 }
 
 .detailsListWrap {
