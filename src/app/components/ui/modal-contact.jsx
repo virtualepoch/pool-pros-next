@@ -4,7 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import emailjs from "@emailjs/browser";
 import { FooterLinks } from "../global/footer-links";
 
-export const ContactModal = ({ modal, setModal }) => {
+export const ModalContact = ({ modal, setModal }) => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();

@@ -2,8 +2,9 @@
   width: 100%;
   height: fit-content;
   position: relative;
-  /* !!!- Z-INDEX BELOW NEEDS TO BE SET AT- ( -1 )!!!" SO THAT THE "CONTACT BUTTON" IS ON TOP OF IT */
-  z-index: -1;
+  /* !!!- Z-INDEX BELOW NEEDS TO BE SET AT- ( -1 )!!!" SO THAT THE "CONTACT BUTTON" IS ON TOP OF IT WHEN SCROLLING UP */
+  /* !!!- REALLY NOT NECESSARY BECAUSE YOU REALLY DON'T EVEN NOTICE THE EFFECT WHEN SCROLLING UP */
+  /* z-index: -1; */
   padding: 50px 0;
   background: var(--bg);
 }
@@ -67,7 +68,7 @@
 
 .statement {
   width: fit-content;
-  padding: 5px 10px;
+  padding: 24px;
   color: #fff;
   font: 22px "Comfortaa", sans-serif;
   text-shadow: 0 0 5px #000;
@@ -102,6 +103,12 @@
   box-shadow: 2px 2px 15px 1px #0007;
 }
 
+.actionBtnsWrap {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
 .bgImg {
   width: 100%;
   height: auto;
@@ -114,5 +121,10 @@
 @media (max-width: 480px) {
   .content {
     padding: 20px 24px;
+  }
+}
+@media (max-width: 800px) {
+  .actionBtnsWrap {
+    flex-direction: column;
   }
 }

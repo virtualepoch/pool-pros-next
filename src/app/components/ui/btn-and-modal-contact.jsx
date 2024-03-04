@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { ContactModal } from "./modal-contact";
+import { ModalContact } from "./modal-contact";
 
+// NOTE!!!!!!!!!! THIS IS THE FIXED VERSION THAT MOVED ON SCROLL
 export const BtnAndModalContact = ({ addedClass, content = "Contact Us" }) => {
   const [modal, setModal] = useState();
   const [pressed, setPressed] = useState();
@@ -44,7 +45,7 @@ export const BtnAndModalContact = ({ addedClass, content = "Contact Us" }) => {
         </div>
       </div>
 
-      <ContactModal modal={modal} setModal={setModal} />
+      <ModalContact modal={modal} setModal={setModal} />
     </>
   );
 };

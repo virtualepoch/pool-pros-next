@@ -8,7 +8,7 @@ export const SERVICES = [
     image: "/gallery/2.jpeg",
     imagePosition: "50% 25%",
     intro:
-      "As the warmer days approach, the anticipation of diving into a clear, sparkling pool becomes irresistible. At Boise Pool Pros, we specialize in turning that anticipation into reality with our professional pool opening services. We understand that a pool is not just a luxury, but a centerpiece of summer joy and family gatherings. That's why we are dedicated to providing a seamless, hassle-free start to your swimming season.",
+      "We understand that a pool is not just a luxury, but a centerpiece of summer joy and family gatherings. That's why we are dedicated to providing a seamless, hassle-free start to your swimming season.",
     introImage: "/services/open1.jpg",
     detailsImage: "/services/open2.jpg",
     introImagePosition: "center",

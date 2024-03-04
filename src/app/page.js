@@ -21,6 +21,23 @@ export default function Home() {
       <BtnAndModalContact />
 
       <Section
+        header="Pool Openings"
+        assurance="As the warmer days approach, the anticipation of diving into a clear, sparkling pool becomes irresistible. At Boise Pool Pros, we specialize in turning that anticipation into reality with our professional pool opening services."
+        // li1="Fully Insured,"
+        // li2="Fully Certified,"
+        // li3="and Guarantee Satisfaction!"
+        logoSrc="/globals/cpo.jpg"
+        logoAlt="CPO Logo"
+        logoWidth={426}
+        logoHeight={426}
+        bgImgSrc="/home/pool-1024.jpg"
+        bgImgAlt="A shallow pool/spa with a large pool in the background"
+        bgImgWidth={1024}
+        bgImgHeight={2164}
+        posY={20}
+      />
+
+      <Section
         header="Residential and Commercial Services"
         assurance="By choosing us for your weekly pool and spa services, you can rest assured. We are :"
         li1="Fully Insured,"
@@ -35,6 +52,7 @@ export default function Home() {
         bgImgWidth={1024}
         bgImgHeight={2164}
         posY={20}
+        href="/services"
       />
 
       <Section
@@ -51,6 +69,7 @@ export default function Home() {
         bgImgWidth={1024}
         bgImgHeight={1365}
         posY={100}
+        href="/services#technical-services"
       />
 
       <SwiperAutoFlow styles={styles} />

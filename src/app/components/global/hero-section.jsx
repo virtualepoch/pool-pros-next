@@ -28,7 +28,7 @@ export const HeroSection = ({ styles }) => {
               transition: "transform 1s ease, opacity 1s ease",
             }}
           >
-            Boise&apos;s Highly Rated Pool & Spa Service Professionals
+            We Are Boise&apos;s Highly Rated Pool & Spa Service Professionals
           </h1>
         </div>
 
