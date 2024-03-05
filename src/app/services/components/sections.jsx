@@ -27,7 +27,7 @@ export const Sections = () => {
           key={services.id}
           id={services.id}
         >
-         <Headers styles={styles} services={services} />
+          <Headers styles={styles} services={services} />
 
           <div className={styles.sectionContentWrap}>
             <Intro styles={styles} services={services} />
@@ -54,9 +54,11 @@ export const Sections = () => {
         </section>
       ))}
 
-      <WhyChoose styles={styles} />
+      <div className={styles.sectionFooterWrap}>
+        <WhyChoose styles={styles} />
 
-      <Guarantee styles={styles} services={SERVICES} />
+        <Guarantee styles={styles} services={SERVICES} />
+      </div>
 
       <SiteLogoFloatAnim styles={styles} />
     </div>

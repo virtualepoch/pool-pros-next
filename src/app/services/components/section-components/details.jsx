@@ -6,7 +6,9 @@ import { TECHNICAL_SERVICES_LIST } from "../../content/technical-services-list";
 export const Details = ({ styles, services }) => {
   return (
     <div className={styles.details}>
-      <p className={styles.sectionContent}>{services.detailsListSubHeader}</p>
+      <p className={styles.detailsListSubHeader}>
+        {services.detailsListSubHeader}
+      </p>
 
       <ul className={styles.detailsList}>
         {services.id === "pool-openings" &&

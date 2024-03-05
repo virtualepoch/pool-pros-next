@@ -30,7 +30,7 @@
 
 .landing {
   height: fit-content;
-  min-height: 70vh;
+  min-height: calc(75vh + 92px);
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@
 }
 
 .btnContact {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   background: none;
 }
 

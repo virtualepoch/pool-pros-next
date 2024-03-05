@@ -3,7 +3,7 @@ export const Intro = ({ styles, services }) => {
     <div
       className={styles.intro}
       style={{
-        backgroundImage: `url(${services.introImage})`,
+        backgroundImage: `radial-gradient(ellipse at center, #0007 50%, #0002), url(${services.introImage})`,
         backgroundPosition: services.introImagePosition,
       }}
     >

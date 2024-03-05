@@ -37,14 +37,13 @@ export const SERVICES = [
   {
     id: "pool-maintenance",
     header: "Pool & Spa Maintenance",
-    headerImage: "/gallery/0.jpg",
-    imagePosition: "50% 50%",
+    headerImage: "/gallery/1.jpeg",
+    headerImagePosition: "100% 75%",
     intro:
       "At Boise Pool Pros, we understand that a clean pool and spa is the heart of your backyard oasis. It's not just about the aesthetics; it's about health, safety, and the joy of swimming in sparkling, crystal-clear water. That's why our professional pool cleaning services are designed to ensure your pool remains in pristine condition.",
     introImage:
       "https://scontent.fboi1-1.fna.fbcdn.net/v/t39.30808-6/344407458_907231593723209_8315941484184307425_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=watLL00Y5n0AX8fsbpS&_nc_ht=scontent.fboi1-1.fna&oh=00_AfCqT58LquC3X1irkPJmBWD_1eBLIQHkSgrvp_IK1Xnabg&oe=65EBA804",
-    detailsImage: "/services/open2.jpg",
-    content: "Pool Maintenance... What we do",
+    introImagePosition: "100% 50%",
   },
   // TECHNICAL SERVICES ///////////////////////////////////////////////
   {
@@ -57,18 +56,18 @@ export const SERVICES = [
 
     introImage:
       "https://scontent.fboi1-1.fna.fbcdn.net/v/t1.6435-9/61760068_2351476841580480_7118230723374350336_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=FzWzqEFpQUQAX8wQNuF&_nc_ht=scontent.fboi1-1.fna&oh=00_AfDpalH27l3npVOCK_nlSwpkql65BofXW0fLxoYdVesr5w&oe=660E3759",
-    detailsImage: "/home/tech-1024.jpg",
-    detailsImagePosition: "50% 80%",
-    detailsHeader: "Our Technical Services Include:",
+    introImagePosition: "100% 70%",
   },
   // CLOSINGS ///////////////////////////////////////////////
-  {
-    id: "pool-closings",
-    header: "Pool Closings",
-    image: "/gallery/2.jpeg",
-    imagePosition: "100% 100%",
-    introImage: "/services/open1.jpg",
-    detailsImage: "/services/open2.jpg",
-    content: "Pool Closings... What we do",
-  },
+  // {
+  //   id: "pool-closings",
+  //   header: "Pool Closings",
+  //   headerImage: "/gallery/2.jpeg",
+  //   headerImagePosition: "50% 60%",
+  //   intro:
+  //     "Closing Services...",
+
+  //   introImage: "/services/open1.jpg",
+  //   introImagePosition: "100% 70%",
+  // },
 ];

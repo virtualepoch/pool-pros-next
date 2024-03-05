@@ -1,6 +1,6 @@
 export const TECHNICAL_SERVICES_LIST = [
   {
-    id: "Equipment Installation and Repair ",
+    id: "Equipment Installation and Repair: ",
     text: "From pumps and heaters to filtration systems, our technicians ensure your equipment is installed correctly and functioning at its best.",
   },
   {
