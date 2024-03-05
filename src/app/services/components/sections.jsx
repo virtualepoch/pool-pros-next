@@ -3,6 +3,7 @@ import { BgGradientAnim } from "./bg-gradient-anim/bg-gradient-anim";
 import { SiteLogoFloatAnim } from "./site-logo-float-anim";
 import { Headers } from "./section-components/_headers";
 import { Intro } from "./section-components/intro";
+import { IntroBeforeAfter } from "./section-components/intro-before-after";
 import { Details } from "./section-components/details";
 import { Guarantee } from "./section-components/guarantee";
 import { WhyChoose } from "./section-components/why-choose";
@@ -34,7 +35,11 @@ export const Sections = () => {
           <Headers styles={styles} services={services} />
 
           <div className={styles.sectionContentWrap}>
-            <Intro styles={styles} services={services} />
+            {services.id === "pool-spa-maintenance" ? (
+              <IntroBeforeAfter styles={styles} services={services} />
+            ) : (
+              <Intro styles={styles} services={services} />
+            )}
 
             <Details styles={styles} services={services} />
           </div>

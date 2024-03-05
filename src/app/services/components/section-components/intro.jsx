@@ -1,4 +1,6 @@
-export const Intro = ({ styles, services }) => {
+import styles from "./components.module.css";
+
+export const Intro = ({ services }) => {
   return (
     <div
       className={styles.intro}

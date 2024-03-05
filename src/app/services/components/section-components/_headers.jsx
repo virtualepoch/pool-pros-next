@@ -26,7 +26,8 @@ export const Headers = ({ styles, services }) => {
           // boxShadow: state ? "0 0 5px 1px #000a" : "none",
         }}
       >
-        {services.id === "pool-spa-maintenance"
+        {(services.id === "pool-spa-maintenance") |
+        (services.id === "pool-spa-cleaning")
           ? services.headerShort
           : services.header}
       </h3>

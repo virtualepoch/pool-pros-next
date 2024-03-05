@@ -1,12 +1,8 @@
 import Image from "next/image";
 
-export const SectionBeforeAfter = ({ styles, services }) => {
+export const BeforeAfterNextImgs = ({ styles, services }) => {
   return (
     <div className={styles.beforeAfterContainer}>
-      <p className={styles.beforeAfterText}>
-        We turn pool around real quick like!!!!
-      </p>
-
       <div className={styles.imagesWrap}>
         <Image
           className={styles.beforeImage}

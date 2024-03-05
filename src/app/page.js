@@ -63,9 +63,9 @@ export default function Home() {
       <Section
         header="Technical Services"
         assurance="At Boise Pool Pros, we understand that the backbone of any great pool experience is its technical integrity. Our specialized pool technical services are designed to address, maintain, and enhance the mechanical and structural aspects of your pool, ensuring it operates smoothly and efficiently."
-        li1="Certified Pentair Technicians!"
-        li2="Over a decade of experience!"
-        li3="Satisfaction Guaranteed!"
+        // li1="Certified Pentair Technicians!"
+        // li2="Over a decade of experience!"
+        // li3="Satisfaction Guaranteed!"
         logoSrc="/globals/pentair.jpg"
         logoAlt="Pentair Service Professional Logo"
         logoWidth={512}
