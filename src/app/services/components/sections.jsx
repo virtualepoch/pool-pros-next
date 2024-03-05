@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { BgGradientAnim } from "./bg-gradient-anim/bg-gradient-anim";
-import { SectionBeforeAfter } from "./section-components/section-before-after";
 import { SiteLogoFloatAnim } from "./site-logo-float-anim";
+import { Headers } from "./section-components/_headers";
 import { Intro } from "./section-components/intro";
-import { Guarantee } from "./section-components/guarantee";
 import { Details } from "./section-components/details";
+import { Guarantee } from "./section-components/guarantee";
 import { WhyChoose } from "./section-components/why-choose";
 
 import styles from "./sections.module.css";
@@ -27,41 +27,14 @@ export const Sections = () => {
           key={services.id}
           id={services.id}
         >
-          <header className={styles.headerWrap}>
-            <h3 className={styles.header}>{services.header}</h3>
-
-            {/* <img
-              src="https://gifdb.com/images/high/blue-pool-water-reflection-ac7ghsk1xa52q7cn.webp"
-              alt="hello"
-              width={604}
-              height={400}
-              className={styles.headerImage}
-              style={{ objectPosition: "center" }}
-            /> */}
-            <Image
-              className={styles.headerImage}
-              src={services.image}
-              alt="Services section image"
-              width={640}
-              height={480}
-              style={{ objectPosition: services.imagePosition }}
-            />
-          </header>
+         <Headers styles={styles} services={services} />
 
           <div className={styles.sectionContentWrap}>
             <Intro styles={styles} services={services} />
 
-            <Guarantee styles={styles} services={services} />
-
             <Details styles={styles} services={services} />
 
-            <WhyChoose styles={styles} />
-
-            {services.id === "pool-openings" && (
-              <SectionBeforeAfter styles={styles} services={services} />
-            )}
-
-            {services.id === "technical-services" && (
+            {/* {services.id === "technical-services" && (
               <>
                 <div className={styles.stickersContainer}>
                   <Image
@@ -76,10 +49,14 @@ export const Sections = () => {
                   </p>
                 </div>
               </>
-            )}
+            )} */}
           </div>
         </section>
       ))}
+
+      <WhyChoose styles={styles} />
+
+      <Guarantee styles={styles} services={SERVICES} />
 
       <SiteLogoFloatAnim styles={styles} />
     </div>

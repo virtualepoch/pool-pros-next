@@ -1,4 +1,4 @@
-export const POOL_CLEANING_LIST = [
+export const CLEANING_LIST = [
   {
     id: "Regular Maintenance: ",
     text: "Weekly, bi-weekly, or monthly visits to suit your schedule and pool usage.",
@@ -21,6 +21,6 @@ export const POOL_CLEANING_LIST = [
   },
   {
     id: "Customized Cleaning Plans: ",
-    text: "Tailored cleaning schedules and services that fit your specific pool type, size, and usage needs.",
+    text: "Tailored cleaning schedules and services that fit your specific pool or spa type, size, and usage needs.",
   },
 ];

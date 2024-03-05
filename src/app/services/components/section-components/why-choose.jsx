@@ -19,7 +19,7 @@ export const WhyChoose = ({ styles }) => {
         <li className={styles.whyChooseItem}>
           <div className={styles.whyChooseIcon} />
           <span>Transparent Pricing: </span>No hidden fees. We provide clear,
-          upfront pricing based on your specific pool opening needs.
+          upfront pricing based on your specific pool or spa service needs.
         </li>
 
         <li className={styles.whyChooseItem}>
