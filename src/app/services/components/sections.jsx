@@ -10,15 +10,16 @@ import { WhyChoose } from "./section-components/why-choose";
 import styles from "./sections.module.css";
 
 // CONTENT //////////////////////////////////////////
-import { SERVICES } from "../content/main-content";
+import { SERVICES } from "../content/services-content";
 import { BtnAndNav } from "./btn-and-nav";
+import { BtnAndModalContactGlobal } from "../../components/global/btn-and-modal-contact-global";
 
 export const Sections = () => {
   return (
     <div className={styles.sections}>
       <BgGradientAnim />
 
-      <BtnAndNav styles={styles} />
+      <BtnAndNav styles={styles} services={SERVICES} />
 
       {SERVICES.map((services) => (
         <section
@@ -36,24 +37,8 @@ export const Sections = () => {
             <Intro styles={styles} services={services} />
 
             <Details styles={styles} services={services} />
-
-            {/* {services.id === "technical-services" && (
-              <>
-                <div className={styles.stickersContainer}>
-                  <Image
-                    className={styles.pentairStickers}
-                    src="/services/certified-stickers-512.png"
-                    alt="Services section image"
-                    width={512}
-                    height={539}
-                  />
-                  <p className={styles.stickersMessage}>
-                    We are fully Certified!
-                  </p>
-                </div>
-              </>
-            )} */}
           </div>
+          <BtnAndModalContactGlobal content={services.btnText} />
         </section>
       ))}
 

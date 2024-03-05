@@ -7,7 +7,7 @@ export const Headers = ({ styles, services }) => {
 
   useEffect(() => {
     function handleScroll() {
-      setState(ref.current.scrollTop === 0 ? true : false);
+      setState(ref.current.scrollTop == 0 ? true : false);
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -16,17 +16,19 @@ export const Headers = ({ styles, services }) => {
 
   return (
     <>
-      <div ref={ref} />
       <h3
-        // ref={ref}
+        ref={ref}
         className={styles.header}
         style={{
           backgroundImage: `url(${services.headerImage})`,
           backgroundPosition: services.headerImagePosition,
+          // border: state ? "solid red" : "none",
           // boxShadow: state ? "0 0 5px 1px #000a" : "none",
         }}
       >
-        {services.header}
+        {services.id === "pool-spa-maintenance"
+          ? services.headerShort
+          : services.header}
       </h3>
 
       <h3 className={styles.subHeader}>{services.subHeader}</h3>

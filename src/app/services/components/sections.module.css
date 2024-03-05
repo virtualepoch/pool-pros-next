@@ -18,25 +18,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 64px;
   /* border: solid red; */
 }
 
 .header {
   width: 100%;
   height: fit-content;
-  min-height: 75px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  min-height: 71px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: #fff;
   text-shadow: var(--text-shadow-2);
   font-size: 32px;
-  padding: 48px 24px 24px;
-  box-shadow: inset 0 0 10px 1px #0007, 0 0 10px 1px #000a;
+  padding: 24px;
   background-size: cover;
-  border-top: solid #3168ff;
-  border-bottom: solid #3168ff;
 }
 
 .btnAndNavWrap {
@@ -47,7 +46,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1101010;
+  z-index: 11;
   height: fit-content;
 }
 
@@ -58,8 +57,8 @@
   height: 50px;
   position: absolute;
   left: 10px;
-  top: 20px;
-  z-index: 10101;
+  top: 15px;
+  z-index: 11;
   border-radius: 25px;
   background: var(--btn-nav-bg);
   background: #fff;
@@ -75,6 +74,13 @@
   transition: transform 500ms ease;
 }
 
+/* Enable hover only on non-touch devices */
+/* @media (hover: hover) and (pointer: fine) {
+  .btnNavServicesIcon:hover {
+    transform: rotate(-180deg);
+  }
+} */
+
 .btnNavServices.open .btnNavServicesIcon {
   transform: rotate(-180deg);
 }
@@ -85,16 +91,15 @@
   max-height: calc(100vh - 150px);
   position: absolute;
   left: 10px;
-  top: 17px;
-  z-index: 100;
+  top: 15px;
+  z-index: 10;
   padding: 56px 14px 24px;
-  color: #222;
+  color: #fff;
   font-family: "latin", sans-serif;
-  text-shadow: none;
+  text-shadow: var(--text-shadow-5);
   background: #fff;
   border-radius: 24px;
-  box-shadow: 1px 1px 10px 1px #0009;
-  /* border: solid blue; */
+  box-shadow: 1px 1px 10px 1px #0007;
 }
 
 p.headerNavServices {
@@ -102,11 +107,9 @@ p.headerNavServices {
 }
 
 .navServices ul {
-  /* border: solid red; */
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
   justify-content: space-around;
   font-size: 20px;
@@ -114,21 +117,41 @@ p.headerNavServices {
 
 .navServices li {
   width: 100%;
+  height: 60px;
   display: flex;
-}
-.navServices li:hover {
-  border-color: #111;
+  align-items: center;
+  border-bottom: solid #fff;
+  background-size: cover;
 }
 
 .navServices a {
   width: 100%;
-  border: 1px solid #aaa;
-  border-radius: 100px;
-  padding: 5px 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #0007;
 }
 
 .navServices a:hover {
-  background-color: #f9f9f9;
+  background-color: #0009;
+}
+
+.linkArrow {
+  position: relative;
+  width: 40px;
+  height: 100%;
+  background-size: 40%;
+  background-position: 3px 50%;
+  background-color: #0007;
+  transition: background-position 300ms ease;
+  background-repeat: no-repeat;
+  background-image: url(/icons/chevron-right-cyan.svg);
+}
+
+.navServices a:hover ~ .linkArrow {
+  background-color: #0009;
+  background-position: calc(100% - 3px) 50%;
 }
 
 .subHeader {
@@ -213,7 +236,7 @@ p.headerNavServices {
 .sectionFooterWrap {
   position: relative;
   padding: 24px;
-  padding-bottom: 64px;
+  padding-bottom: 128px;
   display: flex;
   align-items: center;
   gap: 64px;
@@ -461,9 +484,19 @@ p.headerNavServices {
 }
 
 @media (max-width: 700px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    border: solid #3168ff;
+    box-shadow: inset 0 0 10px 1px #000a, 0 0 10px 1px #000a;
+    padding: 0;
+    font-size: 24px;
+  }
   .intro {
     min-height: fit-content;
     padding: 24px;
+    font-size: 20px;
   }
   .sectionContentWrap {
     padding-top: 0;
@@ -487,6 +520,7 @@ p.headerNavServices {
   .sectionFooterWrap {
     flex-direction: column;
     padding: 24px;
+    padding-bottom: 64px;
   }
 }
 

@@ -87,10 +87,10 @@ export const Footer = () => {
         <Image
           priority
           className="site-logo"
-          src="/t/1.png"
+          src="/logos/192.png"
           alt="Boise Pool Pros Logo"
-          width={512}
-          height={512}
+          width={192}
+          height={192}
         />
       </Link>
 

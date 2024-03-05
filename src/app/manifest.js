@@ -1,13 +1,13 @@
 export default function manifest() {
   return {
-    name: "IdaHomeServ LLC Pool & Spa",
-    short_name: "IdaHomeServ",
-    description: "IdaHomeServ App Created with Next.js",
+    name: "Boise Pool Pros",
+    short_name: "Pool Pros",
+    description: "Boise Pool Pros App built with Next.js",
     id: "/",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",
-    theme_color: "#fff",
+    theme_color: "#0ff",
     icons: [
       {
         src: "/logos/favicon.ico",
@@ -25,8 +25,8 @@ export default function manifest() {
         type: "image/png",
       },
       {
-        src: "/logos/apple-touch-icon.png",
-        sizes: "192x192",
+        src: "/logos/apple-icon.png",
+        sizes: "180x180",
         type: "image/png",
         purpose: "any",
       },
@@ -39,42 +39,6 @@ export default function manifest() {
         src: "/logos/512.png",
         sizes: "512x512",
         type: "image/png",
-      },
-      {
-        src: "/logos/maskable_icon-48.png",
-        sizes: "48x48",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/logos/maskable_icon-72.png",
-        sizes: "72x72",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/logos/maskable_icon-96.png",
-        sizes: "96x96",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/logos/maskable_icon-128.png",
-        sizes: "128x128",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/logos/maskable_icon-192.png",
-        sizes: "192x192",
-        type: "image/png",
-        purpose: "maskable",
-      },
-      {
-        src: "/logos/maskable_icon-512.png",
-        sizes: "512x512",
-        type: "image/png",
-        purpose: "maskable",
       },
     ],
   };

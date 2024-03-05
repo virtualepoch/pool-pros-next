@@ -4,12 +4,8 @@ export const Landing = ({ styles }) => {
   return (
     <div className={styles.landing}>
       <h2 className={styles.heroStatement}>
-        <span>
-          Professional
-          <br /> Pool Services:
-        </span>
-        <br /> Engineered to Transform Your Oasis into a Masterpiece of
-        Tranquility and Elegance
+        Our Professional Pool Services are designed to ensure your pool remains
+        a pristine oasis of leisure and luxury.
       </h2>
 
       <BtnAndModalContact addedClass={styles.btnContact} />
