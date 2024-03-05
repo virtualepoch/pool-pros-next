@@ -11,11 +11,14 @@ import styles from "./sections.module.css";
 
 // CONTENT //////////////////////////////////////////
 import { SERVICES } from "../content/main-content";
+import { BtnAndNav } from "./btn-and-nav";
 
 export const Sections = () => {
   return (
     <div className={styles.sections}>
       <BgGradientAnim />
+
+      <BtnAndNav styles={styles} />
 
       {SERVICES.map((services) => (
         <section

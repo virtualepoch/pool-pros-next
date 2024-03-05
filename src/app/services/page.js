@@ -1,6 +1,5 @@
 import { ZoomBg } from "../components/global/zoom-bg";
 import { Landing } from "./components/landing";
-import { Header } from "./components/header";
 import { Sections } from "./components/sections";
 import styles from "./page.module.css";
 
@@ -34,7 +33,9 @@ export default function Services() {
 
       <Landing styles={styles} />
 
-      <Header styles={styles} />
+      <div className={styles.routeHeader}>
+        <p>Services</p>
+      </div>
 
       <Sections />
     </>

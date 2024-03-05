@@ -56,7 +56,7 @@ export const BtnAndNav = ({ styles }) => {
   }, [setOpen, nav]);
 
   return (
-    <>
+    <div className={styles.btnAndNavWrap}>
       <CSSTransition in={state} unmountOnExit timeout={500}>
         <button
           className={
@@ -73,7 +73,7 @@ export const BtnAndNav = ({ styles }) => {
           style={{
             opacity: anim ? 1 : 0,
             transform: `translateY(-${anim ? 0 : 100}%)`,
-            boxShadow: pressed ? "none" : "1px 2px 10px 1px #0007",
+            boxShadow: pressed | open ? "none" : "1px 2px 10px 1px #0007",
             transition: `opacity 500ms ease, transform 500ms ease`,
           }}
           onClick={() => {
@@ -108,6 +108,6 @@ export const BtnAndNav = ({ styles }) => {
           </ul>
         </nav>
       </CSSTransition>
-    </>
+    </div>
   );
 };

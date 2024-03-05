@@ -1,11 +1,29 @@
+"use client";
+import { useRef, useState, useEffect } from "react";
+
 export const Headers = ({ styles, services }) => {
+  const [state, setState] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    function handleScroll() {
+      setState(ref.current.scrollTop === 0 ? true : false);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [setState]);
+
   return (
     <>
+      <div ref={ref} />
       <h3
+        // ref={ref}
         className={styles.header}
         style={{
           backgroundImage: `url(${services.headerImage})`,
           backgroundPosition: services.headerImagePosition,
+          // boxShadow: state ? "0 0 5px 1px #000a" : "none",
         }}
       >
         {services.header}
