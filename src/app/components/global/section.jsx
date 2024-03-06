@@ -8,20 +8,18 @@ import styles from "./section.module.css";
 export const Section = ({
   header,
   assurance,
-  li1,
-  li2,
-  li3,
   logoSrc,
   logoAlt,
   logoWidth,
   logoHeight,
+  logoDisplay,
   bgImgSrc,
   bgImgAlt,
   bgImgWidth,
   bgImgHeight,
-  posY,
   objectPosition,
   href = "/services#pool-openings",
+  addedClass,
 }) => {
   const [pressed, setPressed] = useState();
 
@@ -35,26 +33,12 @@ export const Section = ({
         </div>
 
         <div className={styles.contentWrap}>
-          <div className={styles.content}>
-            <Image
-              className={styles.logo}
-              src={logoSrc}
-              alt={logoAlt}
-              width={logoWidth}
-              height={logoHeight}
-            />
-
+          <div className={`${styles.content} ${addedClass}`}>
             <InViewOpacityTransform
               transformSpeed="1s"
               className={styles.statement}
             >
               <h3>{assurance}</h3>
-
-              <ul>
-                <li>{li1}</li>
-                <li>{li2}</li>
-                <li>{li3}</li>
-              </ul>
 
               <div className={styles.actionBtnsWrap}>
                 <Link
@@ -76,6 +60,15 @@ export const Section = ({
                 </Link>
               </div>
             </InViewOpacityTransform>
+
+            <Image
+              className={styles.logo}
+              src={logoSrc}
+              alt={logoAlt}
+              width={logoWidth}
+              height={logoHeight}
+              style={{ display: logoDisplay }}
+            />
           </div>
 
           <Image

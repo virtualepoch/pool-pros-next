@@ -87,18 +87,19 @@ export const Footer = () => {
       <SiteLogo priority={false} />
 
       <div className="copyright-wrap">
+        <p className="footer-info">(208) 475-4344</p>
+
         <p className="footer-info">boisepoolpros@gmail.com</p>
 
         <p className="footer-info">8670 West Pembrook Drive, Boise, ID 83704</p>
 
-        <p className="footer-info">(208) 475-4344</p>
-
+        <br />
         <p className="footer-copyright">
-          Copyright &copy; 2024 Boise Pool Pros, all rights reserved.
+          &copy; 2024 Boise Pool Pros, all rights reserved.
         </p>
 
         <p className="footer-info virtual-epoch-link-wrapper">
-          Site developed by
+          built & maintained by:
           <br />
           <a
             className="virtual-epoch-link"

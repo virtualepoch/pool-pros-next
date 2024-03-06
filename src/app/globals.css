@@ -361,21 +361,34 @@ button:focus {
   line-height: 18px;
 }
 
+.footer-copyright {
+  color: #ccc;
+}
+
 .virtual-epoch-link-wrapper {
   width: fit-content;
   height: fit-content;
   position: relative;
   z-index: 101;
-  line-height: 12px;
+  margin-top: 32px;
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
+  color: #ccc;
+  line-height: 14px;
+  font-size: 10px;
+  text-transform: uppercase;
 }
 
 .virtual-epoch-link {
   margin: 0 auto;
-  border: 1px solid;
+  border: 1px solid #bbb;
+  border-radius: 3px;
   padding: 5px;
+  color: #cfcfcf;
+  font-size: 11px;
+  text-transform: none;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px #333;
 }
 
 @media (prefers-color-scheme: dark) {

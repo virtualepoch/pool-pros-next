@@ -92,6 +92,13 @@
   }
 }
 
+@media (min-width: 840px) {
+  .contentLastElement {
+    flex-direction: row-reverse;
+    gap: 0;
+  }
+}
+
 .swiperContainer {
   width: 100%;
   background: var(--bg);

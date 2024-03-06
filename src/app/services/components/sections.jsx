@@ -11,9 +11,8 @@ import { WhyChoose } from "./section-components/why-choose";
 import styles from "./sections.module.css";
 
 // CONTENT //////////////////////////////////////////
-import { SERVICES } from "../content/services-content";
+import { SERVICES } from "../content/_main-content";
 import { BtnAndNav } from "./btn-and-nav";
-import { BtnAndModalContactGlobal } from "../../components/global/btn-and-modal-contact-global";
 
 export const Sections = () => {
   return (
@@ -41,7 +40,9 @@ export const Sections = () => {
               <Intro styles={styles} services={services} />
             )}
 
-            <Details styles={styles} services={services} />
+            {services.id !== "pool-closings" && (
+              <Details styles={styles} services={services} />
+            )}
           </div>
         </section>
       ))}
