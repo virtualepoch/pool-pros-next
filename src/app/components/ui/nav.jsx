@@ -34,11 +34,11 @@ export const Nav = ({ nav, setNav }) => {
         <section className="nav-links-wrap">
           <CustomLink to="/" linkName="Home" />
 
+          <CustomLink to="/services" linkName="Services" />
+
           <CustomLink to="/testimonials" linkName="Testimonials" />
 
           <CustomLink to="/gallery" linkName="Gallery" />
-
-          <CustomLink to="/services" linkName="Services" />
         </section>
 
         <ContactLinks />

@@ -43,7 +43,6 @@ export const Sections = () => {
 
             <Details styles={styles} services={services} />
           </div>
-          <BtnAndModalContactGlobal content={services.btnText} />
         </section>
       ))}
 

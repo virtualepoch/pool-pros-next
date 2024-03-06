@@ -9,6 +9,6 @@ export const TECHNICAL_SERVICES_LIST = [
   },
   {
     id: "Automation: ",
-    text: "Integrate the latest in pool automation technology, allowing you to control lighting, heating, and cleaning systems with the touch of a button.",
+    text: "We integrate the latest in pool automation technology, allowing you to control lighting, heating, and cleaning systems with the touch of a button.",
   },
 ];

@@ -12,7 +12,7 @@ const reviews = [
     clientName: "Lisa Johnson",
     url: "https://g.co/kgs/jdDBtVX",
     reviewText:
-      "These guys are great! They came when they said the would. They answered all my questions promptly and helped me whenever I needed it. They took very good care of us this year!",
+      "These guys are great! They came when they said the would. They answered all my questions promptly and helped me whenever I needed it. They took very good care of us this year! ",
   },
   {
     clientName: "Amethyst",
@@ -21,10 +21,10 @@ const reviews = [
       "These guys saved both my 90,000 gallon pool and year-round spa. They’ve done everything from adding aeration, heater & chlorinator replacement, reminding me to order chemicals before they run out, acid washing, winterization, chemical testing, cleaning... ",
   },
   {
-    clientName: "Holly Cormell",
-    url: "https://g.co/kgs/NuzoCt8",
+    clientName: "Randy Mason",
+    url: "https://maps.app.goo.gl/3mcM8skF8gNoC8GC6",
     reviewText:
-      "We LOVE IdaHomeServ ... we've used another company before them and switched to Paul and I wish I would of know about IdaHomeServ sooner because the quality of work and customer service is top notch... ",
+      "We are extremely happy with the swimming pool service we have received. We had a few unique situations and Paul researched solutions and corrected the problems. Paul always kept us informed and showed up promptly... ",
   },
 ];
 
@@ -62,9 +62,14 @@ export const SwiperAutoFlow = ({ styles }) => {
 
               <p className={styles.reviewText}>
                 {reviews.reviewText}
-                <a href={reviews.url} className={styles.reviewLink}>
+                <a
+                  className={styles.reviewLink}
+                  href={reviews.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Read full review on Google &gt;
-                </a>{" "}
+                </a>
               </p>
             </div>
           </SwiperSlide>

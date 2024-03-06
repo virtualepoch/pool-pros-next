@@ -10,6 +10,11 @@ export const Intro = ({ services }) => {
       }}
     >
       {services.intro}
+      <br />
+      {services.id === "pool-closings" && <>{services.intro2}</>}
+      <br />
+      <br />
+      {services.id === "pool-closings" && <>{services.intro3}</>}
     </div>
   );
 };

@@ -38,8 +38,6 @@ export default function Home() {
         objectPosition="50% 55%"
       />
 
-      <BtnAndModalContactGlobal />
-
       <Section
         header="Residential and Commercial Services"
         // Our expert team is equipped to handle every aspect of pool maintenance, cleaning, opening, and closing, ensuring your pool is pristine, healthy, and ready for enjoyment year-round.
@@ -59,8 +57,6 @@ export default function Home() {
         href="/services"
       />
 
-      <BtnAndModalContactGlobal />
-
       <Section
         header="Technical Services"
         // At Boise Pool Pros, we understand that the backbone of any great pool experience is its technical integrity. 
@@ -79,8 +75,6 @@ export default function Home() {
         objectPosition="50% 90%"
         href="/services#technical-services"
       />
-
-      <BtnAndModalContactGlobal />
 
       <SwiperAutoFlow styles={styles} />
     </>

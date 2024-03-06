@@ -46,7 +46,7 @@ export const SERVICES = [
       "https://scontent.fboi1-1.fna.fbcdn.net/v/t1.6435-9/59690609_2309071485821016_6484720659212533760_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=783fdb&_nc_ohc=sojVIBj0vaYAX-4uhCN&_nc_ht=scontent.fboi1-1.fna&oh=00_AfCkgL7q0ymrmwj80xF75gCcWnScRpImzaBRTiUU9YclRQ&oe=660F0E12",
     headerImagePosition: "100% 50%",
     intro:
-      "Our professional technicians bring precision, care, and a commitment to excellence in every task, from routine cleaning to complex repairs, ensuring your pool and spa remain in pristine condition.",
+      "Our professional technicians bring precision, care, and a commitment to excellence to every job. From routine cleaning to complex repairs, ensuring your pool and spa remain in pristine condition is our greatest concern.",
     introImage:
       "https://scontent.fboi1-1.fna.fbcdn.net/v/t39.30808-6/344407458_907231593723209_8315941484184307425_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=watLL00Y5n0AX8fsbpS&_nc_ht=scontent.fboi1-1.fna&oh=00_AfCqT58LquC3X1irkPJmBWD_1eBLIQHkSgrvp_IK1Xnabg&oe=65EBA804",
     introImagePosition: "50% 100%",
@@ -80,7 +80,10 @@ export const SERVICES = [
     headerImage: "/gallery/2.jpeg",
     headerImagePosition: "50% 60%",
     intro:
-      "Our Pool Closing Services encapsulate meticulous attention to detail, ensuring your pool is safeguarded during the off-season. We understand the intricacies involved in properly winterizing a pool, from balancing the water chemistry to prevent algae growth and corrosion, to the precise installation of winter covers that protect against debris and weather elements. Our team of certified professionals employs a comprehensive checklist, including the draining of equipment, inspection for any potential issues, and the application of winterizing chemicals, all designed to preserve your pool’s integrity.",
+      "At Boise Pool Pros we understand the intricacies involved in properly winterizing a pool. From preventing algae growth and corrosion, to the precise installation of winter covers,",
+    intro2: "we have you covered. 😉",
+    intro3:
+      "Our team of certified professionals employs a comprehensive checklist, including the draining of equipment, inspection for any potential issues, and the application of winterizing chemicals, all designed to preserve your pool’s integrity.",
     introImage:
       "https://scontent.fboi1-1.fna.fbcdn.net/v/t1.6435-9/90519995_2938850019509823_5583633041588224000_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKsPTPDmoFYAX8KwKZx&_nc_ht=scontent.fboi1-1.fna&oh=00_AfANN7aLmvVJzX94x_w87uq4qpU5d47BkHCBB_fQ1_oB5A&oe=660F2A2C",
     introImagePosition: "50% 70%",
