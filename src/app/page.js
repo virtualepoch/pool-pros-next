@@ -42,7 +42,8 @@ export default function Home() {
 
       <Section
         header="Residential and Commercial Services"
-        assurance="At Boise Pool Pros, we specialize in providing top-tier pool services tailored to both residential and commercial clients. Our expert team is equipped to handle every aspect of pool maintenance, cleaning, opening, and closing, ensuring your pool is pristine, healthy, and ready for enjoyment year-round."
+        // Our expert team is equipped to handle every aspect of pool maintenance, cleaning, opening, and closing, ensuring your pool is pristine, healthy, and ready for enjoyment year-round.
+        assurance="At Boise Pool Pros, we specialize in providing top-tier pool services tailored to both residential and commercial clients."
         // li1="Fully Insured,"
         // li2="Fully Certified,"
         // li3="and Guarantee Satisfaction!"
@@ -62,7 +63,8 @@ export default function Home() {
 
       <Section
         header="Technical Services"
-        assurance="At Boise Pool Pros, we understand that the backbone of any great pool experience is its technical integrity. Our specialized pool technical services are designed to address, maintain, and enhance the mechanical and structural aspects of your pool, ensuring it operates smoothly and efficiently."
+        // At Boise Pool Pros, we understand that the backbone of any great pool experience is its technical integrity. 
+        assurance="Our specialized pool technical services are designed to address, maintain, and enhance the mechanical and structural aspects of your pool, ensuring it operates smoothly and efficiently."
         // li1="Certified Pentair Technicians!"
         // li2="Over a decade of experience!"
         // li3="Satisfaction Guaranteed!"

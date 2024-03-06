@@ -1,20 +1,9 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
+import { SiteLogo } from "./site-logo";
 
 export const Header = () => {
   return (
     <header className="header">
-      <Link href="/" className="site-logo-link">
-        <Image
-          priority
-          className="site-logo"
-          src="/logos/192.png"
-          alt="Boise Pool Pros Logo"
-          width={192}
-          height={192}
-        />
-      </Link>
+      <SiteLogo />
 
       <p className="header-phone-number">(208)475-4344</p>
     </header>

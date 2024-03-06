@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { FooterLinks } from "./footer-links";
 import Link from "next/link";
+import { SiteLogo } from "./site-logo";
 
 export const Footer = () => {
   return (
@@ -83,16 +84,7 @@ export const Footer = () => {
         </a>
       </div>
 
-      <Link href="/" className="site-logo-link">
-        <Image
-          priority
-          className="site-logo"
-          src="/logos/192.png"
-          alt="Boise Pool Pros Logo"
-          width={192}
-          height={192}
-        />
-      </Link>
+      <SiteLogo priority={false} />
 
       <div className="copyright-wrap">
         <p className="footer-info">boisepoolpros@gmail.com</p>
@@ -109,7 +101,7 @@ export const Footer = () => {
           Site developed by
           <br />
           <a
-          className="virtual-epoch-link"
+            className="virtual-epoch-link"
             href="https://www.virtualepoch.com"
             target="_blank"
             rel="noreferrer"

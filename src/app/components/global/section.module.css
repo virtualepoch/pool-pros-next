@@ -107,6 +107,8 @@
   display: flex;
   gap: 48px;
   align-items: center;
+  /* border: solid red; */
+  /* padding-bottom: 24px; */
 }
 
 .bgImg {
