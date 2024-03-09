@@ -1,4 +1,4 @@
-import styles from "./components.module.css";
+import styles from "./intro.module.css";
 
 export const IntroBeforeAfter = ({ services }) => {
   return (

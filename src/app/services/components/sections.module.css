@@ -19,7 +19,6 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 64px;
-  /* border: solid red; */
 }
 
 .header {
@@ -165,7 +164,6 @@ p.headerNavServices {
   display: flex;
   align-items: center;
   gap: 64px;
-  /* border: solid red; */
 }
 
 .section:nth-child(even) .sectionContentWrap {
@@ -180,6 +178,11 @@ p.headerNavServices {
   display: flex;
   flex-direction: column;
   /* border: solid red; */
+}
+@media (max-width: 700px) {
+  .details {
+    padding: 24px;
+  }
 }
 
 .detailsListSubHeader {
@@ -230,6 +233,7 @@ p.headerNavServices {
   display: flex;
   flex-direction: column;
   border-radius: 24px;
+  background-color: #fff;
   box-shadow: 0 2px 20px 1px #0003;
 }
 
@@ -280,6 +284,7 @@ p.headerNavServices {
   flex-direction: column;
   gap: 24px;
   border-radius: 24px;
+  background-color: #fff;
   box-shadow: 0 2px 25px 1px #0003;
 }
 
@@ -370,27 +375,28 @@ p.headerNavServices {
   display: none;
   align-items: center;
   justify-content: center;
-  /* perspective: 1000px; */
 }
 
 .logoFloatWrap {
-  max-width: 170px;
+  max-width: 500px;
   height: auto;
   display: flex;
+  /* border: solid red; */
   /* transform-style: preserve-3d; */
-  /* box-shadow: 0 0 333px 33px #0ff; */
   /* animation: logoFloat 3s linear infinite; */
 }
 
 .logoFloat {
   width: 100%;
   height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 40px 1px #000a;
 }
 
 @media (max-width: 700px) {
   .header {
     position: sticky;
-    top: 0;
+    top: -1px;
     z-index: 9;
     border: solid #3168ff;
     box-shadow: inset 0 0 4px 1px #0004, 0 4px 8px 1px #0007;
@@ -398,13 +404,12 @@ p.headerNavServices {
     font-size: 24px;
   }
   .intro {
-    min-height: fit-content;
-    padding: 24px;
-    font-size: 20px;
+    border-radius: 0;
   }
   .sectionContentWrap {
     padding-top: 0;
     gap: 32px;
+    padding: 0;
   }
   .guaranteeContentWrap {
     flex-direction: column;
@@ -415,7 +420,6 @@ p.headerNavServices {
 @media (max-width: 1200px) {
   .sectionContentWrap {
     flex-direction: column-reverse;
-    padding: 24px;
   }
 
   .section:nth-child(even) .sectionContentWrap {
@@ -430,7 +434,8 @@ p.headerNavServices {
 
 /* VERY LARGE SCREENS //////////// */
 @media (min-width: 2200px) {
-  .section {
+  .section,
+  .sectionFooterWrap {
     top: -100vh;
   }
   .siteLogoFloatAnim {

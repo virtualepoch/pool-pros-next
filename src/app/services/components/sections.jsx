@@ -35,9 +35,9 @@ export const Sections = () => {
 
           <div className={styles.sectionContentWrap}>
             {services.id === "pool-spa-maintenance" ? (
-              <IntroBeforeAfter styles={styles} services={services} />
+              <IntroBeforeAfter services={services} />
             ) : (
-              <Intro styles={styles} services={services} />
+              <Intro services={services} />
             )}
 
             {services.id !== "pool-closings" && (

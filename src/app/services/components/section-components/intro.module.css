@@ -17,8 +17,7 @@
 
 @media (max-width: 700px) {
   .intro {
-    min-height: 200px;
-    font-size: 20px;
+    border-radius: 0;
   }
 }
 
@@ -100,5 +99,3 @@
     opacity: 1;
   }
 }
-
-
