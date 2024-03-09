@@ -26,28 +26,29 @@ export const Intro = ({ services }) => {
               : "radial-gradient(ellipse at center, #0008 50%, #0003)",
         }}
       >
-        {services.id === "pool-closings" ? (
+        {services.intro}
+
+        <br />
+        <br />
+
+        {services.intro2}
+
+        {services.id === "pool-spa-cleaning" && (
           <>
-            {services.intro}
-            <br />
-          </>
-        ) : (
-          <>
-            {services.intro}
             <br />
             <br />
+
+            {services.intro3}
           </>
         )}
 
-        {<>{services.intro2}</>}
-
-        {services.id === "pool-spa-cleaning" && (
-            <>
-              <br />
-              <br />
-              {services.intro3}
-            </>
-          )}
+        {services.id === "pool-closings" && (
+          <>
+            <br />
+            
+            {services.intro3}
+          </>
+        )}
       </p>
 
       <Image

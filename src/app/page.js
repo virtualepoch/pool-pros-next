@@ -29,7 +29,8 @@ export default function Home() {
 
       <Section
         header="Pool Openings"
-        assurance="As the warmer days approach, the anticipation of diving into a clear, sparkling pool becomes irresistible. At Boise Pool Pros, we specialize in turning that anticipation into reality with our professional pool opening services."
+        assurance="As the warmer days approach, the anticipation of diving into a clear, sparkling pool becomes irresistible."
+        assurance2=" At Boise Pool Pros, we specialize in turning that anticipation into reality with our professional pool opening services."
         logoSrc="/globals/cpo.jpg"
         logoAlt="CPO Logo"
         logoWidth={426}
@@ -44,7 +45,8 @@ export default function Home() {
       <Section
         header="Residential and Commercial Services"
         // Our expert team is equipped to handle every aspect of pool maintenance, cleaning, opening, and closing, ensuring your pool is pristine, healthy, and ready for enjoyment year-round.
-        assurance="At Boise Pool Pros, we specialize in providing top-tier pool services tailored to both residential and commercial clients."
+        assurance="At Boise Pool Pros, we specialize in providing top-tier pool services."
+        assurance2="Our services are tailored to both residential and commercial clients."
         logoAlt="CPO Logo"
         logoWidth={426}
         logoHeight={426}
@@ -61,7 +63,8 @@ export default function Home() {
         header="Technical Services"
         addedClass={styles.contentLastElement}
         // At Boise Pool Pros, we understand that the backbone of any great pool experience is its technical integrity.
-        assurance="Our specialized pool technical services are designed to address, maintain, and enhance the mechanical and structural aspects of your pool, ensuring it operates smoothly and efficiently."
+        assurance="Our specialized pool technical services are designed to address, maintain, and enhance the mechanical and structural aspects of your pool."
+        assurance2="Ensuring it operates smoothly and efficiently."
         logoSrc="/globals/pentair.jpg"
         logoAlt="Pentair Service Professional Logo"
         logoWidth={512}

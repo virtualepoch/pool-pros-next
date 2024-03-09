@@ -82,10 +82,11 @@ export const SERVICES = [
     headerImage: "/gallery/2.jpeg",
     headerImagePosition: "50% 60%",
     intro:
-      "At Boise Pool Pros we understand the intricacies involved in properly winterizing a pool. From preventing algae growth and corrosion, to the precise installation of winter covers,",
-    intro2: "we have you covered. 😉",
-    intro3:
-      "Our team of certified professionals employs a comprehensive checklist, including the draining of equipment, inspection for any potential issues, and the application of winterizing chemicals, all designed to preserve your pool’s integrity.",
+      "At Boise Pool Pros we understand the intricacies involved in properly winterizing a pool.",
+    intro2:
+      " From preventing algae growth and corrosion, to the precise installation of winter covers,",
+    intro3: "we have you covered. 😉",
+    // Our team of certified professionals employs a comprehensive checklist, including the draining of equipment, inspection for any potential issues, and the application of winterizing chemicals, all designed to preserve your pool’s integrity.
     introImage: "/services/open1.jpg",
     introImagePosition: "50% 70%",
     btnText: "Contact us for your Pool Closing",

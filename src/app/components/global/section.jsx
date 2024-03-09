@@ -8,6 +8,7 @@ import styles from "./section.module.css";
 export const Section = ({
   header,
   assurance,
+  assurance2,
   logoSrc,
   logoAlt,
   logoWidth,
@@ -38,7 +39,12 @@ export const Section = ({
               transformSpeed="1s"
               className={styles.statement}
             >
-              <h3>{assurance}</h3>
+              <h3>
+                {assurance}
+                <br />
+                <br />
+                {assurance2}
+              </h3>
 
               <div className={styles.actionBtnsWrap}>
                 <Link

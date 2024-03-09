@@ -84,7 +84,15 @@ export const Footer = () => {
         </a>
       </div>
 
-      <SiteLogo priority={false} />
+      <SiteLogo
+        priority={false}
+        src="/logos/jpg333circle.jpg"
+        style={{
+          borderRadius: "100%",
+          maxWidth: "140px",
+          boxShadow: "1px 1px 10px 1px #000a",
+        }}
+      />
 
       <div className="copyright-wrap">
         <p className="footer-info">(208) 475-4344</p>

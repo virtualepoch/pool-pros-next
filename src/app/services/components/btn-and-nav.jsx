@@ -62,35 +62,39 @@ export const BtnAndNav = ({ styles, services }) => {
       </CSSTransition>
 
       <CSSTransition in={nav && state} unmountOnExit timeout={700}>
-        <nav
-          className={styles.navServices}
-          onMouseEnter={() => setNav(true)}
-          onMouseLeave={() => setNav(false)}
-          style={{
-            opacity: open && state ? 1 : 0,
-            transform: `translateY(-${open && state ? 0 : 25}%)`,
-            transition: `opacity ${
-              open && state ? 700 : 400
-            }ms ease, transform 500ms ease`,
-          }}
-        >
-          <ul>
-            {services.map((services) => (
-              <li
-                key={services.id}
-                style={{
-                  backgroundImage: `url(${services.headerImage})`,
-                  backgroundPosition: services.headerImagePosition,
-                }}
-              >
-                <a href={services.url} onClick={() => setNav(false)}>
-                  {services.header}
-                </a>
-                <div className={styles.linkArrow} />
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <>
+          <button className={styles.navServicesBtnBg} onTouchStart={()=> setNav(false)}/>
+
+          <nav
+            className={styles.navServices}
+            onMouseEnter={() => setNav(true)}
+            onMouseLeave={() => setNav(false)}
+            style={{
+              opacity: open && state ? 1 : 0,
+              transform: `translateY(-${open && state ? 0 : 25}%)`,
+              transition: `opacity ${
+                open && state ? 700 : 400
+              }ms ease, transform 500ms ease`,
+            }}
+          >
+            <ul>
+              {services.map((services) => (
+                <li
+                  key={services.id}
+                  style={{
+                    backgroundImage: `url(${services.headerImage})`,
+                    backgroundPosition: services.headerImagePosition,
+                  }}
+                >
+                  <a href={services.url} onClick={() => setNav(false)}>
+                    {services.header}
+                  </a>
+                  <div className={styles.linkArrow} />
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </>
       </CSSTransition>
     </div>
   );

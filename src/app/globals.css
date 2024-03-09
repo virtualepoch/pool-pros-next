@@ -190,6 +190,7 @@ button:focus {
   width: 100%;
   height: auto;
   margin: auto;
+  border-radius: 2px;
   box-shadow: 0 0 5px 1px #0004;
 }
 
