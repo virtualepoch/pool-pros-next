@@ -15,7 +15,15 @@ export const Intro = ({ services }) => {
             : "inset 0 2px 10px 1px #000a",
       }}
     >
-      <p className={styles.introText}>
+      <p
+        className={styles.introText}
+        style={{
+          background:
+            services.id === "pool-spa-cleaning"
+              ? "none"
+              : "radial-gradient(ellipse at center, #0007 50%, #0002)",
+        }}
+      >
         {services.intro}
         <br />
         {services.id === "pool-closings" && <>{services.intro2}</>}
