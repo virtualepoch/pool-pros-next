@@ -19,7 +19,12 @@ export const IntroBeforeAfter = ({ services }) => {
         }}
       />
 
-      <p className={styles.introText}>{services.intro}</p>
+      <p className={styles.introText}>
+        {services.intro}
+        <br />
+        <br />
+        {services.intro2}
+      </p>
     </div>
   );
 };

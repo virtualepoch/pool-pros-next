@@ -24,6 +24,7 @@
 .introText {
   position: relative;
   min-width: 100%;
+  max-width: 700px;
   min-height: 100%;
   z-index: 5;
   padding: 24px 16px;

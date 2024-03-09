@@ -8,7 +8,9 @@ export const Intro = ({ services }) => {
       style={{
         color: services.id === "pool-spa-cleaning" ? "#fff" : "#fff",
         textShadow:
-          services.id === "pool-spa-cleaning" ? "0 0 4px #000,0 0 4px #000" : "0 0 4px #000",
+          services.id === "pool-spa-cleaning"
+            ? "0 0 4px #000,0 0 4px #000"
+            : "0 0 4px #000",
         boxShadow:
           services.id === "pool-spa-cleaning"
             ? "inset 0 2px 10px 1px #fffa"
@@ -24,12 +26,28 @@ export const Intro = ({ services }) => {
               : "radial-gradient(ellipse at center, #0008 50%, #0003)",
         }}
       >
-        {services.intro}
-        <br />
-        {services.id === "pool-closings" && <>{services.intro2}</>}
-        <br />
-        <br />
-        {services.id === "pool-closings" && <>{services.intro3}</>}
+        {services.id === "pool-closings" ? (
+          <>
+            {services.intro}
+            <br />
+          </>
+        ) : (
+          <>
+            {services.intro}
+            <br />
+            <br />
+          </>
+        )}
+
+        {<>{services.intro2}</>}
+
+        {services.id === "pool-spa-cleaning" && (
+            <>
+              <br />
+              <br />
+              {services.intro3}
+            </>
+          )}
       </p>
 
       <Image
