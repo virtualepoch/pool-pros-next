@@ -36,7 +36,9 @@ export const Section = ({
         <div className={styles.contentWrap}>
           <div className={`${styles.content} ${addedClass}`}>
             <InViewOpacityTransform
-              transformSpeed="1s"
+              transformSpeed="500ms"
+              translateY="100px"
+              threshold={0.1}
               className={styles.statement}
             >
               <h3>

@@ -5,7 +5,8 @@ import { useOnScreen } from "../../_functions/use-on-screen";
 export const InViewOpacityTransform = ({
   className,
   rootMargin = "",
-  threshold = 0,
+  threshold = 0.1,
+  translateY = "50px",
   opacitySpeed = "700ms",
   transformSpeed = "500ms",
   children,
@@ -13,7 +14,7 @@ export const InViewOpacityTransform = ({
   const ref = useRef();
   const [inView, setInView] = useState();
 
-  useOnScreen(ref, () => setInView(true),{
+  useOnScreen(ref, () => setInView(true), {
     rootMargin: rootMargin,
     threshold: threshold,
   });
@@ -24,7 +25,7 @@ export const InViewOpacityTransform = ({
       className={className}
       style={{
         opacity: inView ? 1 : 0,
-        transform: inView ? "none" : "translateY(50%)",
+        transform: inView ? "none" : `translateY(${translateY})`,
         transition: `opacity ${opacitySpeed} ease, transform ${transformSpeed} ease`,
       }}
     >
