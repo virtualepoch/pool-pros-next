@@ -1,8 +1,14 @@
+"use client";
+import { useEffect } from "react";
+import { initializeGoogleTagManager } from "../components/googleTagManager";
 import { ElfsightWidgetComponent } from "./elfsight-widget";
 import { LoadingPanel } from "./loading-panel";
 import styles from "./page.module.css";
 
 export default function Testimonials() {
+  useEffect(() => {
+    initializeGoogleTagManager("G-8BZ8QJ3NEW");
+  }, []);
   return (
     <main className="main">
       <h1 className="route-header">Testimonials</h1>

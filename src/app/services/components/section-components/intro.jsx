@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./components.module.css";
 
 export const Intro = ({ services }) => {
@@ -8,12 +9,6 @@ export const Intro = ({ services }) => {
         color: services.id === "pool-spa-cleaning" ? "#000" : "#fff",
         textShadow:
           services.id === "pool-spa-cleaning" ? "0 0 5px #fff" : "0 0 4px #000",
-        backgroundImage: `${
-          services.id === "pool-spa-cleaning"
-            ? "none"
-            : "radial-gradient(ellipse at center, #0007 50%, #0002)"
-        }, url(${services.introImage})`,
-        backgroundPosition: services.introImagePosition,
         boxShadow:
           services.id === "pool-spa-cleaning"
             ? "inset 0 2px 10px 1px #fffa"
@@ -28,6 +23,15 @@ export const Intro = ({ services }) => {
         <br />
         {services.id === "pool-closings" && <>{services.intro3}</>}
       </p>
+
+      <Image
+        className={styles.introImage}
+        style={{ objectPosition: services.introImagePosition }}
+        width={640}
+        height={480}
+        src={services.introImage}
+        alt="Services page image"
+      />
     </div>
   );
 };

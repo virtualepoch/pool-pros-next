@@ -1,24 +1,27 @@
+"use client";
+import { useEffect } from "react";
+import { initializeGoogleTagManager } from "../components/googleTagManager";
 import { ZoomBg } from "../components/global/zoom-bg";
 import { Landing } from "./components/landing";
 import { Sections } from "./components/sections";
 import styles from "./page.module.css";
 
-export const metadata = {
-  title: "Services - Boise Pool Pros",
-  openGraph: {
-    title: "Boise Pool Pros",
-    description: "Boise's Highly Rated Pool & Spa Service Professionals",
-    url: "/",
-    siteName: "Boise Pool Pros",
-    images: {
-      url: "/og_services_2.jpg",
-      width: 1200,
-      height: 630,
-    },
-    locale: "en_US",
-    type: "website",
-  },
-};
+// export const metadata = {
+//   title: "Services - Boise Pool Pros",
+//   openGraph: {
+//     title: "Boise Pool Pros",
+//     description: "Boise's Highly Rated Pool & Spa Service Professionals",
+//     url: "/",
+//     siteName: "Boise Pool Pros",
+//     images: {
+//       url: "/og_services_2.jpg",
+//       width: 1200,
+//       height: 630,
+//     },
+//     locale: "en_US",
+//     type: "website",
+//   },
+// };
 
 const IMAGES = [
   { url: "/gallery/0.jpg", alt: "image one", width: 1440, height: 1080 },
@@ -27,6 +30,10 @@ const IMAGES = [
 ];
 
 export default function Services() {
+  useEffect(() => {
+    initializeGoogleTagManager("G-8BZ8QJ3NEW");
+  }, []);
+
   return (
     <>
       <ZoomBg images={IMAGES} />

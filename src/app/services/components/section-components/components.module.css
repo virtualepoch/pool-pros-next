@@ -23,6 +23,13 @@
   z-index: 5;
 }
 
+.introImage{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .introUnderlay {
   position: absolute;
   left: 0;
