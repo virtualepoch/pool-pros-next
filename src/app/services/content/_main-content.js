@@ -28,7 +28,7 @@ export const SERVICES = [
     headerImagePosition: "20% 40%",
     subHeader: "Our Comprehensive Pool & Spa Cleaning Services Include:",
     intro:
-      "At Boise Pool Pros, we understand that a clean pool and spa is the heart of your backyard oasis. It's not just about the aesthetics; it's about health, safety, and the joy of swimming in sparkling, crystal-clear water. That's why our professional pool cleaning services are designed to ensure your pool remains in pristine condition.",
+      "At Boise Pool Pros, we understand that a clean pool is the heart of your backyard oasis. It's not just about the aesthetics; it's about health, safety, and the joy of swimming in sparkling, crystal-clear water. That's why our professional pool cleaning services are designed to ensure your pool remains in pristine condition.",
     introImage: "/services/clean.jpg",
     introImagePosition: "100% 70%",
     btnText: "Contact us for Cleaning Services",

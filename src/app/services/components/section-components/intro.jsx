@@ -6,9 +6,9 @@ export const Intro = ({ services }) => {
     <div
       className={styles.intro}
       style={{
-        color: services.id === "pool-spa-cleaning" ? "#000" : "#fff",
+        color: services.id === "pool-spa-cleaning" ? "#fff" : "#fff",
         textShadow:
-          services.id === "pool-spa-cleaning" ? "0 0 5px #fff" : "0 0 4px #000",
+          services.id === "pool-spa-cleaning" ? "0 0 4px #000,0 0 4px #000" : "0 0 4px #000",
         boxShadow:
           services.id === "pool-spa-cleaning"
             ? "inset 0 2px 10px 1px #fffa"
@@ -21,7 +21,7 @@ export const Intro = ({ services }) => {
           background:
             services.id === "pool-spa-cleaning"
               ? "none"
-              : "radial-gradient(ellipse at center, #0007 50%, #0002)",
+              : "radial-gradient(ellipse at center, #0008 50%, #0003)",
         }}
       >
         {services.intro}
