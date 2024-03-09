@@ -1,9 +1,22 @@
+"use client";
 import Image from "next/image";
+import { useRef, useState } from "react";
+import { useOnScreen } from "../../../_functions/use-on-screen";
+
 import styles from "./intro.module.css";
 
 export const Intro = ({ services }) => {
+  const ref = useRef();
+  const [inView, setInView] = useState();
+
+  useOnScreen(ref, () => setInView(true), {
+    rootMargin: "",
+    threshold: 0.3,
+  });
+
   return (
     <div
+      ref={ref}
       className={styles.intro}
       style={{
         color: services.id === "pool-spa-cleaning" ? "#fff" : "#fff",
@@ -20,10 +33,16 @@ export const Intro = ({ services }) => {
       <p
         className={styles.introText}
         style={{
-          background:
+          opacity: inView ? 1 : 0,
+          transform: inView ? "none" : "translateY(50px)",
+          backgroundColor:
             services.id === "pool-spa-cleaning"
               ? "none"
-              : "radial-gradient(ellipse at center, #0008 50%, #0003)",
+              : inView
+              ? "#0008"
+              : "none",
+          transition:
+            "opacity 700ms linear, transform 500ms ease, background-color 300ms linear 300ms",
         }}
       >
         {services.intro}
@@ -45,7 +64,7 @@ export const Intro = ({ services }) => {
         {services.id === "pool-closings" && (
           <>
             <br />
-            
+
             {services.intro3}
           </>
         )}

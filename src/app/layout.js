@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import { UI } from "./components/ui";
 import { Header } from "./components/global/header";
 import { Footer } from "./components/global/footer";
+
 import "./globals.css";
 import "./components/ui/ui.css";
 

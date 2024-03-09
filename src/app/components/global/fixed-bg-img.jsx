@@ -19,7 +19,7 @@ export const FixedBgImg = ({ src, alt, width, height, objectPosition }) => {
       height={height}
       style={{
         opacity: anim ? 1 : 0,
-        transition: "opacity 1.5s ease",
+        transition: "opacity 1s ease",
         objectPosition: objectPosition,
       }}
     />

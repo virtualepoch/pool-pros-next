@@ -1,16 +1,21 @@
 "use client";
-import { useInView } from "react-intersection-observer";
+import { useRef, useState } from "react";
+import { useOnScreen } from "../../_functions/use-on-screen";
 
 export const InViewOpacityTransform = ({
   className,
-  children,
+  rootMargin = "",
+  threshold = 0,
   opacitySpeed = "700ms",
   transformSpeed = "500ms",
-  triggerOnce = true,
+  children,
 }) => {
-  const { ref, inView } = useInView({
-    rootMargin: "0%",
-    triggerOnce: triggerOnce,
+  const ref = useRef();
+  const [inView, setInView] = useState();
+
+  useOnScreen(ref, () => setInView(true),{
+    rootMargin: rootMargin,
+    threshold: threshold,
   });
 
   return (
