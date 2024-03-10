@@ -1,6 +1,3 @@
-"use client";
-import { useEffect } from "react";
-import { initializeGoogleTagManager } from "../components/googleTagManager";
 import { BtnAndModalContact } from "../components/ui/btn-and-modal-contact";
 import { ImageSlider } from "./image-slider";
 
@@ -44,10 +41,6 @@ const IMAGES = [
 ];
 
 export default function Gallery() {
-  useEffect(() => {
-    initializeGoogleTagManager("G-8BZ8QJ3NEW");
-  }, []);
-
   return (
     <main className="main">
       <h1 className="route-header">Gallery</h1>

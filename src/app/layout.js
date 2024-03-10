@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import { UI } from "./components/ui";
 import { Header } from "./components/global/header";
 import { Footer } from "./components/global/footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import "./globals.css";
 import "./components/ui/ui.css";
@@ -18,7 +19,9 @@ export const metadata = {
   keywords: [
     "Boise Pool Pros",
     "Pool maintenance services",
+    "Spa maintenance services",
     "Pool cleaning services",
+    "Spa cleaning services",
     "Pool filter cleaning and replacement",
     "Professional pool services",
     "Residential pool services",
@@ -80,6 +83,8 @@ export default function RootLayout({ children }) {
           <Footer />
         </div>
       </body>
+
+      <GoogleTagManager gtmId="G-8BZ8QJ3NEW" />
     </html>
   );
 }

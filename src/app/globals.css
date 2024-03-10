@@ -362,10 +362,6 @@ button:focus {
   line-height: 18px;
 }
 
-.footer-copyright {
-  color: #ccc;
-}
-
 .virtual-epoch-link-wrapper {
   width: fit-content;
   height: fit-content;

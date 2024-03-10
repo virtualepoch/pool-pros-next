@@ -1,6 +1,3 @@
-"use client";
-import { useEffect } from "react";
-import { initializeGoogleTagManager } from "./components/googleTagManager";
 import { FixedBgImg } from "./components/global/fixed-bg-img";
 import { HeroSection } from "./components/global/hero-section";
 import { BtnAndModalContact } from "./components/ui/btn-and-modal-contact";
@@ -9,10 +6,6 @@ import { SwiperAutoFlow } from "./components/global/swiper-auto-flow";
 import styles from "./page.module.css";
 
 export default function Home() {
-  useEffect(() => {
-    initializeGoogleTagManager("G-8BZ8QJ3NEW");
-  }, []);
-
   return (
     <>
       <FixedBgImg

@@ -1,6 +1,3 @@
-"use client";
-import { useEffect } from "react";
-import { initializeGoogleTagManager } from "../components/googleTagManager";
 import { ZoomBg } from "../components/global/zoom-bg";
 import { Landing } from "./components/landing";
 import { Sections } from "./components/sections";
@@ -13,10 +10,6 @@ const IMAGES = [
 ];
 
 export default function Services() {
-  useEffect(() => {
-    initializeGoogleTagManager("G-8BZ8QJ3NEW");
-  }, []);
-
   return (
     <>
       <ZoomBg images={IMAGES} />

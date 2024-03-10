@@ -101,7 +101,6 @@ export const Footer = () => {
 
         <p className="footer-info">8670 West Pembrook Drive, Boise, ID 83704</p>
 
-        <br />
         <p className="footer-copyright">
           &copy; 2024 Boise Pool Pros, all rights reserved.
         </p>
