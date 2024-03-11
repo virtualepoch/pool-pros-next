@@ -9,6 +9,10 @@ const IMAGES = [
   { url: "/home/tech-1024.jpg", alt: "image one", width: 1024, height: 1365 },
 ];
 
+export const metadata = {
+  title: "Pool & Spa Services",
+};
+
 export default function Services() {
   return (
     <>

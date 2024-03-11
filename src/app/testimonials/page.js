@@ -2,6 +2,10 @@ import { ElfsightWidgetComponent } from "./elfsight-widget";
 import { LoadingPanel } from "./loading-panel";
 import styles from "./page.module.css";
 
+export const metadata = {
+  title: "Testimonials",
+};
+
 export default function Testimonials() {
   return (
     <main className="main">

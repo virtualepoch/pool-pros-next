@@ -55,7 +55,7 @@
   backdrop-filter: blur(4px); */
   color: #fff;
   font-size: clamp(1.5rem, 0.9375rem + 2.5vw, 2.25rem);
-  font-family: "Comfortaa", sans-serif;
+  font-family: var(--font-comfortaa);
   text-align: center;
   line-height: 150%;
   text-shadow: var(--text-shadow-4), 1px 2px 3px #000;
@@ -91,6 +91,5 @@
 
 .routeHeader p {
   font-size: clamp(1.5rem, 0.9375rem + 2.5vw, 2.25rem);
-  font-family: "Comfortaa", sans-serif;
+  font-family: var(--font-comfortaa);
 }
-

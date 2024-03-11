@@ -1,20 +1,26 @@
-import { FixedBgImg } from "./components/global/fixed-bg-img";
+import Image from "next/image";
+import Link from "next/link";
 import { BtnAndModalContact } from "./components/ui/btn-and-modal-contact";
-import { Section } from "./components/global/section";
+import { InViewOpacityTransform } from "./components/global/in-view-opacity-transform";
+import { ActionBtn } from "./components/global/ActionBtn";
 import { SwiperAutoFlow } from "./components/global/swiper-auto-flow";
 import styles from "./page.module.css";
-import { AnimOpacityTranslateY } from "./components/global/anim-opacity-translate-y";
-import { InViewOpacityTransform } from "./components/global/in-view-opacity-transform";
 
 export default function Home() {
   return (
     <>
-      <FixedBgImg
+      <Image
+        className="fixed-bg-img"
+        priority
         src="/gallery/9.jpg"
         alt="Hero image for home page- a glistening pool."
         width={900}
         height={598}
-        objectPosition="50% 100%"
+        style={{
+          // opacity: anim ? 1 : 0,
+          // transition: "opacity 1s ease",
+          objectPosition: "50% 100%",
+        }}
       />
 
       <section className={styles.heroSection}>
@@ -46,55 +52,167 @@ export default function Home() {
 
       <BtnAndModalContact />
 
-      <Section
-        header="Pool Openings"
-        assurance="As the warmer days approach, the anticipation of diving into a clear, sparkling pool becomes irresistible."
-        assurance2=" At Boise Pool Pros, we specialize in turning that anticipation into reality with our professional pool opening services."
-        logoSrc="/globals/cpo.jpg"
-        logoAlt="CPO Logo"
-        logoWidth={426}
-        logoHeight={426}
-        bgImgSrc="/gallery/10.jpg"
-        bgImgAlt="A shallow pool/spa with a large pool in the background"
-        bgImgWidth={1024}
-        bgImgHeight={2164}
-        objectPosition="50% 55%"
-      />
+      <section className={styles.section}>
+        <div className={styles.wrap}>
+          <div className={styles.headerWrap}>
+            <InViewOpacityTransform opacitySpeed="1s">
+              <h2 className={styles.header}>Pool Openings</h2>
+            </InViewOpacityTransform>
+          </div>
 
-      <Section
-        header="Residential and Commercial Services"
-        // Our expert team is equipped to handle every aspect of pool maintenance, cleaning, opening, and closing, ensuring your pool is pristine, healthy, and ready for enjoyment year-round.
-        assurance="At Boise Pool Pros, we specialize in providing top-tier pool services."
-        assurance2="Our services are tailored to both residential and commercial clients."
-        logoAlt="CPO Logo"
-        logoWidth={426}
-        logoHeight={426}
-        logoDisplay={"none"}
-        bgImgSrc="/home/pool-1024.jpg"
-        bgImgAlt="A shallow pool/spa with a large pool in the background"
-        bgImgWidth={1024}
-        bgImgHeight={2164}
-        objectPosition="50% 20%"
-        href="/services"
-      />
+          <div className={styles.contentWrap}>
+            <div className={styles.content}>
+              <div className={styles.statement}>
+                <InViewOpacityTransform
+                  transformSpeed="500ms"
+                  translateY="100px"
+                  threshold={0.1}
+                >
+                  <h3>
+                    As the warmer days approach, the anticipation of diving into
+                    a clear, sparkling pool becomes irresistible.
+                    <br />
+                    <br />
+                    At Boise Pool Pros, we specialize in turning that
+                    anticipation into reality with our professional pool opening
+                    services.
+                  </h3>
+                </InViewOpacityTransform>
 
-      <Section
-        header="Technical Services"
-        addedClass={styles.contentLastElement}
-        // At Boise Pool Pros, we understand that the backbone of any great pool experience is its technical integrity.
-        assurance="Our specialized pool technical services are designed to address, maintain, and enhance the mechanical and structural aspects of your pool."
-        assurance2="Ensuring it operates smoothly and efficiently."
-        logoSrc="/globals/pentair.jpg"
-        logoAlt="Pentair Service Professional Logo"
-        logoWidth={512}
-        logoHeight={512}
-        bgImgSrc="/home/tech-1024.jpg"
-        bgImgAlt="Several pool pumps and filters fit snugly in a small room."
-        bgImgWidth={1024}
-        bgImgHeight={1365}
-        objectPosition="50% 90%"
-        href="/services#technical-services"
-      />
+                <Link
+                  className={styles.sectionLink}
+                  href="/services#pool-openings"
+                >
+                  <ActionBtn text="Learn More" />
+                </Link>
+              </div>
+
+              <Image
+                className={styles.logo}
+                src="/globals/cpo.jpg"
+                alt="CPO Logo"
+                width={426}
+                height={426}
+              />
+            </div>
+
+            <Image
+              className={styles.bgImg}
+              src="/gallery/10.jpg"
+              alt="A shallow pool/spa with a large pool in the background"
+              width={1024}
+              height={2164}
+              style={{
+                objectPosition: "50% 55%",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.wrap}>
+          <div className={styles.headerWrap}>
+            <InViewOpacityTransform opacitySpeed="1s">
+              <h2 className={styles.header}>
+                Residential and Commercial Pool Services
+              </h2>
+            </InViewOpacityTransform>
+          </div>
+
+          <div className={styles.contentWrap}>
+            <div className={styles.content}>
+              <div className={styles.statement}>
+                <InViewOpacityTransform
+                  transformSpeed="500ms"
+                  translateY="100px"
+                  threshold={0.1}
+                >
+                  <h3>
+                    At Boise Pool Pros, we specialize in providing top-tier pool
+                    services.
+                    <br />
+                    <br />
+                    Our pool & spa services are tailored to both residential and
+                    commercial clients.
+                  </h3>
+                </InViewOpacityTransform>
+
+                <Link className={styles.sectionLink} href="/services">
+                  <ActionBtn text="Learn More" />
+                </Link>
+              </div>
+            </div>
+
+            <Image
+              className={styles.bgImg}
+              src="/home/pool-1024.jpg"
+              alt="A shallow pool/spa with a large pool in the background"
+              width={1024}
+              height={2164}
+              style={{
+                objectPosition: "50% 20%",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.wrap}>
+          <div className={styles.headerWrap}>
+            <InViewOpacityTransform opacitySpeed="1s">
+              <h2 className={styles.header}>Technical Services</h2>
+            </InViewOpacityTransform>
+          </div>
+
+          <div className={styles.contentWrap}>
+            <div className={styles.content}>
+              <div className={styles.statement}>
+                <InViewOpacityTransform
+                  transformSpeed="500ms"
+                  translateY="100px"
+                  threshold={0.1}
+                >
+                  <h3>
+                    Our specialized pool technical services are designed to
+                    address, maintain, and enhance the mechanical and structural
+                    aspects of your pool.
+                    <br />
+                    <br />
+                    Ensuring it operates smoothly and efficiently.
+                  </h3>
+                </InViewOpacityTransform>
+                <Link
+                  className={styles.sectionLink}
+                  href="/services#technical-services"
+                >
+                  <ActionBtn text="Learn More" />
+                </Link>
+              </div>
+
+              <Image
+                className={styles.logo}
+                src="/globals/pentair.jpg"
+                alt="Pentair Service Professional Logo"
+                width={512}
+                height={512}
+              />
+            </div>
+
+            <Image
+              className={styles.bgImg}
+              src="/home/tech-1024.jpg"
+              alt="Several pool pumps and filters fit snugly in a small room."
+              width={1024}
+              height={1365}
+              style={{
+                objectPosition: "50% 90%",
+              }}
+            />
+          </div>
+        </div>
+      </section>
 
       <SwiperAutoFlow styles={styles} />
     </>
