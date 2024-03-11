@@ -9,34 +9,57 @@ import { InViewOpacityTransform } from "./components/global/in-view-opacity-tran
 export default function Home() {
   return (
     <>
-      <FixedBgImg src="/gallery/9.jpg" alt="Hero image for home page- a glistening pool." width={900} height={598} objectPosition="50% 100%" />
+      <FixedBgImg
+        src="/gallery/9.jpg"
+        alt="Hero image for home page- a glistening pool."
+        width={900}
+        height={598}
+        objectPosition="50% 100%"
+      />
 
       <section className={styles.heroSection}>
         <div className={styles.flexWrap}>
-          <AnimOpacityTranslateY className={styles.heroHeaderWrap}>
-            <h1 className={styles.heroHeader}>We Are Boise&apos;s Highly Rated Pool & Spa Service Professionals</h1>
-          </AnimOpacityTranslateY>
+          <div className={styles.heroHeaderWrap}>
+            <h1 className={styles.heroHeader}>
+              We Are Boise&apos;s Highly Rated Pool & Spa Service Professionals
+            </h1>
+          </div>
 
-          <AnimOpacityTranslateY delay={500} styles={styles}>
-            <ul className={styles.heroServicesList}>
-              <li>Cleaning</li>
-              <li>Maintenance</li>
-              <li>Technical Services</li>
-              <li>Openings and Closings</li>
-            </ul>
-          </AnimOpacityTranslateY>
+          <ul className={styles.heroServicesList}>
+            <li>Cleaning</li>
+            <li>Maintenance</li>
+            <li>Technical Services</li>
+            <li>Openings and Closings</li>
+          </ul>
         </div>
 
-        <InViewOpacityTransform opacitySpeed="500ms" transformSpeed="0ms">
-          <h2 className={styles.heroStatement}>
-            Providing Service to the <span style={{ textTransform: "uppercase", textDecoration: "underline" }}>Boise Metro Area</span> since 2019.
-          </h2>
-        </InViewOpacityTransform>
+        <h2 className={styles.heroStatement}>
+          Providing Service to the{" "}
+          <span
+            style={{ textTransform: "uppercase", textDecoration: "underline" }}
+          >
+            Boise Metro Area
+          </span>{" "}
+          since 2019.
+        </h2>
       </section>
 
       <BtnAndModalContact />
 
-      <Section header="Pool Openings" assurance="As the warmer days approach, the anticipation of diving into a clear, sparkling pool becomes irresistible." assurance2=" At Boise Pool Pros, we specialize in turning that anticipation into reality with our professional pool opening services." logoSrc="/globals/cpo.jpg" logoAlt="CPO Logo" logoWidth={426} logoHeight={426} bgImgSrc="/gallery/10.jpg" bgImgAlt="A shallow pool/spa with a large pool in the background" bgImgWidth={1024} bgImgHeight={2164} objectPosition="50% 55%" />
+      <Section
+        header="Pool Openings"
+        assurance="As the warmer days approach, the anticipation of diving into a clear, sparkling pool becomes irresistible."
+        assurance2=" At Boise Pool Pros, we specialize in turning that anticipation into reality with our professional pool opening services."
+        logoSrc="/globals/cpo.jpg"
+        logoAlt="CPO Logo"
+        logoWidth={426}
+        logoHeight={426}
+        bgImgSrc="/gallery/10.jpg"
+        bgImgAlt="A shallow pool/spa with a large pool in the background"
+        bgImgWidth={1024}
+        bgImgHeight={2164}
+        objectPosition="50% 55%"
+      />
 
       <Section
         header="Residential and Commercial Services"
