@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { useOnScreen } from "../../../_functions/use-on-screen";
+import { useOnScreen } from "../../_functions/use-on-screen";
 
 import styles from "./intro.module.css";
 

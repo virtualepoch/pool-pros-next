@@ -1,11 +1,9 @@
 "use client";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { useOnScreen } from "../../../_functions/use-on-screen";
+import { useOnScreen } from "../../_functions/use-on-screen";
 
-import styles from "./intro.module.css";
-
-export const IntroBeforeAfter = ({ services }) => {
+export const IntroBeforeAfter = ({ styles, children }) => {
   const ref = useRef();
   const [inView, setInView] = useState();
 
@@ -19,26 +17,26 @@ export const IntroBeforeAfter = ({ services }) => {
       <Image
         className={styles.introUnderlay}
         style={{
-          objectPosition: services.introImagePosition,
+          objectPosition: "50% 100%",
         }}
         width={640}
         height={480}
-        src={services.introImage}
+        src="/services/maintenance.jpg"
         alt="Services page image"
       />
 
       <Image
         className={styles.introOverlay}
         style={{
-          objectPosition: services.introImageAfterPosition,
+          objectPosition: "50% 70%",
         }}
         width={640}
         height={480}
-        src={services.introImageAfter}
+        src="/services/maintenance2.jpg"
         alt="Services page image"
       />
 
-      <p
+      <div
         className={styles.introText}
         style={{
           opacity: inView ? 1 : 0,
@@ -48,11 +46,8 @@ export const IntroBeforeAfter = ({ services }) => {
             "opacity 700ms linear, transform 500ms ease, background-color 700ms ease-in 300ms",
         }}
       >
-        {services.intro}
-        <br />
-        <br />
-        {services.intro2}
-      </p>
+        {children}
+      </div>
     </div>
   );
 };

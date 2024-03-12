@@ -1,23 +1,18 @@
 import Image from "next/image";
-import { BgGradientAnim } from "./bg-gradient-anim/bg-gradient-anim";
-import { SiteLogoFloatAnim } from "./site-logo-float-anim";
+
 import { Headers } from "./section-components/_headers";
 import { Intro } from "./section-components/intro";
 import { IntroBeforeAfter } from "./section-components/intro-before-after";
 import { Details } from "./section-components/details";
-import { Guarantee } from "./section-components/guarantee";
-import { WhyChoose } from "./section-components/why-choose";
-
-import styles from "./sections.module.css";
 
 // CONTENT //////////////////////////////////////////
 import { SERVICES } from "../content/_main-content";
 import { BtnAndNav } from "./btn-and-nav";
 
-export const Sections = () => {
+export const Sections = ({ styles }) => {
   return (
     <div className={styles.sections}>
-      <BgGradientAnim />
+    
 
       <BtnAndNav styles={styles} services={SERVICES} />
 
@@ -47,13 +42,8 @@ export const Sections = () => {
         </section>
       ))}
 
-      <div className={styles.sectionFooterWrap}>
-        <WhyChoose styles={styles} />
-
-        <Guarantee styles={styles} services={SERVICES} />
-      </div>
-
-      <SiteLogoFloatAnim styles={styles} />
+    
+   
     </div>
   );
 };

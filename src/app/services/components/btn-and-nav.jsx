@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 
-export const BtnAndNav = ({ styles, services }) => {
+export const BtnAndNav = ({ styles }) => {
   const [pressed, setPressed] = useState();
   const [state, setState] = useState();
 
@@ -63,7 +63,10 @@ export const BtnAndNav = ({ styles, services }) => {
 
       <CSSTransition in={nav && state} unmountOnExit timeout={700}>
         <>
-          <button className={styles.navServicesBtnBg} onTouchStart={()=> setNav(false)}/>
+          <button
+            className={styles.navServicesBtnBg}
+            onTouchStart={() => setNav(false)}
+          />
 
           <nav
             className={styles.navServices}
@@ -78,20 +81,70 @@ export const BtnAndNav = ({ styles, services }) => {
             }}
           >
             <ul>
-              {services.map((services) => (
-                <li
-                  key={services.id}
-                  style={{
-                    backgroundImage: `url(${services.headerImage})`,
-                    backgroundPosition: services.headerImagePosition,
-                  }}
-                >
-                  <a href={services.url} onClick={() => setNav(false)}>
-                    {services.header}
-                  </a>
-                  <div className={styles.linkArrow} />
-                </li>
-              ))}
+              <li
+                // LINK OPENINGS /////////////////////////////////////
+                style={{
+                  backgroundImage: "url(/gallery/10.jpg)",
+                  backgroundPosition: "50% 40%",
+                }}
+              >
+                <a href="#pool-openings" onClick={() => setNav(false)}>
+                  Pool Openings
+                </a>
+                <div className={styles.linkArrow} />
+              </li>
+
+              <li
+                // LINK CLEANING /////////////////////////////////////
+                style={{
+                  backgroundImage: "url(/gallery/0.jpg)",
+                  backgroundPosition: "20% 40%",
+                }}
+              >
+                <a href="#pool-spa-cleaning" onClick={() => setNav(false)}>
+                  Pool & Spa Cleaning
+                </a>
+                <div className={styles.linkArrow} />
+              </li>
+
+              <li
+                // LINK MAINTENANCE /////////////////////////////////////
+                style={{
+                  backgroundImage: "url(/services/2.jpg)",
+                  backgroundPosition: "100% 50%",
+                }}
+              >
+                <a href="#pool-spa-maintenance" onClick={() => setNav(false)}>
+                  Pool & Spa Maintenance
+                </a>
+                <div className={styles.linkArrow} />
+              </li>
+
+              <li
+                // LINK TECHNICAL SERVICES /////////////////////////////////////
+                style={{
+                  backgroundImage: "url(/home/tech-1024.jpg)",
+                  backgroundPosition: "50% 70%",
+                }}
+              >
+                <a href="#technical-services" onClick={() => setNav(false)}>
+                  Technical Services
+                </a>
+                <div className={styles.linkArrow} />
+              </li>
+
+              <li
+                // LINK CLOSINGS /////////////////////////////////////
+                style={{
+                  backgroundImage: "url(/gallery/2.jpeg)",
+                  backgroundPosition: "50% 60%",
+                }}
+              >
+                <a href="#pool-closings" onClick={() => setNav(false)}>
+                  Pool Closings
+                </a>
+                <div className={styles.linkArrow} />
+              </li>
             </ul>
           </nav>
         </>
