@@ -9,6 +9,8 @@ export const DetailsMaintenance = ({ styles }) => {
           Chemical Balancing and Treatment
         </li>
 
+        <hr className={styles.hr} />
+
         <li
           className={styles.cleaningDetailsListItem}
           style={{ fontWeight: "bold" }}
@@ -16,12 +18,16 @@ export const DetailsMaintenance = ({ styles }) => {
           Pool Equipment Inspection and Repair
         </li>
 
+        <hr className={styles.hr} />
+
         <li
           className={styles.cleaningDetailsListItem}
           style={{ fontWeight: "bold" }}
         >
           Pool Opening and Closing Services
         </li>
+        
+        <hr className={styles.hr} />
 
         <li
           className={styles.cleaningDetailsListItem}
@@ -30,12 +36,16 @@ export const DetailsMaintenance = ({ styles }) => {
           Filter Cleaning and Replacement
         </li>
 
+        <hr className={styles.hr} />
+        
         <li
           className={styles.cleaningDetailsListItem}
           style={{ fontWeight: "bold" }}
         >
           Salt cell cleaning and inspection
         </li>
+        
+        <hr className={styles.hr} />
 
         <li
           className={styles.cleaningDetailsListItem}

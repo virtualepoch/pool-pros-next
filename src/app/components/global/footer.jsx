@@ -58,6 +58,18 @@ export const Footer = () => {
 
       <FooterLinks />
 
+      <Link className="nav-link" href="/services">
+        Services
+      </Link>
+
+      <Link className="nav-link" href="/testimonials">
+        Testimonials
+      </Link>
+
+      <Link className="nav-link" href="/gallery">
+        Gallery
+      </Link>
+
       <div className="footer-logos-wrap">
         <a href="https://cpo.training/" target="_blank" rel="noreferrer">
           <Image

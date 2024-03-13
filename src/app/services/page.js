@@ -133,7 +133,7 @@ export default function Services() {
             Maintenance
           </h3>
 
-          <h3 className={styles.subHeader}>
+          <h3 className={styles.subHeader} style={{ textAlign: "center" }}>
             Our Pool & Spa Maintenance Services Include:
           </h3>
 
@@ -203,9 +203,9 @@ export default function Services() {
             Pool Closings
           </h3>
 
-          <h3 className={styles.subHeader}>
+          <h3 className={styles.subHeader} style={{ textAlign: "center" }}>
             Our pool closing service includes a thorough checklist to ensure
-            every detail is addressed.
+            every detail is addressed
           </h3>
           <br />
           <div className={styles.sectionContentWrap}>

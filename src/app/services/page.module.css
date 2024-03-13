@@ -124,18 +124,30 @@
   left: 10px;
   top: 15px;
   z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid #0ff;
   border-radius: 25px;
   background: var(--btn-nav-bg);
   background: #fff;
 }
 
+.btnNavServices.open {
+  border: none;
+}
+
 .btnNavServicesIcon {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 0;
+  right: 0;
+  margin: auto;
   top: 0;
-  background: url(/icons/chevron-down-solid.svg) center / 25% no-repeat;
+  filter: drop-shadow(0 1px 1px #000c);
+  background: url(/icons/chevron-down-solid.svg) center / 50% no-repeat;
   transition: transform 500ms ease;
 }
 
@@ -147,6 +159,7 @@
 } */
 
 .btnNavServices.open .btnNavServicesIcon {
+  filter: drop-shadow(0 -1px 1px #000c);
   transform: rotate(-180deg);
 }
 
