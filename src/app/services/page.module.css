@@ -128,9 +128,9 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  border: 1px solid #0ff;
+  /* border-top: 1px solid #0ff;
+  border-left: 1px solid #0ff; */
   border-radius: 25px;
-  background: var(--btn-nav-bg);
   background: #fff;
 }
 
@@ -186,7 +186,8 @@
   text-shadow: var(--text-shadow-5);
   background: #fff;
   border-radius: 24px;
-  box-shadow: 1px 1px 10px 1px #0007;
+  box-shadow: inset 1px 1px 1px 1px #0ff7, inset -1px -1px 2px 1px #0222,
+    1px 1px 10px 1px #0007;
 }
 
 p.headerNavServices {

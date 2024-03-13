@@ -43,9 +43,8 @@ export default function Services() {
         <BtnAndNav styles={styles} />
 
         {/* OPENINGS /////////////////////////////////////////////////// */}
-        <section className={styles.section}>
+        <section className={styles.section} id="pool-openings">
           <h3
-            id="pool-openings"
             className={styles.header}
             style={{
               backgroundImage: "url(/gallery/10.jpg)",
@@ -79,9 +78,8 @@ export default function Services() {
         </section>
 
         {/* CLEANING /////////////////////////////////////////////////// */}
-        <section className={styles.section}>
+        <section className={styles.section} id="pool-spa-cleaning">
           <h3
-            id="pool-spa-cleaning"
             className={styles.header}
             style={{
               backgroundImage: "url(/gallery/0.jpg)",
@@ -121,9 +119,8 @@ export default function Services() {
         </section>
 
         {/* MAINTENANCE /////////////////////////////////////////////////// */}
-        <section className={styles.section}>
+        <section className={styles.section} id="pool-spa-maintenance">
           <h3
-            id="pool-spa-maintenance"
             className={styles.header}
             style={{
               backgroundImage: "url(/services/2.jpg)",
@@ -154,9 +151,8 @@ export default function Services() {
         </section>
 
         {/* TECHNICAL /////////////////////////////////////////////////// */}
-        <section className={styles.section}>
+        <section className={styles.section} id="technical-services">
           <h3
-            id="technical-services"
             className={styles.header}
             style={{
               backgroundImage: "url(/home/tech-1024.jpg)",
@@ -191,9 +187,8 @@ export default function Services() {
         </section>
 
         {/* CLOSINGS /////////////////////////////////////////////////// */}
-        <section className={styles.section}>
+        <section className={styles.section} id="pool-closings">
           <h3
-            id="pool-closings"
             className={styles.header}
             style={{
               backgroundImage: "url(/gallery/2.jpeg)",
