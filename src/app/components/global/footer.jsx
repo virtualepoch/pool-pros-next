@@ -1,7 +1,6 @@
-"use client";
 import Image from "next/image";
-import { FooterLinks } from "./footer-links";
 import Link from "next/link";
+import { FooterLinks } from "./footer-links";
 import { SiteLogo } from "./site-logo";
 
 export const Footer = () => {

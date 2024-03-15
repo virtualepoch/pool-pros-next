@@ -3,53 +3,37 @@ export const DetailsMaintenance = ({ styles }) => {
     <div className={styles.details}>
       <ul className={styles.detailsList} style={{ textAlign: "center" }}>
         <li
-          className={styles.cleaningDetailsListItem}
-          style={{ fontWeight: "bold" }}
+          className={`${styles.cleaningDetailsListItem} ${styles.maintenanceListItem}`}
         >
           Chemical Balancing and Treatment
         </li>
 
-        <hr className={styles.hr} />
-
         <li
-          className={styles.cleaningDetailsListItem}
-          style={{ fontWeight: "bold" }}
+          className={`${styles.cleaningDetailsListItem} ${styles.maintenanceListItem}`}
         >
           Pool Equipment Inspection and Repair
         </li>
 
-        <hr className={styles.hr} />
-
         <li
-          className={styles.cleaningDetailsListItem}
-          style={{ fontWeight: "bold" }}
+          className={`${styles.cleaningDetailsListItem} ${styles.maintenanceListItem}`}
         >
           Pool Opening and Closing Services
         </li>
-        
-        <hr className={styles.hr} />
 
         <li
-          className={styles.cleaningDetailsListItem}
-          style={{ fontWeight: "bold" }}
+          className={`${styles.cleaningDetailsListItem} ${styles.maintenanceListItem}`}
         >
           Filter Cleaning and Replacement
         </li>
 
-        <hr className={styles.hr} />
-        
         <li
-          className={styles.cleaningDetailsListItem}
-          style={{ fontWeight: "bold" }}
+          className={`${styles.cleaningDetailsListItem} ${styles.maintenanceListItem}`}
         >
           Salt cell cleaning and inspection
         </li>
-        
-        <hr className={styles.hr} />
 
         <li
-          className={styles.cleaningDetailsListItem}
-          style={{ fontWeight: "bold" }}
+          className={`${styles.cleaningDetailsListItem} ${styles.maintenanceListItem}`}
         >
           Tailored maintenance schedules to fit specific pool needs and usage
           patterns

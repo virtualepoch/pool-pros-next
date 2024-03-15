@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BtnAndModalContact } from "./components/ui/btn-and-modal-contact";
 import { InViewOpacityTransform } from "./components/global/in-view-opacity-transform";
+import { BgImgFixed } from "./components/global/bg-img-fixed";
 import { ActionBtn } from "./components/global/ActionBtn";
 import { SwiperAutoFlow } from "./components/global/swiper-auto-flow";
 import styles from "./page.module.css";
@@ -9,18 +10,12 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <>
-      <Image
-        className="fixed-bg-img"
-        priority
+      <BgImgFixed
         src="/gallery/9.jpg"
         alt="Hero image for home page- a glistening pool."
         width={900}
         height={598}
-        style={{
-          // opacity: anim ? 1 : 0,
-          // transition: "opacity 1s ease",
-          objectPosition: "50% 100%",
-        }}
+        objectPosition="50% 100%"
       />
 
       <section className={styles.heroSection}>

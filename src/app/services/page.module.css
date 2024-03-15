@@ -186,8 +186,7 @@
   text-shadow: var(--text-shadow-5);
   background: #fff;
   border-radius: 24px;
-  box-shadow: inset 1px 1px 1px 1px #0ff7, inset -1px -1px 2px 1px #0222,
-    1px 1px 10px 1px #0007;
+  box-shadow: 1px 1px 10px 1px #0007;
 }
 
 p.headerNavServices {
@@ -400,13 +399,55 @@ p.headerNavServices {
   display: block;
 }
 
+.maintenanceListItem {
+  position: relative;
+  padding: 16px;
+  color: #333;
+  color: var(--blue-1);
+  text-shadow: 0 1px 3px #0003;
+  text-shadow: 0 1px 3px #0ff3;
+  border-radius: 16px;
+  font-weight: 600;
+  box-shadow: 0 5px 10px 1px #2222;
+}
+
+.checkbox::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: inset 1px 1px 4px 1px #0002;
+}
+
 .checkbox {
-  width: 25px;
-  min-width: 25px;
-  height: 25px;
-  border: 1px solid #0af;
+  position: relative;
+  z-index: 0;
+  width: 26px;
+  min-width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
-  background: url(/icons/check-solid.svg) center / 100% no-repeat;
+  overflow: visible;
+  box-shadow: 1px 1px 4px 1px #0002;
+
+  background: var(--grad-2);
+}
+
+.checkbox::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  background: url(/icons/check-solid.svg) center / 80% no-repeat;
+  filter: drop-shadow(1px 1px 3px #0005);
 }
 
 .sectionFooterWrap {
