@@ -15,10 +15,7 @@ const comfortaa = localFont({
 });
 
 export const metadata = {
-  title: {
-    default: "Pool & Spa Service Professionals - Boise Pool Pros",
-    template: "%s - Boise Pool Pros",
-  },
+  title: "Pool & Spa Service Professionals - Boise Pool Pros",
   description:
     "We provide Residential & Commercial Pool & Spa Cleaning, Maintenance, Technical Services, Openings, Closings, Water Treatment, and many other services.",
   generator: "Next.js",

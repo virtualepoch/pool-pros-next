@@ -238,7 +238,7 @@ button:focus {
 
 .bg-img-fixed-wrap.active {
   opacity: 1;
-  transition: opacity 500ms linear;
+  transition: opacity 700ms linear;
 }
 
 .bg-img-fixed {
