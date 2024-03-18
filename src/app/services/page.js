@@ -2,7 +2,6 @@ import Image from "next/image";
 import { ZoomBg } from "../components/global/bg-imgs-anim-zoom";
 import { BtnAndModalContact } from "../components/ui/btn-and-modal-contact";
 import { BtnAndNav } from "./components/btn-and-nav";
-// import { InViewOpacityTransform } from "../components/global/in-view-opacity-transform";
 import { DetailsOpenings } from "./components/details-openings";
 import { DetailsCleaning } from "./components/details-cleaning";
 import { DetailsMaintenance } from "./components/details-maintenance";
