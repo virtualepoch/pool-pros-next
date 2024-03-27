@@ -15,8 +15,8 @@ export const SiteLogo = ({
         style={style}
         src={src}
         alt="Boise Pool Pros Logo"
-        width={333}
-        height={333}
+        width={180}
+        height={180}
       />
     </Link>
   );

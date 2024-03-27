@@ -73,10 +73,10 @@ export const Footer = () => {
         <a href="https://cpo.training/" target="_blank" rel="noreferrer">
           <Image
             className="logo"
-            src="/globals/cpo.jpg"
+            src="/images/cpo-256.jpg"
             alt="CPO Logo"
-            width={426}
-            height={426}
+            width={140}
+            height={140}
             target="_blank"
             rel="noreferrer"
           />
@@ -85,10 +85,10 @@ export const Footer = () => {
         <a href="https://www.pentair.com" target="_blank" rel="noreferrer">
           <Image
             className="logo"
-            src="/globals/pentair.jpg"
+            src="/images/pentair-256.jpg"
             alt="Pentair Service Professional Logo"
-            width={512}
-            height={512}
+            width={140}
+            height={140}
             target="_blank"
             rel="noreferrer"
           />

@@ -28,7 +28,7 @@ export const ImageSlider = ({ images }) => {
       <Swiper
         className="swiper_container"
         style={{
-          "--swiper-navigation-color": "#0ffa",
+          "--swiper-navigation-color": "#0ff",
         }}
         loop
         // speed={500}
@@ -56,8 +56,8 @@ export const ImageSlider = ({ images }) => {
           <SwiperSlide key={images.url}>
             <Image
               className="swiper-slide-img"
-              width={640}
-              height={480}
+              width={930}
+              height={642}
               src={images.url}
               alt={images.alt}
             />

@@ -166,6 +166,10 @@ button:focus {
   position: relative;
 }
 
+.main.testimonials {
+  background-color: var(--bg);
+}
+
 /* HEADER */
 .header {
   width: 100%;

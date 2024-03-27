@@ -21,7 +21,7 @@ export const IntroBeforeAfter = ({ styles, children }) => {
         }}
         width={640}
         height={480}
-        src="/services/maintenance.jpg"
+        src="/images/maintenance.jpg"
         alt="Services page image"
       />
 
@@ -32,7 +32,7 @@ export const IntroBeforeAfter = ({ styles, children }) => {
         }}
         width={640}
         height={480}
-        src="/services/maintenance2.jpg"
+        src="/images/maintenance2.jpg"
         alt="Services page image"
       />
 

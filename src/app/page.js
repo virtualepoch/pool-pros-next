@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <BgImgFixed
-        src="/gallery/9.jpg"
+        src="/images/9.jpg"
         alt="Hero image for home page- a glistening pool."
         width={900}
         height={598}
@@ -84,16 +84,16 @@ export default function Home() {
 
               <Image
                 className={styles.logo}
-                src="/globals/cpo.jpg"
+                src="/images/cpo-256.jpg"
                 alt="CPO Logo"
-                width={426}
-                height={426}
+                width={180}
+                height={180}
               />
             </div>
 
             <Image
               className={styles.bgImg}
-              src="/gallery/10.jpg"
+              src="/images/10.jpg"
               alt="A shallow pool/spa with a large pool in the background"
               width={1024}
               height={2164}
@@ -141,7 +141,7 @@ export default function Home() {
 
             <Image
               className={styles.bgImg}
-              src="/home/pool-1024.jpg"
+              src="/images/pool-1024.jpg"
               alt="A shallow pool/spa with a large pool in the background"
               width={1024}
               height={2164}
@@ -175,7 +175,7 @@ export default function Home() {
                     aspects of your pool.
                     <br />
                     <br />
-                    Ensuring it operates smoothly and efficiently.
+                    This will ensure it operates smoothly and efficiently.
                   </h3>
                 </InViewOpacityTransform>
                 <Link
@@ -188,16 +188,16 @@ export default function Home() {
 
               <Image
                 className={styles.logo}
-                src="/globals/pentair.jpg"
+                src="/images/pentair-256.jpg"
                 alt="Pentair Service Professional Logo"
-                width={512}
-                height={512}
+                width={180}
+                height={180}
               />
             </div>
 
             <Image
               className={styles.bgImg}
-              src="/home/tech-1024.jpg"
+              src="/images/tech-1024.jpg"
               alt="Several pool pumps and filters fit snugly in a small room."
               width={1024}
               height={1365}

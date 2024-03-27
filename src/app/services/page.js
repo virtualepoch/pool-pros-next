@@ -11,10 +11,15 @@ import { DetailsTechnical } from "./components/details-technical";
 import styles from "./page.module.css";
 
 const IMAGES = [
-  { url: "/gallery/0.jpg", alt: "image one", width: 1440, height: 1080 },
-  { url: "/gallery/spa-0.jpg", alt: "image one", width: 2048, height: 1536 },
-  { url: "/home/tech-1024.jpg", alt: "image one", width: 1024, height: 1365 },
+  { url: "/images/0.jpg", alt: "image one", width: 1440, height: 1080 },
+  { url: "/images/spa-0.jpg", alt: "image one", width: 2048, height: 1536 },
+  { url: "/images/tech-1024.jpg", alt: "image one", width: 1024, height: 1365 },
 ];
+
+
+export const metadata = {
+  title: "Boise Pool Pros - Services",
+};
 
 export default function Services() {
   return (
@@ -42,7 +47,7 @@ export default function Services() {
           <h3
             className={styles.header}
             style={{
-              backgroundImage: "url(/gallery/10.jpg)",
+              backgroundImage: "url(/images/10.jpg)",
               backgroundPosition: "50% 40%",
             }}
           >
@@ -77,7 +82,7 @@ export default function Services() {
           <h3
             className={styles.header}
             style={{
-              backgroundImage: "url(/gallery/0.jpg)",
+              backgroundImage: "url(/images/0.jpg)",
               backgroundPosition: "20% 40%",
             }}
           >
@@ -118,7 +123,7 @@ export default function Services() {
           <h3
             className={styles.header}
             style={{
-              backgroundImage: "url(/services/2.jpg)",
+              backgroundImage: "url(/images/2.jpg)",
               backgroundPosition: "100% 50%",
             }}
           >
@@ -186,7 +191,7 @@ export default function Services() {
           <h3
             className={styles.header}
             style={{
-              backgroundImage: "url(/gallery/2.jpeg)",
+              backgroundImage: "url(/images/2.jpeg)",
               backgroundPosition: "50% 60%",
             }}
           >
@@ -202,7 +207,7 @@ export default function Services() {
             <IntroAnim
               styles={styles}
               imagePosition="50% 60%"
-              imgSrc="/services/open1.jpg"
+              imgSrc="/images/open1.jpg"
             >
               <p>
                 At Boise Pool Pros we understand the intricacies involved in
@@ -267,10 +272,10 @@ export default function Services() {
 
               <Image
                 className={styles.guaranteeImage}
-                src={"/globals/cpo.jpg"}
+                src={"/images/cpo-256.jpg"}
                 alt="Services section intro image"
-                width={426}
-                height={426}
+                width={180}
+                height={180}
               />
             </div>
           </div>
