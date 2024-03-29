@@ -60,7 +60,7 @@ export default function Services() {
           <div className={styles.sectionContentWrap}>
             <IntroAnim
               styles={styles}
-              imgSrc="/services/open.jpg"
+              imgSrc="/images/open.jpg"
               imagePosition="center"
             >
               <p>
@@ -96,7 +96,7 @@ export default function Services() {
             <IntroAnim
               styles={styles}
               imagePosition="100% 70%"
-              imgSrc="/services/clean.jpg"
+              imgSrc="/images/clean.jpg"
               bgColor="none"
             >
               <p style={{ textShadow: "0 0 5px #000" }}>
