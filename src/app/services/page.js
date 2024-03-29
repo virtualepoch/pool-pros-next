@@ -169,7 +169,7 @@ export default function Services() {
             <IntroAnim
               styles={styles}
               imagePosition="100% 70%"
-              imgSrc="/services/tech.jpg"
+              imgSrc="/images/tech.jpg"
             >
               <p>
                 The backbone of any great pool experience is its technical
