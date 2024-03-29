@@ -16,7 +16,6 @@ const IMAGES = [
   { url: "/images/tech-1024.jpg", alt: "image one", width: 1024, height: 1365 },
 ];
 
-
 export const metadata = {
   title: "Boise Pool Pros - Services",
 };
@@ -155,7 +154,7 @@ export default function Services() {
           <h3
             className={styles.header}
             style={{
-              backgroundImage: "url(/home/tech-1024.jpg)",
+              backgroundImage: "url(/images/tech-1024.jpg)",
               backgroundPosition: "50% 70%",
             }}
           >

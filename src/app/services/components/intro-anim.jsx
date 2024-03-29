@@ -7,7 +7,7 @@ export const IntroAnim = ({
   styles,
   imagePosition,
   imgSrc,
-  bgColor = "#0005",
+  bgColor = "#0003",
   children,
 }) => {
   const ref = useRef();

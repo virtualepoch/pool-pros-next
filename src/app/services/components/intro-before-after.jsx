@@ -41,7 +41,7 @@ export const IntroBeforeAfter = ({ styles, children }) => {
         style={{
           opacity: inView ? 1 : 0,
           transform: inView ? "none" : "translateY(50px)",
-          backgroundColor: inView ? "#0008" : "none",
+          backgroundColor: inView ? "#0005" : "none",
           transition:
             "opacity 700ms linear, transform 500ms ease, background-color 700ms ease-in 300ms",
         }}

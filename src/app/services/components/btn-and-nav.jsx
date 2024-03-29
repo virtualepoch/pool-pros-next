@@ -53,10 +53,7 @@ export const BtnAndNav = ({ styles }) => {
           style={{
             opacity: anim ? 1 : 0,
             transform: `translateY(-${anim ? 0 : 100}%)`,
-            boxShadow:
-              pressed | open
-                ? "inset 2px 2px 1px 1px #0ff5"
-                : "inset 1px 1px 1px 1px #0ff7, inset -1px -1px 2px 1px #0222, 1px 2px 10px 1px #0007",
+            boxShadow: pressed | open ? "" : "2px 4px 15px #0005",
             transition: `opacity 500ms ease, transform 500ms ease`,
           }}
         >
@@ -87,7 +84,7 @@ export const BtnAndNav = ({ styles }) => {
               <li
                 // LINK OPENINGS /////////////////////////////////////
                 style={{
-                  backgroundImage: "url(/gallery/10.jpg)",
+                  backgroundImage: "url(/images/10.jpg)",
                   backgroundPosition: "50% 40%",
                 }}
               >
@@ -100,7 +97,7 @@ export const BtnAndNav = ({ styles }) => {
               <li
                 // LINK CLEANING /////////////////////////////////////
                 style={{
-                  backgroundImage: "url(/gallery/0.jpg)",
+                  backgroundImage: "url(/images/0.jpg)",
                   backgroundPosition: "20% 40%",
                 }}
               >
@@ -113,7 +110,7 @@ export const BtnAndNav = ({ styles }) => {
               <li
                 // LINK MAINTENANCE /////////////////////////////////////
                 style={{
-                  backgroundImage: "url(/services/2.jpg)",
+                  backgroundImage: "url(/images/2.jpg)",
                   backgroundPosition: "100% 50%",
                 }}
               >
@@ -126,7 +123,7 @@ export const BtnAndNav = ({ styles }) => {
               <li
                 // LINK TECHNICAL SERVICES /////////////////////////////////////
                 style={{
-                  backgroundImage: "url(/home/tech-1024.jpg)",
+                  backgroundImage: "url(/images/tech-1024.jpg)",
                   backgroundPosition: "50% 70%",
                 }}
               >
@@ -139,7 +136,7 @@ export const BtnAndNav = ({ styles }) => {
               <li
                 // LINK CLOSINGS /////////////////////////////////////
                 style={{
-                  backgroundImage: "url(/gallery/2.jpeg)",
+                  backgroundImage: "url(/images/2.jpeg)",
                   backgroundPosition: "50% 60%",
                 }}
               >
