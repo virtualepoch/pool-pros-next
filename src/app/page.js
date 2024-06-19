@@ -6,6 +6,9 @@ import { BgImgFixed } from "./components/global/bg-img-fixed";
 import { ActionBtn } from "./components/global/ActionBtn";
 import { SwiperAutoFlow } from "./components/global/swiper-auto-flow";
 import styles from "./page.module.css";
+import { WhyChooseGuarantee } from "./components/global/WhyChooseGuarantee";
+import { TimeRenderedComponent } from "./components/global/TimeRenderedComponent";
+import { SectionPoolOpenings } from "./components/global/sections/SectionPoolOpenings";
 
 export default function Home() {
   return (
@@ -47,70 +50,16 @@ export default function Home() {
 
       <BtnAndModalContact />
 
-      <section className={styles.section}>
-        <div className={styles.wrap}>
-          <div className={styles.headerWrap}>
-            <InViewOpacityTransform opacitySpeed="1s">
-              <h2 className={styles.header}>Pool Openings</h2>
-            </InViewOpacityTransform>
-          </div>
-
-          <div className={styles.contentWrap}>
-            <div className={styles.content}>
-              <div className={styles.statement}>
-                <InViewOpacityTransform
-                  transformSpeed="500ms"
-                  translateY="100px"
-                  threshold={0.1}
-                >
-                  <h3>
-                    As the warmer days approach, the anticipation of diving into
-                    a clear, sparkling pool becomes irresistible.
-                    <br />
-                    <br />
-                    At Boise Pool Pros, we specialize in turning that
-                    anticipation into reality with our professional pool opening
-                    services.
-                  </h3>
-                </InViewOpacityTransform>
-
-                <Link
-                  className={styles.sectionLink}
-                  href="/services#pool-openings"
-                >
-                  <ActionBtn text="Learn More" />
-                </Link>
-              </div>
-
-              <Image
-                className={styles.logo}
-                src="/images/cpo-256.jpg"
-                alt="CPO Logo"
-                width={180}
-                height={180}
-              />
-            </div>
-
-            <Image
-              className={styles.bgImg}
-              src="/images/10.jpg"
-              alt="A shallow pool/spa with a large pool in the background"
-              width={1024}
-              height={2164}
-              style={{
-                objectPosition: "50% 55%",
-              }}
-            />
-          </div>
-        </div>
-      </section>
+      <TimeRenderedComponent month1={3} day1={1} month2={6} day2={7}>
+        <SectionPoolOpenings styles={styles} />
+      </TimeRenderedComponent>
 
       <section className={styles.section}>
         <div className={styles.wrap}>
           <div className={styles.headerWrap}>
             <InViewOpacityTransform opacitySpeed="1s">
               <h2 className={styles.header}>
-                Residential and Commercial Pool Services
+                Residential & Commercial Pool & Spa Services
               </h2>
             </InViewOpacityTransform>
           </div>
@@ -124,12 +73,15 @@ export default function Home() {
                   threshold={0.1}
                 >
                   <h3>
-                    At Boise Pool Pros, we specialize in providing top-tier pool
-                    services.
+                    At Boise Pool Pros, we always aspire to provide top-tier
+                    service.
                     <br />
                     <br />
                     Our pool & spa services are tailored to both residential and
-                    commercial clients.
+                    commercial clients. 
+                    <br />
+                    <br />
+                    You can also rest assured because we are licensed Pentair technicians and are fully insured.
                   </h3>
                 </InViewOpacityTransform>
 
@@ -175,7 +127,8 @@ export default function Home() {
                     aspects of your pool.
                     <br />
                     <br />
-                    This will ensure it operates smoothly and efficiently.
+                    This will ensure it always operates smoothly and
+                    efficiently.
                   </h3>
                 </InViewOpacityTransform>
                 <Link
@@ -209,7 +162,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* <PoolOpeningsSlide styles={styles} /> */}
+
       <SwiperAutoFlow styles={styles} />
+
+      <WhyChooseGuarantee />
     </>
   );
 }

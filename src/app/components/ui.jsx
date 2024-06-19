@@ -2,7 +2,7 @@
 import { useState } from "react";
 // COMPONENTS
 import { BtnNav } from "./ui/btn-nav";
-import { Nav } from "./ui/nav";
+import { Nav } from "./ui/Nav";
 // import { BtnToTop } from "./ui/btn-to-top";
 // import { LinkContact } from "./links/link-contact";
 // import { AlertModal } from "./ui/modal-alert";

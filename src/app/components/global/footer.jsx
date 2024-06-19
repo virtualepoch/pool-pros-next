@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FooterLinks } from "./footer-links";
+import { FooterNavLinks } from "./FooterNavLinks";
 import { SiteLogo } from "./site-logo";
 
 export const Footer = () => {
@@ -57,17 +58,7 @@ export const Footer = () => {
 
       <FooterLinks />
 
-      <Link className="nav-link" href="/services">
-        Services
-      </Link>
-
-      <Link className="nav-link" href="/testimonials">
-        Testimonials
-      </Link>
-
-      <Link className="nav-link" href="/gallery">
-        Gallery
-      </Link>
+      <FooterNavLinks />
 
       <div className="footer-logos-wrap">
         <a href="https://cpo.training/" target="_blank" rel="noreferrer">
