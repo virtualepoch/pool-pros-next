@@ -59,7 +59,7 @@ export default function Home() {
           <div className={styles.headerWrap}>
             <InViewOpacityTransform opacitySpeed="1s">
               <h2 className={styles.header}>
-                Residential & Commercial Pool & Spa Services
+                Residential & Commercial Services
               </h2>
             </InViewOpacityTransform>
           </div>
@@ -81,7 +81,7 @@ export default function Home() {
                     commercial clients. 
                     <br />
                     <br />
-                    You can also rest assured because we are licensed Pentair technicians and are fully insured.
+                    You can also rest assured because we are licensed Pentair technicians and fully insured.
                   </h3>
                 </InViewOpacityTransform>
 
