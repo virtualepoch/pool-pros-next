@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./skimmer.module.css";
 
 export const SkimmerAppInfo = () => {

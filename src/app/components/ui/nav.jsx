@@ -1,6 +1,6 @@
 import { CSSTransition } from "react-transition-group";
 // COMPONENTS
-import { NavLinks } from "./NavLinks";
+import { NavLinks } from "./nav-links";
 import { ContactLinks } from "./contact-links";
 import { SiteLogo } from "../global/site-logo";
 
