@@ -90,7 +90,7 @@ export const Footer = () => {
         priority={false}
         src="/logos/jpg333circle.jpg"
         style={{
-          borderRadius: "100%",
+          borderRadius: "5px",
           maxWidth: "140px",
           boxShadow: "1px 1px 10px 1px #000a",
         }}

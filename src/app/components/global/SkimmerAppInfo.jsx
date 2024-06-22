@@ -4,22 +4,26 @@ export const SkimmerAppInfo = () => {
   return (
     <div className={styles.container}>
       <div className={styles.box}>
-        <h1 className={styles.heading}>We use the Skimmer App</h1>
-        <p className={styles.textLarge}>
-          The Skimmer app provides you with automated weekly updates directly to
-          your email. It ensures you stay fully informed about the health and
-          current status of your pool.
-        </p>
+        <div className={styles.flexWrap}>
+          <h1 className={styles.heading}>We use the<br/> Skimmer App</h1>
 
-        <img
-          className={styles.image}
-          src={
-            "https://play-lh.googleusercontent.com/mnOAREKT7OQDKGg_wQZUXnM__XMxWWFGj-XgMCtL8bi5PAba_PwBMG3Asf5Bo6fJWQ"
-          }
-          alt="Skimmer logo"
-          width={180}
-          height={180}
-        />
+          <img
+            className={styles.image}
+            src={
+              "https://play-lh.googleusercontent.com/mnOAREKT7OQDKGg_wQZUXnM__XMxWWFGj-XgMCtL8bi5PAba_PwBMG3Asf5Bo6fJWQ"
+            }
+            alt="Skimmer logo"
+            width={512}
+            height={512}
+          />
+        </div>
+
+        <p className={styles.textLarge}>
+          The skimmer app allows us to record the services performed and
+          chemicals added at each visit. After the service is finished Skimmer
+          sends a detailed report to your email. This ensures you&apos;re always
+          informed and updated on the current status of your pool or spa.
+        </p>
       </div>
     </div>
   );

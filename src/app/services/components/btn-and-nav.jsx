@@ -82,19 +82,6 @@ export const BtnAndNav = ({ styles }) => {
           >
             <ul>
               <li
-                // LINK OPENINGS /////////////////////////////////////
-                style={{
-                  backgroundImage: "url(/images/10.jpg)",
-                  backgroundPosition: "50% 40%",
-                }}
-              >
-                <a href="#pool-openings" onClick={() => setNav(false)}>
-                  Pool Openings
-                </a>
-                <div className={styles.linkArrow} />
-              </li>
-
-              <li
                 // LINK CLEANING /////////////////////////////////////
                 style={{
                   backgroundImage: "url(/images/0.jpg)",
@@ -129,6 +116,19 @@ export const BtnAndNav = ({ styles }) => {
               >
                 <a href="#technical-services" onClick={() => setNav(false)}>
                   Technical Services
+                </a>
+                <div className={styles.linkArrow} />
+              </li>
+
+              <li
+                // LINK OPENINGS /////////////////////////////////////
+                style={{
+                  backgroundImage: "url(/images/10.jpg)",
+                  backgroundPosition: "50% 40%",
+                }}
+              >
+                <a href="#pool-openings" onClick={() => setNav(false)}>
+                  Pool Openings
                 </a>
                 <div className={styles.linkArrow} />
               </li>

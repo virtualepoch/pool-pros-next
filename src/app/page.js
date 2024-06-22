@@ -9,6 +9,7 @@ import styles from "./page.module.css";
 import { WhyChooseGuarantee } from "./components/global/WhyChooseGuarantee";
 import { TimeRenderedComponent } from "./components/global/TimeRenderedComponent";
 import { SectionPoolOpenings } from "./components/global/sections/SectionPoolOpenings";
+import { SkimmerAppInfo } from "./components/global/SkimmerAppInfo";
 
 export default function Home() {
   return (
@@ -78,10 +79,11 @@ export default function Home() {
                     <br />
                     <br />
                     Our pool & spa services are tailored to both residential and
-                    commercial clients. 
+                    commercial clients.
                     <br />
                     <br />
-                    You can also rest assured because we are licensed Pentair technicians and fully insured.
+                    You can also rest assured because we are licensed Pentair
+                    technicians and fully insured.
                   </h3>
                 </InViewOpacityTransform>
 
@@ -162,9 +164,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <PoolOpeningsSlide styles={styles} /> */}
-
       <SwiperAutoFlow styles={styles} />
+
+      <SkimmerAppInfo />
 
       <WhyChooseGuarantee />
     </>

@@ -42,41 +42,6 @@ export default function Services() {
       <div className={styles.sections}>
         <BtnAndNav styles={styles} />
 
-        {/* OPENINGS /////////////////////////////////////////////////// */}
-        <section className={styles.section} id="pool-openings">
-          <h3
-            className={styles.header}
-            style={{
-              backgroundImage: "url(/images/10.jpg)",
-              backgroundPosition: "50% 40%",
-            }}
-          >
-            Pool Openings
-          </h3>
-
-          <h3 className={styles.subHeader}>
-            Comprehensive Pool Opening Services
-          </h3>
-
-          <div className={styles.sectionContentWrap}>
-            <IntroAnim
-              styles={styles}
-              imgSrc="/images/open.jpg"
-              imagePosition="center"
-            >
-              <p>
-                A pool is not just a luxury, but a centerpiece of summer joy and
-                family gatherings. <br />
-                <br />
-                That&apos;s why we are dedicated to providing a seamless,
-                hassle-free start to your swimming season.
-              </p>
-            </IntroAnim>
-
-            <DetailsOpenings styles={styles} />
-          </div>
-        </section>
-
         {/* CLEANING /////////////////////////////////////////////////// */}
         <section className={styles.section} id="pool-spa-cleaning">
           <h3
@@ -183,6 +148,41 @@ export default function Services() {
             </IntroAnim>
 
             <DetailsTechnical styles={styles} />
+          </div>
+        </section>
+
+          {/* OPENINGS /////////////////////////////////////////////////// */}
+          <section className={styles.section} id="pool-openings">
+          <h3
+            className={styles.header}
+            style={{
+              backgroundImage: "url(/images/10.jpg)",
+              backgroundPosition: "50% 40%",
+            }}
+          >
+            Pool Openings
+          </h3>
+
+          <h3 className={styles.subHeader}>
+            Comprehensive Pool Opening Services
+          </h3>
+
+          <div className={styles.sectionContentWrap}>
+            <IntroAnim
+              styles={styles}
+              imgSrc="/images/open.jpg"
+              imagePosition="center"
+            >
+              <p>
+                A pool is not just a luxury, but a centerpiece of summer joy and
+                family gatherings. <br />
+                <br />
+                That&apos;s why we are dedicated to providing a seamless,
+                hassle-free start to your swimming season.
+              </p>
+            </IntroAnim>
+
+            <DetailsOpenings styles={styles} />
           </div>
         </section>
 
