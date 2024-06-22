@@ -52,15 +52,13 @@ export const ModalContact = ({ modal, setModal }) => {
               : "none",
           }}
         >
-          <div className="modal-header">
-            <h3 className="flex-center">Contact Us</h3>
+          <h3 className="modal-header">Contact Us</h3>
 
-            <button
-              className="btn-close-modal"
-              aria-label="Close contact form"
-              onClick={() => setModal(false)}
-            />
-          </div>
+          <button
+            className="btn-close-modal"
+            aria-label="Close contact form"
+            onClick={() => setModal(false)}
+          />
 
           <FooterLinks />
 
