@@ -95,7 +95,7 @@ export default function Gallery() {
 
       <ImageSlider images={IMAGES} />
 
-      <BtnAndModalContact addedClass="contact-link-gallery-page" />
+      <BtnAndModalContact addedClass="contact-link-gallery-page" offset={250}/>
     </main>
   );
 }

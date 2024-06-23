@@ -3,7 +3,11 @@ import { useEffect, useState } from "react";
 import { ModalContact } from "./modal-contact";
 
 // NOTE!!!!!!!!!! THIS IS THE FIXED VERSION THAT MOVED ON SCROLL
-export const BtnAndModalContact = ({ addedClass, content = "Contact Us" }) => {
+export const BtnAndModalContact = ({
+  addedClass,
+  content = "Contact Us",
+  offset = 0,
+}) => {
   const [modal, setModal] = useState();
   const [pressed, setPressed] = useState();
 
@@ -11,12 +15,12 @@ export const BtnAndModalContact = ({ addedClass, content = "Contact Us" }) => {
 
   useEffect(() => {
     function handleScroll() {
-      setBtnFixed(window.scrollY > window.innerHeight ? true : false);
+      setBtnFixed(window.scrollY > window.innerHeight + offset ? true : false);
     }
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [setBtnFixed]);
+  }, [setBtnFixed, offset]);
 
   return (
     <>

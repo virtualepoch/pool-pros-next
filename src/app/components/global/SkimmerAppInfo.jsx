@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./skimmer.module.css";
 
 export const SkimmerAppInfo = () => {
@@ -5,16 +6,17 @@ export const SkimmerAppInfo = () => {
     <div className={styles.container}>
       <div className={styles.box}>
         <div className={styles.flexWrap}>
-          <h1 className={styles.heading}>We use the<br/> Skimmer App</h1>
+          <h1 className={styles.heading}>
+            We use the
+            <br /> Skimmer App
+          </h1>
 
-          <img
+          <Image
             className={styles.image}
-            src={
-              "https://play-lh.googleusercontent.com/mnOAREKT7OQDKGg_wQZUXnM__XMxWWFGj-XgMCtL8bi5PAba_PwBMG3Asf5Bo6fJWQ"
-            }
-            alt="Skimmer logo"
-            width={512}
-            height={512}
+            src="/images/skimmer-logo.webp"
+            alt="Skimmer App logo"
+            width={240}
+            height={240}
           />
         </div>
 
