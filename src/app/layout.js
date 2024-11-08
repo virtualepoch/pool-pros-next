@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { UI } from "./components/ui";
 import { Header } from "./components/global/header";
 import { Footer } from "./components/global/footer";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
 import "./components/ui/ui.css";
@@ -97,7 +97,7 @@ export default function RootLayout({ children }) {
         </div>
       </body>
 
-      <GoogleTagManager gtmId="G-8BZ8QJ3NEW" />
+      <GoogleAnalytics gaId="G-8BZ8QJ3NEW" />
     </html>
   );
 }
