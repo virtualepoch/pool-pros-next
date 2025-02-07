@@ -19,10 +19,6 @@ const IMAGES = [
     alt: "Boise Pool Pros gallery image four",
   },
   {
-    url: "/images/9.jpg",
-    alt: "Boise Pool Pros gallery image",
-  },
-  {
     url: "/images/10.jpg",
     alt: "Boise Pool Pros gallery image",
   },
@@ -95,7 +91,7 @@ export default function Gallery() {
 
       <ImageSlider images={IMAGES} />
 
-      <BtnAndModalContact addedClass="contact-link-gallery-page" offset={250}/>
+      <BtnAndModalContact addedClass="contact-link-gallery-page" offset={250} />
     </main>
   );
 }

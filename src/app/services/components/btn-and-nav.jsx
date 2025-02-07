@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
 export const BtnAndNav = ({ styles }) => {
@@ -15,15 +15,11 @@ export const BtnAndNav = ({ styles }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [setState]);
 
-  ///////////////////////////////////////////////////////
-
   const [anim, setAnim] = useState();
 
   useEffect(() => {
     setTimeout(() => setAnim(state), 1);
   }, [setAnim, state]);
-
-  //////////////////////////////////////////////////////
 
   const [nav, setNav] = useState();
   const [open, setOpen] = useState();
@@ -32,10 +28,13 @@ export const BtnAndNav = ({ styles }) => {
     setTimeout(() => setOpen(nav), 1);
   }, [setOpen, nav]);
 
+  const nodeRef = useRef(null);
+
   return (
     <div className={styles.btnAndNavWrap}>
-      <CSSTransition in={state} unmountOnExit timeout={500}>
+      <CSSTransition in={state} unmountOnExit timeout={500} nodeRef={nodeRef}>
         <button
+        ref={nodeRef}
           className={
             nav
               ? `${styles.btnNavServices} ${styles.open}`
@@ -61,9 +60,10 @@ export const BtnAndNav = ({ styles }) => {
         </button>
       </CSSTransition>
 
-      <CSSTransition in={nav && state} unmountOnExit timeout={700}>
+      <CSSTransition in={nav && state} unmountOnExit timeout={700} nodeRef={nodeRef}>
         <>
           <button
+          ref={nodeRef}
             className={styles.navServicesBtnBg}
             onTouchStart={() => setNav(false)}
           />

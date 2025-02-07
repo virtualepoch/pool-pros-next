@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
 export const LoadingPanel = ({ styles }) => {
@@ -11,14 +11,17 @@ export const LoadingPanel = ({ styles }) => {
     }, 2000);
   }, [loadingPanel]);
 
+  const nodeRef = useRef(null);
+
   return (
     <CSSTransition
       in={loadingPanel}
       unmountOnExit
       timeout={300}
       classNames={styles.loadingSection}
+      nodeRef={nodeRef}
     >
-      <div className={styles.loadingSection}>
+      <div className={styles.loadingSection} ref={nodeRef}>
         <div className={styles.loadingIcon} />
       </div>
     </CSSTransition>

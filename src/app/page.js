@@ -15,11 +15,11 @@ export default function Home() {
   return (
     <>
       <BgImgFixed
-        src="/images/9.jpg"
+        src="/images/0.jpg"
         alt="Hero image for home page- a glistening pool."
         width={900}
         height={598}
-        objectPosition="50% 100%"
+        objectPosition="50% 50%"
       />
 
       <section className={styles.heroSection}>

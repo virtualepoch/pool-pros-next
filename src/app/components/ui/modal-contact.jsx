@@ -32,6 +32,8 @@ export const ModalContact = ({ modal, setModal }) => {
   const [pressed, setPressed] = useState();
   const [anim, setAnim] = useState();
 
+  const nodeRef = useRef(null);
+
   return (
     <CSSTransition
       in={modal}
@@ -40,8 +42,9 @@ export const ModalContact = ({ modal, setModal }) => {
       timeout={400}
       classNames="modal"
       unmountOnExit
+      nodeRef={nodeRef}
     >
-      <section className="modal" aria-label="Contact Form">
+      <section className="modal" aria-label="Contact Form" ref={nodeRef}>
         <div
           className="modal-content-wrap"
           style={{

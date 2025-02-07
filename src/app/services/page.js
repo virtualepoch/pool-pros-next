@@ -12,7 +12,7 @@ import { DetailsTechnical } from "./components/details-technical";
 import styles from "./page.module.css";
 
 const IMAGES = [
-  { url: "/images/0.jpg", alt: "image one", width: 1440, height: 1080 },
+  { url: "/images/10.jpg", alt: "image one", width: 1440, height: 1080 },
   { url: "/images/spa-0.jpg", alt: "image one", width: 2048, height: 1536 },
   { url: "/images/tech-1024.jpg", alt: "image one", width: 1024, height: 1365 },
 ];

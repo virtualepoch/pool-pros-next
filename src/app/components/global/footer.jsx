@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { FooterLinks } from "./footer-links";
 import { FooterNavLinks } from "./FooterNavLinks";
 import { SiteLogo } from "./site-logo";
@@ -104,7 +103,7 @@ export const Footer = () => {
         <p className="footer-info">8670 West Pembrook Drive, Boise, ID 83704</p>
 
         <p className="footer-copyright">
-          &copy; 2024 Boise Pool Pros, all rights reserved.
+          &copy; {new Date().getFullYear()} Boise Pool Pros, all rights reserved.
         </p>
 
         <p className="footer-info virtual-epoch-link-wrapper">

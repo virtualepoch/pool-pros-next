@@ -11,14 +11,17 @@ export const AlertModal = () => {
     setAnim(alertModal);
   }, [setAnim, alertModal]);
 
+  const nodeRef = useRef(null);
+
   return (
     <CSSTransition
       in={alertModal}
       unmountOnExit
       timeout={400}
       classNames="modal"
+      nodeRef={nodeRef}
     >
-      <div className="modal alert">
+      <div className="modal alert" ref={nodeRef}>
         <div
           className="modal-content-wrap"
           style={{
