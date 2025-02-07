@@ -225,7 +225,6 @@
   text-align: center;
   text-shadow: 0 0 1px black, 0 0 2px black;
   border-radius: 300px;
-  backdrop-filter: blur(10px);
 }
 
 .contact-link::before {
