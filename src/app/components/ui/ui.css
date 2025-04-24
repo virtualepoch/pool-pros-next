@@ -279,7 +279,7 @@
   bottom: auto;
   z-index: 10;
   transition: transform var(--contact-btn-trans) ease;
-  transform: translateY(calc(100vh - 70px));
+  transform: translateY(calc(100vh - 80px));
 }
 
 .btn-contact-wrap-open {
