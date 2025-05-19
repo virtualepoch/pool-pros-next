@@ -11,10 +11,10 @@ export const ModalContact = ({ modal, setModal }) => {
 
     emailjs
       .sendForm(
-        "service_mo98h3m",
-        "template_153843878",
+        "service_9ohq2xf",
+        "template_plreudf",
         form.current,
-        "52XGouyue0NUaWVBb"
+        "oCPX_vCBcjZYErlyF"
       )
       .then(
         (result) => {
