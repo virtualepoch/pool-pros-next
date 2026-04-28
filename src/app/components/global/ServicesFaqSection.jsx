@@ -3,7 +3,8 @@ import styles from "./services-faq.module.css";
 
 const SERVICE_FAQ_ITEMS = [
   {
-    question: "Do you service both residential and commercial pools in the Boise area?",
+    question:
+      "Do you service both residential and commercial pools in the Boise area?",
     answer:
       "Yes. Boise Pool Pros supports backyard pools and spas as well as select commercial and community pools within the Boise metro. Route density and safety requirements can affect availability for very large commercial sites, so it is best to describe your property when you first contact us.",
   },

@@ -9,35 +9,39 @@ export const ServiceAreaSection = () => {
     >
       <div className={styles.inner}>
         <h2 className={styles.title} id="service-area-heading">
-          Pool &amp; spa service area around Boise
+          Where we run routes (and why it matters)
         </h2>
         <p className={styles.lead}>
-          Boise Pool Pros serves homeowners, HOAs, and commercial properties
-          across the Boise metro and nearby communities. Whether you need weekly
-          cleaning, seasonal openings and closings, or technical help with pumps,
-          filters, and heaters, we plan routes and chemistry around real-world
-          Idaho weather and water use—not generic national averages.
+          Boise Pool Pros is built around short drive times and repeat visits,
+          not one-off fly-bys. Most of our week is spent on pools we already know:
+          how the skimmer pulls after a windstorm, how fast pH drifts when the
+          cottonwoods shed, and how your fill water behaves when irrigation season
+          kicks in. That local rhythm is what keeps chemistry stable when the
+          forecast swings from cool nights to triple-digit afternoons.
         </p>
         <p className={styles.lead}>
-          Typical service coverage includes Boise, Meridian, Eagle, Garden City,
-          Kuna, Nampa, Star, and Middleton. If you are just outside this radius,
-          contact us anyway; we often accommodate nearby neighborhoods depending
-          on schedule and drive time.
+          Day-to-day routing covers Boise, Meridian, Eagle, Garden City, Kuna,
+          Nampa, Star, and Middleton. If you are on the edge of town or just
+          outside that ring, call anyway—we regularly pick up pockets near
+          Highway 44, Lake Lowell, and the west bench when the calendar allows.
         </p>
         <ul className={styles.list}>
-          <li>Residential backyard pools and attached spas</li>
-          <li>Community pools and small commercial bodies of water</li>
-          <li>Seasonal and year-round routes with documented visits</li>
+          <li>Backyard pools, attached spas, and small HOA bodies of water</li>
+          <li>Seasonal openings and winterizations timed around Idaho freeze dates</li>
+          <li>Service notes and chemistry history you can actually use (Skimmer reports)</li>
         </ul>
         <nav className={styles.linkRow} aria-label="Related pages">
           <Link className={styles.navLink} href="/services">
-            Full services list
+            Services detail
           </Link>
           <Link className={styles.navLink} href="/services#faq">
-            Service FAQ
+            FAQ
           </Link>
           <Link className={styles.navLink} href="/testimonials">
-            Customer testimonials
+            Reviews
+          </Link>
+          <Link className={styles.navLink} href="/gallery">
+            Gallery
           </Link>
         </nav>
       </div>

@@ -103,8 +103,6 @@ export default function Home() {
 
       <BtnAndModalContact />
 
-      <ServiceAreaSection></ServiceAreaSection>
-
       <TimeRenderedComponent month1={3} day1={1} month2={6} day2={7}>
         <SectionPoolOpenings styles={styles} />
       </TimeRenderedComponent>
@@ -141,24 +139,6 @@ export default function Home() {
                   </h3>
                 </InViewOpacityTransform>
 
-                <p className={styles.internalNavHint}>
-                  Browse{" "}
-                  <Link href="/services#pool-spa-cleaning">
-                    pool and spa cleaning
-                  </Link>
-                  ,{" "}
-                  <Link href="/services#pool-spa-maintenance">
-                    maintenance programs
-                  </Link>
-                  ,{" "}
-                  <Link href="/services#technical-services">technical care</Link>
-                  , and{" "}
-                  <Link href="/services#pool-openings">
-                    openings and closings
-                  </Link>{" "}
-                  for more detail.
-                </p>
-
                 <Link className={styles.sectionLink} href="/services">
                   <ActionBtn text="Learn More" />
                 </Link>
@@ -177,6 +157,15 @@ export default function Home() {
             />
           </div>
         </div>
+        <p className={styles.sectionFootnote}>
+          Dig into how we handle Treasure Valley realities—wind-blown debris,
+          cottonwood season, hard water, and busy summer bather loads—on our{" "}
+          <Link href="/services#pool-spa-cleaning">cleaning</Link>,{" "}
+          <Link href="/services#pool-spa-maintenance">maintenance</Link>,{" "}
+          <Link href="/services#technical-services">technical</Link>,{" "}
+          <Link href="/services#pool-openings">opening</Link>, and{" "}
+          <Link href="/services#pool-closings">closing</Link> pages.
+        </p>
       </section>
 
       <section className={styles.section}>
@@ -205,13 +194,6 @@ export default function Home() {
                     efficiently.
                   </h3>
                 </InViewOpacityTransform>
-
-                <p className={styles.internalNavHint}>
-                  See what neighbors say on the{" "}
-                  <Link href="/testimonials">testimonials</Link> page, or view
-                  finished work in the{" "}
-                  <Link href="/gallery">project gallery</Link>.
-                </p>
 
                 <Link
                   className={styles.sectionLink}
@@ -242,6 +224,13 @@ export default function Home() {
             />
           </div>
         </div>
+        <p className={styles.sectionFootnote}>
+          Curious how pumps, heaters, and salt cells behave on Idaho pools? Read
+          neighbor experiences on{" "}
+          <Link href="/testimonials">testimonials</Link> and match equipment to
+          real jobs in the{" "}
+          <Link href="/gallery">gallery</Link> before you call.
+        </p>
       </section>
 
       <SwiperAutoFlow styles={styles} />
@@ -251,6 +240,8 @@ export default function Home() {
       <OrendaLsiSection></OrendaLsiSection>
 
       <WhyChooseGuarantee />
+
+      <ServiceAreaSection></ServiceAreaSection>
     </>
   );
 }

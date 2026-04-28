@@ -62,25 +62,28 @@
   width: 100%;
 }
 
-.internalNavHint {
-  max-width: 520px;
-  margin: 16px auto 0;
-  padding: 0 8px;
+.sectionFootnote {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 20px 28px 36px;
   font-size: 17px;
-  line-height: 1.5;
-  color: #fff;
-  text-shadow: 0 0 4px #000;
+  line-height: 1.55;
+  color: var(--text);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-comfortaa);
 }
 
-.internalNavHint a {
-  color: #b8fffc;
+.sectionFootnote a {
   font-weight: 700;
+  color: #3168ff;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.internalNavHint a:hover {
-  color: #fff;
+.sectionFootnote a:hover {
+  color: #0d0b88;
 }
 
 .heroStatement {

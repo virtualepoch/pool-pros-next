@@ -244,9 +244,9 @@ export default function Services() {
 
         <SkimmerAppInfo />
 
-        <ServicesFaqSection></ServicesFaqSection>
-
         <WhyChooseGuarantee />
+
+        <ServicesFaqSection></ServicesFaqSection>
       </div>
     </>
   );

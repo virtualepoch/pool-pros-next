@@ -108,9 +108,11 @@ export default function Gallery() {
     <main className="main">
       <h1 className="route-header">Gallery</h1>
 
+      <ImageSlider images={IMAGES} />
+
       <p
         style={{
-          padding: "0 24px 20px",
+          padding: "28px 24px 12px",
           maxWidth: "560px",
           margin: "0 auto",
           fontSize: "17px",
@@ -118,14 +120,13 @@ export default function Gallery() {
           color: "var(--text)",
         }}
       >
-        Planning a project? Pair these photos with our{" "}
-        <Link href="/services">full services list</Link>,{" "}
-        <Link href="/services#faq">service FAQ</Link>, and{" "}
-        <Link href="/testimonials">customer testimonials</Link> before you
-        reach out.
+        If a photo looks like your backyard—same plaster tone, similar equipment
+        pad, or that familiar Boise wind grit in the corners—jump to the{" "}
+        <Link href="/services">services breakdown</Link>, skim the{" "}
+        <Link href="/services#faq">FAQ</Link> for how we schedule and bill, then
+        read <Link href="/testimonials">Google-backed testimonials</Link> before
+        you tap Contact.
       </p>
-
-      <ImageSlider images={IMAGES} />
 
       <BtnAndModalContact addedClass="contact-link-gallery-page" offset={250} />
     </main>
