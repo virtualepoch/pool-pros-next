@@ -1,0 +1,49 @@
+.blurb {
+  padding: 28px 24px 8px;
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text);
+  position: relative;
+  z-index: 2;
+}
+
+.inlineLink {
+  font-weight: 700;
+  color: #3168ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.inlineLink:hover {
+  color: #0d0b88;
+}
+
+.quickNav {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text);
+  position: relative;
+  z-index: 2;
+}
+
+.quickNavTitle {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.quickList {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+.quickList li {
+  margin-bottom: 6px;
+  list-style-type: disc;
+}

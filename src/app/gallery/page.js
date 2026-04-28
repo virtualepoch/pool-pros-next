@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { BtnAndModalContact } from "../components/ui/btn-and-modal-contact";
 import { ImageSlider } from "./image-slider";
+import styles from "./gallery.module.css";
+
+const galleryLinkStyle = {
+  fontWeight: 700,
+  color: "#3168ff",
+  textDecoration: "underline",
+  textUnderlineOffset: "3px",
+};
 
 const IMAGES = [
   {
@@ -110,23 +118,152 @@ export default function Gallery() {
 
       <ImageSlider images={IMAGES} />
 
-      <p
-        style={{
-          padding: "28px 24px 12px",
-          maxWidth: "560px",
-          margin: "0 auto",
-          fontSize: "17px",
-          lineHeight: 1.55,
-          color: "var(--text)",
-        }}
-      >
-        If a photo looks like your backyard—same plaster tone, similar equipment
-        pad, or that familiar Boise wind grit in the corners—jump to the{" "}
-        <Link href="/services">services breakdown</Link>, skim the{" "}
-        <Link href="/services#faq">FAQ</Link> for how we schedule and bill, then
-        read <Link href="/testimonials">Google-backed testimonials</Link> before
-        you tap Contact.
+      <p className={styles.blurb}>
+        These shots reflect the kind of work we do every week:{" "}
+        <Link
+          className={styles.inlineLink}
+          style={galleryLinkStyle}
+          href="/services#pool-spa-cleaning"
+        >
+          pool and spa cleaning
+        </Link>
+        ,{" "}
+        <Link
+          className={styles.inlineLink}
+          style={galleryLinkStyle}
+          href="/services#pool-spa-maintenance"
+        >
+          ongoing maintenance
+        </Link>
+        ,{" "}
+        <Link
+          className={styles.inlineLink}
+          style={galleryLinkStyle}
+          href="/services#technical-services"
+        >
+          technical service
+        </Link>
+        ,{" "}
+        <Link
+          className={styles.inlineLink}
+          style={galleryLinkStyle}
+          href="/services#pool-openings"
+        >
+          seasonal openings
+        </Link>
+        , and{" "}
+        <Link
+          className={styles.inlineLink}
+          style={galleryLinkStyle}
+          href="/services#pool-closings"
+        >
+          winter closings
+        </Link>
+        . For scheduling and what to expect on a route, read the{" "}
+        <Link
+          className={styles.inlineLink}
+          style={galleryLinkStyle}
+          href="/services#faq"
+        >
+          services FAQ
+        </Link>
+        ; for customer feedback, see{" "}
+        <Link
+          className={styles.inlineLink}
+          style={galleryLinkStyle}
+          href="/testimonials"
+        >
+          testimonials
+        </Link>
+        . When you are ready, use Contact below.
       </p>
+
+      <nav className={styles.quickNav} aria-label="Quick links from gallery">
+        <p className={styles.quickNavTitle}>Quick links</p>
+        <ul className={styles.quickList}>
+          <li>
+            <Link
+              className={styles.inlineLink}
+              style={galleryLinkStyle}
+              href="/services"
+            >
+              All services
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={styles.inlineLink}
+              style={galleryLinkStyle}
+              href="/services#pool-spa-cleaning"
+            >
+              Pool &amp; spa cleaning
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={styles.inlineLink}
+              style={galleryLinkStyle}
+              href="/services#pool-spa-maintenance"
+            >
+              Maintenance
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={styles.inlineLink}
+              style={galleryLinkStyle}
+              href="/services#technical-services"
+            >
+              Technical services
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={styles.inlineLink}
+              style={galleryLinkStyle}
+              href="/services#pool-openings"
+            >
+              Pool openings
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={styles.inlineLink}
+              style={galleryLinkStyle}
+              href="/services#pool-closings"
+            >
+              Pool closings
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={styles.inlineLink}
+              style={galleryLinkStyle}
+              href="/services#faq"
+            >
+              FAQ
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={styles.inlineLink}
+              style={galleryLinkStyle}
+              href="/testimonials"
+            >
+              Testimonials
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={styles.inlineLink}
+              style={galleryLinkStyle}
+              href="/"
+            >
+              Home
+            </Link>
+          </li>
+        </ul>
+      </nav>
 
       <BtnAndModalContact addedClass="contact-link-gallery-page" offset={250} />
     </main>

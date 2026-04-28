@@ -3,6 +3,13 @@ import { ElfsightWidgetComponent } from "./elfsight-widget";
 import { LoadingPanel } from "./loading-panel";
 import styles from "./page.module.css";
 
+const relatedLinkStyle = {
+  fontWeight: 700,
+  color: "#3168ff",
+  textDecoration: "underline",
+  textUnderlineOffset: "3px",
+};
+
 export const metadata = {
   title: "Customer Testimonials",
   description:
@@ -45,6 +52,8 @@ export default function Testimonials() {
       <nav
         aria-label="Related site pages"
         style={{
+          position: "relative",
+          zIndex: 2,
           padding: "32px 24px 48px",
           maxWidth: "560px",
           margin: "0 auto",
@@ -58,20 +67,24 @@ export default function Testimonials() {
         </p>
         <ul style={{ paddingLeft: "1.25rem", margin: 0, listStyleType: "disc" }}>
           <li style={{ marginBottom: "6px", listStyleType: "disc" }}>
-            <Link href="/services">
-              Line-by-line services (cleaning, maintenance, tech, openings)
+            <Link href="/services" style={relatedLinkStyle}>
+              Our services (cleaning, maintenance, tech, openings)
             </Link>
           </li>
           <li style={{ marginBottom: "6px", listStyleType: "disc" }}>
-            <Link href="/services#faq">
+            <Link href="/services#faq" style={relatedLinkStyle}>
               Idaho-specific FAQ—routing, cadence, and equipment
             </Link>
           </li>
           <li style={{ marginBottom: "6px", listStyleType: "disc" }}>
-            <Link href="/gallery">Gallery shots from actual Treasure Valley jobs</Link>
+            <Link href="/gallery" style={relatedLinkStyle}>
+              Gallery shots from actual Treasure Valley jobs
+            </Link>
           </li>
           <li style={{ listStyleType: "disc" }}>
-            <Link href="/">Home page overview</Link>
+            <Link href="/" style={relatedLinkStyle}>
+              Home page
+            </Link>
           </li>
         </ul>
       </nav>
