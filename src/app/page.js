@@ -12,6 +12,28 @@ import { SectionPoolOpenings } from "./components/global/sections/SectionPoolOpe
 import { SkimmerAppInfo } from "./components/global/SkimmerAppInfo";
 import { OrendaLsiSection } from "./components/global/OrendaLsiSection";
 
+export const metadata = {
+  title: "Pool & Spa Service Professionals",
+  description:
+    "Boise Pool Pros provides residential and commercial pool and spa cleaning, maintenance, technical service, openings, closings, and water chemistry balancing in the Boise Metro Area.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Pool & Spa Service Professionals - Boise Pool Pros",
+    description:
+      "Trusted pool and spa service professionals in Boise for cleaning, maintenance, technical services, and balanced water chemistry.",
+    url: "/",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 export default function Home() {
   return (
     <>

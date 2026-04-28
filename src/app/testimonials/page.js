@@ -3,7 +3,25 @@ import { LoadingPanel } from "./loading-panel";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Boise Pool Pros - Testimonials",
+  title: "Customer Testimonials",
+  description:
+    "Read customer testimonials and feedback for Boise Pool Pros pool and spa service in the Boise Metro Area.",
+  alternates: {
+    canonical: "/testimonials",
+  },
+  openGraph: {
+    title: "Customer Testimonials - Boise Pool Pros",
+    description:
+      "See what customers say about Boise Pool Pros cleaning, maintenance, and technical service quality.",
+    url: "/testimonials",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function Testimonials() {

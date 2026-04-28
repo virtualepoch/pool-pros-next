@@ -18,7 +18,25 @@ const IMAGES = [
 ];
 
 export const metadata = {
-  title: "Pool & Spa Services - Boise Pool Pros",
+  title: "Pool & Spa Services",
+  description:
+    "Explore Boise Pool Pros services including pool and spa cleaning, maintenance, technical repair support, openings, closings, and proactive water chemistry care.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Pool & Spa Services - Boise Pool Pros",
+    description:
+      "Professional pool and spa cleaning, maintenance, technical services, openings, and closings in Boise.",
+    url: "/services",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function Services() {

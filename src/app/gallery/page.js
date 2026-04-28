@@ -81,7 +81,25 @@ const IMAGES = [
 ];
 
 export const metadata = {
-  title: "Boise Pool Pros - Gallery",
+  title: "Pool Service Gallery",
+  description:
+    "View Boise Pool Pros gallery photos featuring pool cleaning, maintenance, technical work, and seasonal opening and closing results.",
+  alternates: {
+    canonical: "/gallery",
+  },
+  openGraph: {
+    title: "Pool Service Gallery - Boise Pool Pros",
+    description:
+      "See real project photos from Boise Pool Pros pool and spa service work.",
+    url: "/gallery",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function Gallery() {

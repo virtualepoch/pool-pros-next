@@ -15,7 +15,10 @@ const comfortaa = localFont({
 });
 
 export const metadata = {
-  title: "Pool & Spa Service Professionals - Boise Pool Pros",
+  title: {
+    default: "Pool & Spa Service Professionals - Boise Pool Pros",
+    template: "%s | Boise Pool Pros",
+  },
   description:
     "We provide Residential & Commercial Pool & Spa Cleaning, Maintenance, Technical Services, Openings, Closings, Water Treatment, and many other services.",
   generator: "Next.js",
@@ -56,10 +59,15 @@ export const metadata = {
   publishers: [{ name: "James Davis" }, { name: "Paul Elie" }],
 
   metadataBase: new URL("https://www.boisepoolpros.com"),
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en-US": "/en-US",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
   openGraph: {
@@ -83,6 +91,42 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Boise Pool Pros",
+    url: "https://www.boisepoolpros.com",
+    image: "https://www.boisepoolpros.com/og.jpg",
+    telephone: "+1-208-475-4344",
+    email: "boisepoolpros@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "8670 West Pembrook Drive",
+      addressLocality: "Boise",
+      addressRegion: "ID",
+      postalCode: "83704",
+      addressCountry: "US",
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Boise Metro Area",
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "17:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "00:00",
+      },
+    ],
+  };
+
   return (
     <html lang="en">
       <body className={`${inter.className} ${comfortaa.variable}`}>
@@ -95,6 +139,12 @@ export default function RootLayout({ children }) {
 
           <Footer />
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        ></script>
       </body>
 
       <GoogleAnalytics gaId="G-8BZ8QJ3NEW" />
