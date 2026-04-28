@@ -2,30 +2,30 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export const FooterNavLinks = () => {
-  function CustomLink({ to, linkName, ...props }) {
-    const pathname = usePathname();
-
-    return (
-      <>
-        {pathname != to && (
-          <Link className="nav-link" href={to}>
-            {linkName}
-          </Link>
-        )}
-      </>
-    );
-  }
+function FooterNavLink({ to, linkName }) {
+  const pathname = usePathname();
 
   return (
+    <>
+      {pathname != to && (
+        <Link className="nav-link" href={to}>
+          {linkName}
+        </Link>
+      )}
+    </>
+  );
+}
+
+export const FooterNavLinks = () => {
+  return (
     <nav className="nav-links-wrap">
-      <CustomLink to="/" linkName="Home" />
+      <FooterNavLink to="/" linkName="Home"></FooterNavLink>
 
-      <CustomLink to="/services" linkName="Services" />
+      <FooterNavLink to="/services" linkName="Services"></FooterNavLink>
 
-      <CustomLink to="/testimonials" linkName="Testimonials" />
+      <FooterNavLink to="/testimonials" linkName="Testimonials"></FooterNavLink>
 
-      <CustomLink to="/gallery" linkName="Gallery" />
+      <FooterNavLink to="/gallery" linkName="Gallery"></FooterNavLink>
     </nav>
   );
 };

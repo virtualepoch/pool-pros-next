@@ -1,0 +1,209 @@
+.wrap {
+  width: 100%;
+  padding: 28px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(165deg, #0a1628 0%, #122a4a 45%, #0d2840 100%);
+  color: #e8f4ff;
+  /* Paint above the fixed hero image (.bg-img-fixed-wrap uses z-index: -1) and Swiper layers */
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.inner {
+  max-width: 56rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.topRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.titleBlock {
+  flex: 1 1 280px;
+}
+
+.kicker {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #56fff8;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 1px 12px #0006;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #b8d4ec;
+  max-width: 36rem;
+}
+
+.body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #c5dff0;
+}
+
+.body p {
+  margin: 0 0 16px;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}
+
+.list {
+  margin: 12px 0 0;
+  padding-left: 1.25rem;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+.list li:last-child {
+  margin-bottom: 0;
+}
+
+.link {
+  color: #7ef9ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link:hover {
+  color: #b8fffc;
+}
+
+.highlightBox {
+  padding: 18px 20px;
+  border-radius: 10px;
+  background: #0004;
+  border: 1px solid #3168ff55;
+  box-shadow: 0 8px 24px #0004;
+}
+
+.highlightTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.legendIntro {
+  font-size: 0.95rem;
+  color: #9ec8e8;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.legendBar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legendRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10px;
+  min-height: 52px;
+}
+
+.swatch {
+  flex: 0 0 12px;
+  align-self: stretch;
+  min-height: 44px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px #fff3;
+}
+
+.swatchPurple {
+  background: linear-gradient(180deg, #a855f7, #6b21a8);
+}
+
+.swatchGreen {
+  background: linear-gradient(180deg, #4ade80, #15803d);
+}
+
+.swatchYellow {
+  background: linear-gradient(180deg, #fde047, #ca8a04);
+}
+
+.swatchRed {
+  background: linear-gradient(180deg, #fb7185, #b91c1c);
+}
+
+.legendText {
+  flex: 1 1 200px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #d0e8f8;
+}
+
+.legendRange {
+  font-weight: 700;
+  color: #fff;
+}
+
+.storeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.storeLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid #3168ff88;
+  background: linear-gradient(111deg, #3168ffcc 0%, #1a4a9ccc 100%);
+  color: #fff;
+  box-shadow: 0 4px 14px #0005;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.storeLink:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px #0006;
+}
+
+.storeLinkSecondary {
+  background: #0d2138;
+  border-color: #56fff888;
+  color: #b8fffc;
+}
+
+.note {
+  font-size: 0.88rem;
+  color: #8eb4d4;
+  line-height: 1.5;
+  margin-top: 8px;
+}

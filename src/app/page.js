@@ -10,6 +10,7 @@ import { WhyChooseGuarantee } from "./components/global/WhyChooseGuarantee";
 import { TimeRenderedComponent } from "./components/global/TimeRenderedComponent";
 import { SectionPoolOpenings } from "./components/global/sections/SectionPoolOpenings";
 import { SkimmerAppInfo } from "./components/global/SkimmerAppInfo";
+import { OrendaLsiSection } from "./components/global/OrendaLsiSection";
 
 export default function Home() {
   return (
@@ -167,6 +168,8 @@ export default function Home() {
       <SwiperAutoFlow styles={styles} />
 
       <SkimmerAppInfo />
+
+      <OrendaLsiSection></OrendaLsiSection>
 
       <WhyChooseGuarantee />
     </>

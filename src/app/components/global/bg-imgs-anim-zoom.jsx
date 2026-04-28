@@ -4,12 +4,9 @@ import { useEffect, useState } from "react";
 import styles from "./bg-imgs-anim-zoom.module.css";
 
 export const ZoomBg = ({ images }) => {
-  const [state, setState] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    setState(true);
-
     const interval = setInterval(() => {
       setImageIndex((index) => (index === images.length - 1 ? 0 : index + 1));
     }, 5000);
@@ -18,11 +15,7 @@ export const ZoomBg = ({ images }) => {
   }, [images]);
 
   return (
-    <div
-      className={
-        state ? `${styles.container} ${styles.active}` : styles.container
-      }
-    >
+    <div className={`${styles.container} ${styles.active}`}>
       {images.map((images, index) => (
         <Image
           className={

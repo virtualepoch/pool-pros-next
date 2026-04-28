@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, FreeMode, Navigation, Thumbs } from "swiper/modules";
 
@@ -14,16 +14,11 @@ export const ImageSlider = ({ images }) => {
   const [btnNextHov, setBtnNextHov] = useState(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const [op, setOp] = useState(null);
-  useEffect(() => {
-    setOp(true);
-  }, [setOp]);
-
   return (
     <section
       className="image-slider"
       aria-label="Image Slider"
-      style={{ opacity: op ? 1 : 0, transition: "opacity 400ms linear" }}
+      style={{ opacity: 1, transition: "opacity 400ms linear" }}
     >
       <Swiper
         className="swiper_container"

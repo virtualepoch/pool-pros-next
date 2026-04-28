@@ -2,36 +2,36 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export const NavLinks = ({ setNav }) => {
-  function CustomLink({ to, linkName, ...props }) {
-    const pathname = usePathname();
+function NavCustomLink({ to, linkName, onNavigate }) {
+  const pathname = usePathname();
 
-    return (
-      <>
-        {pathname != to && (
-          <Link
-            className="nav-link"
-            onClick={() => {
-              setNav(false);
-            }}
-            href={to}
-          >
-            {linkName}
-          </Link>
-        )}
-      </>
-    );
-  }
+  return (
+    <>
+      {pathname != to && (
+        <Link
+          className="nav-link"
+          onClick={onNavigate}
+          href={to}
+        >
+          {linkName}
+        </Link>
+      )}
+    </>
+  );
+}
+
+export const NavLinks = ({ setNav }) => {
+  const handleNavigate = () => setNav(false);
 
   return (
     <section className="nav-links-wrap">
-      <CustomLink to="/" linkName="Home" />
+      <NavCustomLink to="/" linkName="Home" onNavigate={handleNavigate}></NavCustomLink>
 
-      <CustomLink to="/services" linkName="Services" />
+      <NavCustomLink to="/services" linkName="Services" onNavigate={handleNavigate}></NavCustomLink>
 
-      <CustomLink to="/testimonials" linkName="Testimonials" />
+      <NavCustomLink to="/testimonials" linkName="Testimonials" onNavigate={handleNavigate}></NavCustomLink>
 
-      <CustomLink to="/gallery" linkName="Gallery" />
+      <NavCustomLink to="/gallery" linkName="Gallery" onNavigate={handleNavigate}></NavCustomLink>
     </section>
   );
 };

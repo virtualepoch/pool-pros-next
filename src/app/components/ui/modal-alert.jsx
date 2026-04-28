@@ -1,15 +1,10 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
 export const AlertModal = () => {
-  const [alertModal, setAlertModal] = useState(true),
-    [anim, setAnim] = useState(true),
-    [pressed, setPressed] = useState();
-
-  useEffect(() => {
-    setAnim(alertModal);
-  }, [setAnim, alertModal]);
+  const [alertModal, setAlertModal] = useState(true);
+  const [pressed, setPressed] = useState();
 
   const nodeRef = useRef(null);
 
@@ -25,9 +20,9 @@ export const AlertModal = () => {
         <div
           className="modal-content-wrap"
           style={{
-            opacity: anim ? 1 : 0,
-            transform: anim ? "translateY(0)" : "translateY(50%)",
-            transition: anim
+            opacity: alertModal ? 1 : 0,
+            transform: alertModal ? "translateY(0)" : "translateY(50%)",
+            transition: alertModal
               ? "opacity 1000ms ease, transform 500ms ease"
               : "none",
           }}
