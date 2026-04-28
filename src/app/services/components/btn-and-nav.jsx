@@ -145,6 +145,18 @@ export const BtnAndNav = ({ styles }) => {
                 </a>
                 <div className={styles.linkArrow} />
               </li>
+
+              <li
+                style={{
+                  backgroundImage: "url(/images/pool-1024.jpg)",
+                  backgroundPosition: "50% 35%",
+                }}
+              >
+                <a href="#faq" onClick={() => setNav(false)}>
+                  Service FAQ
+                </a>
+                <div className={styles.linkArrow} />
+              </li>
             </ul>
           </nav>
         </>

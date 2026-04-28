@@ -9,6 +9,7 @@ import { DetailsMaintenance } from "./components/details-maintenance";
 import { IntroAnim } from "./components/intro-anim";
 import { IntroBeforeAfter } from "./components/intro-before-after";
 import { DetailsTechnical } from "./components/details-technical";
+import { ServicesFaqSection } from "../components/global/ServicesFaqSection";
 import styles from "./page.module.css";
 
 const IMAGES = [
@@ -20,7 +21,7 @@ const IMAGES = [
 export const metadata = {
   title: "Pool & Spa Services",
   description:
-    "Explore Boise Pool Pros services including pool and spa cleaning, maintenance, technical repair support, openings, closings, and proactive water chemistry care.",
+    "Explore Boise Pool Pros services including pool and spa cleaning, maintenance, technical repair support, openings, closings, proactive water chemistry care, and answers to frequently asked service questions.",
   alternates: {
     canonical: "/services",
   },
@@ -242,6 +243,8 @@ export default function Services() {
         </section>
 
         <SkimmerAppInfo />
+
+        <ServicesFaqSection></ServicesFaqSection>
 
         <WhyChooseGuarantee />
       </div>

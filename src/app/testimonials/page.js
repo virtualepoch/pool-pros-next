@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ElfsightWidgetComponent } from "./elfsight-widget";
 import { LoadingPanel } from "./loading-panel";
 import styles from "./page.module.css";
@@ -36,6 +37,34 @@ export default function Testimonials() {
         </span>
         . We will be updating with new reviews as they come in. Thanks!
       </p>
+
+      <nav
+        aria-label="Related site pages"
+        style={{
+          padding: "0 24px 16px",
+          maxWidth: "560px",
+          margin: "0 auto",
+          fontSize: "17px",
+          lineHeight: 1.55,
+          color: "var(--text)",
+        }}
+      >
+        <p style={{ margin: "0 0 8px" }}>While you are here:</p>
+        <ul style={{ paddingLeft: "1.25rem", margin: 0, listStyleType: "disc" }}>
+          <li style={{ marginBottom: "6px", listStyleType: "disc" }}>
+            <Link href="/services">Services overview and pricing context</Link>
+          </li>
+          <li style={{ marginBottom: "6px", listStyleType: "disc" }}>
+            <Link href="/services#faq">Answers to common service questions</Link>
+          </li>
+          <li style={{ marginBottom: "6px", listStyleType: "disc" }}>
+            <Link href="/gallery">Photo gallery of recent pool work</Link>
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <Link href="/">Boise Pool Pros home page</Link>
+          </li>
+        </ul>
+      </nav>
 
       <LoadingPanel styles={styles} />
 

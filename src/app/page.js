@@ -11,6 +11,7 @@ import { TimeRenderedComponent } from "./components/global/TimeRenderedComponent
 import { SectionPoolOpenings } from "./components/global/sections/SectionPoolOpenings";
 import { SkimmerAppInfo } from "./components/global/SkimmerAppInfo";
 import { OrendaLsiSection } from "./components/global/OrendaLsiSection";
+import { ServiceAreaSection } from "./components/global/ServiceAreaSection";
 
 export const metadata = {
   title: "Pool & Spa Service Professionals",
@@ -54,10 +55,38 @@ export default function Home() {
           </div>
 
           <ul className={styles.heroServicesList}>
-            <li>Cleaning</li>
-            <li>Maintenance</li>
-            <li>Technical Services</li>
-            <li>Openings and Closings</li>
+            <li>
+              <Link
+                className={styles.heroServiceLink}
+                href="/services#pool-spa-cleaning"
+              >
+                Cleaning
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.heroServiceLink}
+                href="/services#pool-spa-maintenance"
+              >
+                Maintenance
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.heroServiceLink}
+                href="/services#technical-services"
+              >
+                Technical Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.heroServiceLink}
+                href="/services#pool-openings"
+              >
+                Openings and Closings
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -73,6 +102,8 @@ export default function Home() {
       </section>
 
       <BtnAndModalContact />
+
+      <ServiceAreaSection></ServiceAreaSection>
 
       <TimeRenderedComponent month1={3} day1={1} month2={6} day2={7}>
         <SectionPoolOpenings styles={styles} />
@@ -109,6 +140,24 @@ export default function Home() {
                     technicians and fully insured.
                   </h3>
                 </InViewOpacityTransform>
+
+                <p className={styles.internalNavHint}>
+                  Browse{" "}
+                  <Link href="/services#pool-spa-cleaning">
+                    pool and spa cleaning
+                  </Link>
+                  ,{" "}
+                  <Link href="/services#pool-spa-maintenance">
+                    maintenance programs
+                  </Link>
+                  ,{" "}
+                  <Link href="/services#technical-services">technical care</Link>
+                  , and{" "}
+                  <Link href="/services#pool-openings">
+                    openings and closings
+                  </Link>{" "}
+                  for more detail.
+                </p>
 
                 <Link className={styles.sectionLink} href="/services">
                   <ActionBtn text="Learn More" />
@@ -156,6 +205,14 @@ export default function Home() {
                     efficiently.
                   </h3>
                 </InViewOpacityTransform>
+
+                <p className={styles.internalNavHint}>
+                  See what neighbors say on the{" "}
+                  <Link href="/testimonials">testimonials</Link> page, or view
+                  finished work in the{" "}
+                  <Link href="/gallery">project gallery</Link>.
+                </p>
+
                 <Link
                   className={styles.sectionLink}
                   href="/services#technical-services"

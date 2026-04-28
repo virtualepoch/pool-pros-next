@@ -55,6 +55,34 @@
   box-shadow: 2px 2px 15px 1px #0007;
 }
 
+.heroServiceLink {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.internalNavHint {
+  max-width: 520px;
+  margin: 16px auto 0;
+  padding: 0 8px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #fff;
+  text-shadow: 0 0 4px #000;
+}
+
+.internalNavHint a {
+  color: #b8fffc;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.internalNavHint a:hover {
+  color: #fff;
+}
+
 .heroStatement {
   width: 100%;
   padding: 32px;
