@@ -20,8 +20,8 @@ export const OrendaLsiSection = () => {
               LSI-first chemistry with the Orenda Calculator®
             </h2>
             <p className={styles.subtitle}>
-              Boise Pool Pros uses the Langelier Saturation Index (LSI) through
-              the free Orenda app so your water stays in the safe zone for
+              All of the pool and spa service technicians here at Boise Pool Pros use the Langelier Saturation Index (LSI) through
+              the free Orenda app. This allows us to ensure that your water stays in the safe zone for
               plaster, vinyl liners, and equipment—never guessing from isolated
               test numbers alone.
             </p>

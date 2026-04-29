@@ -28,6 +28,18 @@
   color: var(--text);
 }
 
+.lead a {
+  font-weight: 700;
+  font-family: var(--font-comfortaa);
+  color: #3168ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lead a:hover {
+  color: #0d0b88;
+}
+
 .list {
   margin: 0;
   padding-left: 1.25rem;
@@ -46,18 +58,17 @@
 .linkRow {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 20px;
+  align-items: center;
+  gap: 16px 24px;
   padding-top: 8px;
 }
 
-.navLink {
-  font-weight: 700;
-  font-family: var(--font-comfortaa);
-  color: #3168ff;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.navLink:hover {
-  color: #0d0b88;
+/* Matches home page .sectionLink + global .btn-contact (ActionBtn) */
+.actionLink {
+  width: fit-content;
+  max-width: 280px;
+  height: fit-content;
+  display: flex;
+  text-decoration: none;
+  color: inherit;
 }

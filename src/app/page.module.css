@@ -62,30 +62,6 @@
   width: 100%;
 }
 
-.sectionFootnote {
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: 20px 28px 36px;
-  font-size: 17px;
-  line-height: 1.55;
-  color: var(--text);
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  font-family: var(--font-comfortaa);
-}
-
-.sectionFootnote a {
-  font-weight: 700;
-  color: #3168ff;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.sectionFootnote a:hover {
-  color: #0d0b88;
-}
-
 .heroStatement {
   width: 100%;
   padding: 32px;

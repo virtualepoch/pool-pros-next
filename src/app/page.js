@@ -12,6 +12,7 @@ import { SectionPoolOpenings } from "./components/global/sections/SectionPoolOpe
 import { SkimmerAppInfo } from "./components/global/SkimmerAppInfo";
 import { OrendaLsiSection } from "./components/global/OrendaLsiSection";
 import { ServiceAreaSection } from "./components/global/ServiceAreaSection";
+import { HomeSeoCallouts } from "./components/global/HomeSeoCallouts";
 
 export const metadata = {
   title: "Pool & Spa Service Professionals",
@@ -157,15 +158,6 @@ export default function Home() {
             />
           </div>
         </div>
-        <p className={styles.sectionFootnote}>
-          Dig into how we handle Treasure Valley realities—wind-blown debris,
-          cottonwood season, hard water, and busy summer bather loads—on our{" "}
-          <Link href="/services#pool-spa-cleaning">cleaning</Link>,{" "}
-          <Link href="/services#pool-spa-maintenance">maintenance</Link>,{" "}
-          <Link href="/services#technical-services">technical</Link>,{" "}
-          <Link href="/services#pool-openings">opening</Link>, and{" "}
-          <Link href="/services#pool-closings">closing</Link> pages.
-        </p>
       </section>
 
       <section className={styles.section}>
@@ -224,13 +216,6 @@ export default function Home() {
             />
           </div>
         </div>
-        <p className={styles.sectionFootnote}>
-          Curious how pumps, heaters, and salt cells behave on Idaho pools? Read
-          neighbor experiences on{" "}
-          <Link href="/testimonials">testimonials</Link> and match equipment to
-          real jobs in the{" "}
-          <Link href="/gallery">gallery</Link> before you call.
-        </p>
       </section>
 
       <SwiperAutoFlow styles={styles} />
@@ -242,6 +227,8 @@ export default function Home() {
       <WhyChooseGuarantee />
 
       <ServiceAreaSection></ServiceAreaSection>
+
+      {/* <HomeSeoCallouts></HomeSeoCallouts> */}
     </>
   );
 }
