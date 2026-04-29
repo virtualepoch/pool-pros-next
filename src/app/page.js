@@ -92,7 +92,7 @@ export default function Home() {
         </div>
 
         <h2 className={styles.heroStatement}>
-          Providing Service to the{" "}
+          Boise&apos;s local pool and spa service company, providing service to the{" "}
           <span
             style={{ textTransform: "uppercase", textDecoration: "underline" }}
           >

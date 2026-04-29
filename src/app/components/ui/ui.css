@@ -475,8 +475,69 @@
   font: 100 20px sans-serif;
   background: #000b;
   backdrop-filter: blur(10px);
-  overflow: auto;
+  overflow: hidden;
   overscroll-behavior: contain;
+}
+
+.modal-drag-shell {
+  min-height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+.modal-drag-shell--dragging {
+  touch-action: none;
+}
+
+/* Touch / tablet: space before chevron row */
+.modal--touch-dismiss .modal-content-wrap {
+  padding-bottom: max(32px, env(safe-area-inset-bottom, 0px) + 16px);
+}
+
+.modal-swipe-hint-btn {
+  position: relative;
+  align-self: center;
+  flex-shrink: 0;
+  margin-top: auto;
+  margin-bottom: max(8px, env(safe-area-inset-bottom, 0px));
+  width: 72px;
+  height: 56px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.modal-swipe-hint-btn:focus-visible {
+  outline: 2px solid #56fff8;
+  outline-offset: 2px;
+}
+
+.modal-swipe-hint-icon path {
+  stroke: #2ec4b6;
+  animation: modal-swipe-hint-flash 1.45s ease-in-out infinite;
+}
+
+@keyframes modal-swipe-hint-flash {
+  0%,
+  100% {
+    stroke: #2ec4b6;
+  }
+
+  50% {
+    stroke: #fff;
+  }
 }
 
 .modal-enter {
